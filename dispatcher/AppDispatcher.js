@@ -9,9 +9,22 @@ AppDispatcher.register((payload) => {
 
   let action = payload.action;
   let new_item = payload.new_item;
+  let valuebyid = payload.valuebyid;
+  let valuebyidinselect = payload.valuebyidinselect;
   let id = payload.id;
 
   switch(action) {
+
+  // Respond to change value by id
+      case 'change-value-by-id-select':
+      ListStore.changeValueInSelect(valuebyidinselect);
+      break;
+
+  // Respond to change value by id
+      case 'change-value-by-id':
+      ListStore.changeValue(valuebyid);
+      break;
+
 	// Calculate sum
 	case 'add-sum-item':
 		ListStore.addSumItem(id);

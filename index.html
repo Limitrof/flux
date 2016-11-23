@@ -10,10 +10,138 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="dist/style.css"/>
+
+	<script>
+
+        $(document).ready(function() {
+            function moveBillContainer(){
+                if($('#staticPrice').offset().left > 100)
+                {
+                    $('#staticPrice').css("height","300px");
+                    var basePosition = $('#app-root').offset().top;
+                    var startPosition = $('#staticPrice').offset().top;
+                    var bottomPosition = $('#longBlueRowBottom').offset().top;
+                    //console.log("bottomPosition="+bottomPosition);
+
+                    var staticPositionPlusHeight = $('#staticPrice').offset().top +  410;
+					/* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
+					 console.log ($('#staticPrice').offset().top);
+					 console.log ($(window).scrollTop()); */
+                    //if position smaller then current top & currentPos + Height < than longBlueRowBottom
+                    var currStaticIfNotMove = $('#staticPrice').offset().top - $(window).scrollTop();
+                    if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
+                        //if ( currStaticIfNotMove < 100){
+                        //console.log('bzzz '+ currStaticIfNotMove);
+                        var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                        $('#staticPrice').offset({"top":forNewPos});
+                    }
+                    $('#staticPrice').offset().top
+                    if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                        //console.log("left buttom position");
+                        var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                        $('#staticPrice').offset({"top":forNewPos});
+                    }
+                } else {
+                    $('#staticPrice').css({"margin-top":"10px","top":"0px","height":"470px"});
+                }
+            }
+            $( window ).resize(moveBillContainer);
+            $( window ).scroll(moveBillContainer);
+
+        });
+	</script>
+
 </head>
-<link rel="stylesheet" href="dist/style.css"/>
 <body>
-	<h1>Easy Flux Example</h1>
+
+<div id="longBlueRow" class="row">
+	<div class="col-md-12">
+		<img id="logoImg" src="img/logo.png"/>
+		<div id="link1">
+			<a href="http://agv-aftermarket.com/">AGV Aftermarket</a>
+		</div>
+	</div>
+</div>
+<div id="longImg"></div>
+<div class="tabbable tabbablefirst">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab10" data-toggle="tab">AGV</a></li>
+		<li><a href="#tab20" data-toggle="tab">AGV lab</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="tab10">
+			<!-----------------------------------second tab START------------------------>
+			<div class="tabbable">
+				<ul class="nav nav-tabs second-level">
+					<li><a href="#tab100" data-toggle="tab">Marketing</a></li>
+					<li class="active"><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li>
+					<li><a href="#tab300" data-toggle="tab">Direct Research</a></li>
+					<li><a href="#tab400" data-toggle="tab">POS Products 1</a></li>
+					<li><a href="#tab500" data-toggle="tab">POS Products 2</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane" id="tab100">
+						Marketing
+					</div>
+					<div class="tab-pane active" id="tab200">
+						<!--------------------------------third tab START-------------------->
+						<div class="tabbable">
+							<ul class="nav nav-tabs third-level">
+								<li><a href="/index.php#tab1000" data-toggle="tablink">Самостоятельный расчет</a></li>
+								<li class="active"><a href="#tab2000" data-toggle="tab">Расчет от бюджета</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane" id="tab1000">
+									<p>Самостоятельный расчет</p>
+								</div>
+								<div class="tab-pane active" id="tab2000">
+									<p style="margin-top:20px;">Расчет от бюджета</p>
+									<div id="app-root">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--------------------------------third tab FINISH-------------------->
+					</div>
+					<div class="tab-pane" id="tab300">
+						Direct Research
+					</div>
+					<div class="tab-pane" id="tab400">
+						POS Products 1
+					</div>
+					<div class="tab-pane" id="tab500">
+						POS Products 2
+					</div>
+				</div>
+			</div>
+			<!-----------------------------------second tab START------------------------>
+		</div>
+		<div class="tab-pane" id="tab20">
+			<!--AGV lab START-->
+			<p>AGV lab...</p>
+			<!--AGV lab FINISH-->
+		</div>
+	</div>
+</div>
+
+
+<!-- bottom-->
+<div id="longBlueRowBottom" class="row">
+	<div class="col-md-12">
+		<!--img id="logoImgBottom" src="logo.png"/-->
+		<div id="linkBottom">
+			<a href="http://agv-aftermarket.com/">Copyright © 2016. AGV Aftermarket.</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+	<h1>Some</h1>
 	<div id="app-root"></div>
 	<script src="dist/bundle.min.js"></script>
 </body>

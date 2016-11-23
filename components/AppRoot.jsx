@@ -6,7 +6,7 @@ import AppDispatcher from '../dispatcher/AppDispatcher';
 // Sub components
 import NewItemForm from './NewItemForm';
 
-
+//ВЫВЕСТИ КАК ОТДЕЛЬНЫЙ КОМПОНЕНТ
 class SomeSum extends React.Component{
 	
 	
@@ -19,7 +19,28 @@ class SomeSum extends React.Component{
 		   return <span></span>;
 	  }
 }
+//ВЫВЕСТИ КАК ОТДЕЛЬНЫЙ КОМПОНЕНТ
+class ProductSelect extends React.Component {
 
+
+    constructor(props, context) {
+        super(props, context)
+        this.state = {
+			/* 	value: 1 */
+        }
+    }
+
+
+    render() {
+        var arrOfOptions = [];
+        this.props.category.map(function (currOption, index) {
+            arrOfOptions.push(<option key={index} value={currOption.valOf}>{currOption.strInfo}</option>);
+        });
+        return <div><select onChange={this.props.onChange} value={this.state.value} data-id={this.props.unic}>{arrOfOptions}</select></div>;
+        //return <div><select onChange={this.props.onClick} value={this.state.value}>{arrOfOptions}</select></div>;
+
+    }
+}
 
 // Method to retrieve state from Stores
 let getListState = () => {
@@ -27,19 +48,139 @@ let getListState = () => {
     items: ListStore.getItems()
   };
 }
+//////////////////////////////////////
+// блок данных вводимых пользователем
+let getDistributorQuantiy = () => {
+	return {
+        distributorQuantiy: ListStore.inStore_getDistributorQuantiy()
+	}
+}
+
+
+//////////////////////
+// блок выходного чека
+//Разработка программы: услуги агентства
+let getBillDev = () => {
+    return {
+        billDev: ListStore.inStore_getBillDev()
+    }
+}
+//Платформа для Программы лояльности
+let getBillPlatform= () => {
+    return {
+        billPlatform:ListStore.inStore_getBillPlatform()
+    }
+}
+
+//Дизайн key visual
+let getBillDesign= () => {
+    return {
+        billDesign:ListStore.inStore_getBillDesign()
+    }
+}
+
+//Призовой фонд
+let getBillBonus = () => {
+    return {
+        billBonus:ListStore.inStore_getBillBonus()
+    }
+}
+
+//Охват (количество участников)
+let getUsersQuantity= () => {
+    return {
+        usersQuantity:ListStore.inStore_getUsersQuantity()
+    }
+}
+
+//Качество контакта
+let getQualityLevel= () => {
+    return {
+        qualityLevel:ListStore.inStore_getQualityLevel()
+    }
+}
+
+//Среднее количество контактов за Программу
+let getContactsQuantity= () => {
+    return {
+        contactsQuantity:ListStore.inStore_getContactsQuantity()
+    }
+}
+
+
+let getAllSum = () => {
+	return {
+        allAmount:ListStore.getSum()
+	}
+}
+// блок выходного чека
+//////////////////////
+
+
+
+
+
+
 
 class AppRoot extends React.Component {
   
   // Method to setState based upon Store changes
   _onChange() {
     this.setState(getListState());
+//usercanchange
+      this.setState(getDistributorQuantiy());
+//usercantchange
+    this.setState(getBillDev());
+    this.setState(getBillPlatform());
+    this.setState(getBillDesign());
+    this.setState(getBillBonus());
+    this.setState(getUsersQuantity());
+    this.setState(getQualityLevel());
+    this.setState(getContactsQuantity());
+
+    this.setState(getAllSum());
   }
 
   constructor() {
     super();
     this.state = getListState();
-	this.handleClickCheckbox = this.handleClickCheckbox.bind(this) ; 
-	
+
+//Данные о количестве дистрибьюторов
+      this.state.distributorQuantiy = getDistributorQuantiy();
+
+
+
+
+
+
+//Разработка программы: услуги агентства
+      this.state.billDev = getBillDev();
+
+//Платформа для Программы лояльности
+      this.state.billPlatform = getBillPlatform();
+
+//Дизайн key visual
+      this.state.billDesign = getBillDesign();
+
+//Призовой фонд
+      this.state.billBonus = getBillBonus();
+
+//Охват (количество участников)
+      this.state.usersQuantity = getUsersQuantity();
+
+//Качество контакта
+          this.state.qualityLevel = getQualityLevel();
+
+//Среднее количество контактов за Программу
+      this.state.contactsQuantity = getContactsQuantity();
+
+
+//Итого:
+    this.state.allAmount = getAllSum();
+	//this.handleClickCheckbox = this.handleClickCheckbox.bind(this) ;
+
+
+
   }
 
   // Add change listeners to stores
@@ -55,8 +196,36 @@ class AppRoot extends React.Component {
   setDistributorQuantiy(e){
 	  alert("about");
   }
+
+    changeValueBySelect(e){
+  	alert('click');
+        let id = e.target.dataset.id;
+        let value = e.target.value;
+        alert(id);
+        alert(value);
+        AppDispatcher.dispatch({
+            action: 'change-value-by-id-select',
+            valuebyidinselect: {
+                id: id,
+                value: value
+            }
+        });
+	}
+  changeValueInState(e){
+  	//важно изменить через диспетчер в стейт придет само!
+      let id = e.target.dataset.id;
+		let value = e.target.value;
+      AppDispatcher.dispatch({
+          action: 'change-value-by-id',
+          valuebyid: {
+			  id: id,
+			  value: value
+		  }
+      });
+  }
+
+
   addToSum(e){
-	 alert('go'+e.target.dataset.id); 
 	 //addSumItem
 	  let id = e.target.dataset.id;
     
@@ -77,21 +246,45 @@ class AppRoot extends React.Component {
   }
 
   render(){
-      
+
     let _this = this;
-let lastCategory = '';
+	let lastCategory = '';
     let items = ListStore.getItems();
-    let currentSum = ListStore.getSum();
-	alert('currentSum='+currentSum);
-    let itemHtml = items.map(( listItem,index ) => {
+
+      //Разработка программы: услуги агентства
+      let billDev = ListStore.inStore_getBillDev();
+
+//Платформа для Программы лояльности
+      let billPlatform = ListStore.inStore_getBillPlatform();
+
+//Дизайн key visual
+      let billDesign = ListStore.inStore_getBillDesign();
+
+//Призовой фонд
+      let billBonus = ListStore.inStore_getBillBonus();
+
+    //let currentSum = ListStore.getSum();
+
+	//alert('currentSum='+currentSum);
+      //this.state.allAmount = ListStore.getSum();
+      var arrSize = items.length;//ПОЛУЧАЕМ последнее занчение для вывода последнего блока ИТОГО (раздела "Призовой
+	  // фонд")
+	let itemHtml = items.map(( listItem,index ) => {
 		
 		//UNIC FORMULA
+        var buttonListElements = [];
+
+        var blockTitle = [];
+        var blockItogo = [];
 				 var usersControlFormula = [];
-				if (listItem.unicname=='disributors_quantity') {
+				if (listItem.formula=='inputvalue') {
 					//this.state.distributorquantity = this.state.resultPrices[index].multinumber;
-					usersControlFormula.push(<div><input className="width20" type="text"  onChange={_this.setDistributorQuantiy}  value={listItem.multinumber}/></div>);
-				}
-else {usersControlFormula.push(<div>zzzzzzzzzz</div>);}
+					usersControlFormula.push(<div><input className="width70" type="text"  onChange={_this.changeValueInState}  data-id={ listItem.unicname } value={listItem.multinumber}/></div>);
+				}else if(listItem.formula=='select'){
+					usersControlFormula.push(<ProductSelect onChange={_this.changeValueBySelect} category={listItem.arrOfVlue} unic={listItem.unicname} />);
+                }
+else {usersControlFormula.push(<div></div>);}
+//else {usersControlFormula.push(<div>zzzzzzzzzz</div>);}
 
 				/* else if  (listItem.unicname=='budget') {
 					usersControlFormula.push(<div><input className="width70" type="text"  onChange={this.setBudgetInStateOnly}  value={listItem.multinumber}/><button  className="mleft100"  onClick={this.setBudget} value={listItem.multinumber}>Рассчитать</button></div>);
@@ -120,10 +313,11 @@ else {usersControlFormula.push(<div>zzzzzzzzzz</div>);}
 				}
 		
 				//check prefix and set if exist
+				//Блок подсчета суммы за текущую категорию
 				if (listItem.showwordprefix != '') {	
-					var pricewithprefix = listItem.showwordprefix + ' ' + listItem.price;
+					var pricewithprefix = listItem.showwordprefix + ' ' + (listItem.price*listItem.multinumber);
 				} else {
-					pricewithprefix = listItem.price;
+					pricewithprefix = (listItem.price*listItem.multinumber);
 				}				
 				//check suffix and set if exist
 				if (listItem.showwordsuffix != '') {	
@@ -143,30 +337,36 @@ else {usersControlFormula.push(<div>zzzzzzzzzz</div>);}
 					hidepriceonphone = "col-md-3 bcgray hidden-sm hidden-xs";
 				}
 				
-		/* 		 if (listItem.category !== lastCategory) {
-				var itogo='Итого: ';
+				 if (listItem.category !== lastCategory) {
+//ОТРИСОВЫВАЕМ БЛОКИ ИТОГО (кроме последнего)
 					switch (lastCategory) {
 								case "Разработка программы: услуги агентства":
 
-					buttonListElements.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{this.state.billDev} €</div></div>);
+                                    blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDev} €</div></div>);
 								  break;	   
 							  case "Платформа для Программы лояльности:":
-					buttonListElements.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{this.state.billPlatform} €</div></div>);
+                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billPlatform} €</div></div>);
 								  break;
 							  case "Дизайн key visual:":
-					buttonListElements.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{this.state.billDesign} €</div></div>);
+                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDesign} €</div></div>);
 								  break;
 
 							}
-
-                      buttonListElements.push(<div><div className="row bcwhite margintop80"><div className="col-md-12 blueColor_h80_pt5"><h3>{product.category}</h3></div></div></div>);
+//ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
+                      blockTitle.push(<div><div className="row bcwhite margintop80"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
 					
-				 } */
-				
+				 } else if( (arrSize-1) == index){
+
+                     blockItogo.push(<div className="row">
+				<div className="col-md-7">*Призовой фонд
+					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billBonus} €</div>
+			</div>);
+        } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
+        lastCategory = listItem.category;
 				
 				
 		//		<div className={hideinputonphone}>{usersControlFormula}</div>
-      return <div className="row" key={ listItem.id } title={listItem.comment}>
+      return <div>{blockTitle}<div className="row" key={ listItem.id } title={listItem.comment}>
 					<div className="col-md-5 bcgray">
 				{useOrNotCheckbox}
 						<label   htmlFor={listItem.unicname}>{listItem.name}</label>
@@ -174,25 +374,83 @@ else {usersControlFormula.push(<div>zzzzzzzzzz</div>);}
 					
 					<div className={hideinputonphone}>{usersControlFormula}</div>
 					
-					<div className={hidepriceonphone}><SomeSum priceinrow={pricewithprefixandsuffix} key={listItem.price} /><button onClick={ _this.removeItem } data-id={ listItem.id }>×</button></div>
-	          </div>;
+					<div className={hidepriceonphone}><SomeSum priceinrow={pricewithprefixandsuffix} key={listItem.id} /></div>
+	          </div>{blockItogo}</div>;
     });
-		 // 
+		 // <button onClick={ _this.removeItem } data-id={ listItem.id }>×</button>
 
-    return (
+   /* return (
       <div>
         <div className="allControls">
           { itemHtml }
         </div>
         <NewItemForm />
       </div>
-    );  	
+    );*/
+
+      return (
+	  <div  className="row" key="mainform" id="reactroot">
+		  <div className="col-md-8">{itemHtml}</div>
+		  <div className="col-md-4">
+			  <div id="staticPrice">
+
+				  <div className="row">
+					  <div className="col-md-9 colorblue">Результаты</div>
+
+				  </div>
+
+
+				  <div className="row">
+					  <div className="col-md-9">Разработка программы: услуги агентства</div>
+					  <div className="col-md-3">{this.state.billDev} €</div>
+				  </div>
+
+				  <div className="row">
+					  <div className="col-md-9">Платформа для Программы лояльности</div>
+					  <div className="col-md-3">{this.state.billPlatform} €</div>
+				  </div>
+
+				  <div className="row">
+					  <div className="col-md-9">Дизайн key visual</div>
+					  <div className="col-md-3">{this.state.billDesign} €</div>
+				  </div>
+
+				  <div className="row">
+					  <div className="col-md-9"> Призовой фонд</div>
+					  <div className="col-md-3">{this.state.billBonus} €</div>
+				  </div>
+
+				  <hr/>
+				  <div className="row colorblue">
+					  <div className="col-md-9">Охват (количество участников)</div>
+					  <div className="col-md-3">{this.state.usersQuantity}</div>
+				  </div>
+				  <div className="row colorblue">
+					  <div className="col-md-9">Качество контакта</div>
+					  <div className="col-md-3">{this.state.qualityLevel}</div>
+				  </div>
+				  <div className="row colorblue">
+					  <div className="col-md-9">Среднее количество контактов за Программу</div>
+					  <div className="col-md-3">{this.state.contactsQuantity}</div>
+				  </div>
+
+
+				  <hr/>
+				  <div className="row colorblue">
+					  <div className="col-md-9"><span className="textalignright">Итого:</span></div>
+					  <div className="col-md-3">{this.state.allAmount} €</div>
+				  </div>
+
+			  </div>
+
+		  </div>
+	  </div>);
   }
  //////////////////////////////
  // block of my functions
  
  handleClickCheckbox(someval,indexinarray) {
-		alert(this.state.resultPrices[indexinarray].needit == false);
+		//alert(this.state.resultPrices[indexinarray].needit == false);
 		/* if(this.state.resultPrices[indexinarray].needit == false && this.state.resultPrices[indexinarray].ischecked == false) {
 			var newArr = this.state.resultPrices;
 	
@@ -213,7 +471,7 @@ else {usersControlFormula.push(<div>zzzzzzzzzz</div>);}
 	}  
 	
 	setDistributorQuantiy(indexinarray,event){
-		alert('dis');
+		//alert('dis');
 		/*   var valueForDistributorPrice = event.target.value;
 
 		  var newArrForFormula = this.state.resultPrices;

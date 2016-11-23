@@ -47,7 +47,7 @@ height:80px;
 .tabbablefirst>.nav{
 	margin-left: -32px;
 }
-#container select{
+#app-root select{
 	height: 50px;
 	margin-top: -15px;
     width: 80%; 
@@ -158,7 +158,7 @@ width:1280px;
 margin:0 auto;
 }
 #longImg{
-background-image:url('calc.png');
+background-image:url('../img/calc.png');
 width:1280px;
 height:431px;
 margin:0 auto;
