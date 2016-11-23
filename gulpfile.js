@@ -1,4 +1,4 @@
-// gulpfile.js
+﻿// gulpfile.js
 var gulp = require('gulp');
 var browserify = require('browserify');
 var babelify = require('babelify');
@@ -6,6 +6,8 @@ var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
+//for css manipulation
+ var importCss = require('gulp-import-css');
  
 gulp.task('build', function () {
   return browserify({
@@ -28,6 +30,10 @@ gulp.task('compress', function() {
 
 gulp.task('default', function(cb) {
   runSequence('build','compress', cb);
+//css
+    gulp.src('assets/*.css')
+    .pipe(importCss())
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('watch', function () {
@@ -36,3 +42,4 @@ gulp.task('watch', function () {
   gulp.watch("./dispatcher/*.js", ['default']);
   gulp.watch("./stores/*.js", ['default']);
 });
+

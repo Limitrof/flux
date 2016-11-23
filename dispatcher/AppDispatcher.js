@@ -12,7 +12,11 @@ AppDispatcher.register((payload) => {
   let id = payload.id;
 
   switch(action) {
-
+	// Calculate sum
+	case 'add-sum-item':
+		ListStore.addSumItem(id);
+		break;
+		
     // Respond to add-item action
     case 'add-item':
       ListStore.addItem(new_item);
@@ -23,7 +27,7 @@ AppDispatcher.register((payload) => {
       ListStore.removeItem(id);
       break;
 
-    default:
+	  default:
       return true;
   }
 

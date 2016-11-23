@@ -1,0 +1,195 @@
+/* main container*/
+.tabbablefirst{
+padding:30px;
+width:1280px;
+margin:0 auto;
+}
+/* create buttons on tabs*/
+/* .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { 
+    background-color: #033860;	
+    cursor: default;	
+color: white;
+}
+.second-level .nav-tabs>li>a, .second-level .nav-tabs>li>a:focus, .second-level .nav-tabs>li>a:hover {
+   /*  color: #555; */
+	color:gray;
+    background-color: #fff;
+    border: 1px solid #ddd;
+/*     border-bottom-color: transparent; */
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+  /*   border-radius: 4px 4px 0 0; */
+    border-radius: 4px;
+}
+
+.nav-tabs {
+    /* border-bottom: 1px solid #ddd; */
+		 border-bottom:none;
+}
+.second-level {
+height:90px;
+    margin-left: -30px;
+	    padding-top: 30px;
+background-color:#dfe2e5;
+}
+.third-level{
+	margin-top:30px;
+	margin-left:-32px;
+}
+.second-level .nav-tabs>li {
+width:20%;
+height:80px;
+}
+.tabbablefirst>.nav{
+	margin-left: -32px;
+}
+#container select{
+	height: 50px;
+	margin-top: -15px;
+    width: 80%; 
+	padding-left: 20px;
+}
+#reactroot{
+margin-left:-30px;
+}
+#logoImg{
+margin:20px 0 0 60px;
+display:block;
+float: left;
+}
+#staticPrice{
+	width:100%;
+	height:300px;
+	margin-top:80px;
+	/*position:absolute;
+	border:1px solid gray;
+	 position:fixed;
+	border-radius:20px;
+	right:40px;
+	 */
+	
+	padding:5px;
+	background-color:white;
+}
+#staticPrice .col-md{
+	top:80px;
+}
+.bcwhite{
+	background-color:white;
+}
+.bcgray{
+	background-color:#e8e9ee;
+	color:#8d90a3;
+	height:70px;
+    padding-top: 25px;	border-bottom:1px solid #b6b6bb;
+}
+.price_sell{
+	background-color:#448bd9;
+	color:white;
+	width:120px;
+	margin-top: -15px;
+	height:50px;
+	border-radius:7px;
+	font-size:18px;
+	font-weight:bold;
+	text-align: center;
+	padding-top:13px;
+}
+.itogo_sell {
+	margin-top:10px;
+	background-color:#47be71;
+	color:white;
+	width:120px;
+	height:50px;
+	border-radius:7px;
+	font-size:18px;
+	font-weight:bold;
+	text-align: center;
+	padding-top:13px;
+	margin-left: 15px;
+}
+.itogo {
+	text-align: right;
+	padding-top: 22px;
+	font-size: 22px;
+	color: #8d90a3;
+}
+label{
+display:flex;
+}
+.checkboxforprice{
+display:block;
+margin-right:20px !important;
+float:left;
+}
+.hiddencheckbox{
+display:none;
+}
+.width20{
+width: 20px;
+text-align: center;
+}
+.width70{
+width: 70px;
+text-align: center;
+}
+.blueColor_h80_pt5{
+color:#438bd5;
+height:80px;
+padding-top: 5px;
+}
+.margintop80{
+margin-top:80px;
+}
+#longBlueRow{
+background-color:#033860;
+height:65px;
+width:1280px;
+margin:0 auto;
+}
+#longBlueRowBottom{
+background-color:#033860;
+height:210px;
+width:1280px;
+margin:0 auto;
+}
+#longImg{
+background-image:url('calc.png');
+width:1280px;
+height:431px;
+margin:0 auto;
+}
+#link1{
+    float: left;
+    margin: 20px 0 0 140px;
+    font-size: 18px;
+}
+#link1 a,#linkBottom a{
+    color: white;
+}
+#linkBottom{
+    float: left;
+    margin: 140px 0 0 140px;
+    font-size: 18px;
+}
+#link1 a{
+    color: white;
+}
+.textalignright{
+text-indent:50px;
+font-weight:bold;
+}
+.colorblue{
+color:#448bd8;
+}
+.mleft100{
+margin-left:70px;
+margin-right:-100px;
+}
+.floatLeft{
+float:left;
+}
