@@ -169,7 +169,7 @@ class AppRoot extends React.Component {
       this.state.usersQuantity = getUsersQuantity();
 
 //Качество контакта
-          this.state.qualityLevel = getQualityLevel();
+	  this.state.qualityLevel = getQualityLevel();
 
 //Среднее количество контактов за Программу
       this.state.contactsQuantity = getContactsQuantity();
@@ -198,11 +198,8 @@ class AppRoot extends React.Component {
   }
 
     changeValueBySelect(e){
-  	alert('click');
         let id = e.target.dataset.id;
         let value = e.target.value;
-        alert(id);
-        alert(value);
         AppDispatcher.dispatch({
             action: 'change-value-by-id-select',
             valuebyidinselect: {
@@ -223,6 +220,14 @@ class AppRoot extends React.Component {
 		  }
       });
   }
+
+    setBudget(e){
+        let valuebudget = e.target.value;
+        AppDispatcher.dispatch({
+            action: 'set-budget',
+            valuebudget: valuebudget
+        });
+	}
 
 
   addToSum(e){
@@ -277,11 +282,24 @@ class AppRoot extends React.Component {
         var blockTitle = [];
         var blockItogo = [];
 				 var usersControlFormula = [];
-				if (listItem.formula=='inputvalue') {
-					//this.state.distributorquantity = this.state.resultPrices[index].multinumber;
-					usersControlFormula.push(<div><input className="width70" type="text"  onChange={_this.changeValueInState}  data-id={ listItem.unicname } value={listItem.multinumber}/></div>);
-				}else if(listItem.formula=='select'){
-					usersControlFormula.push(<ProductSelect onChange={_this.changeValueBySelect} category={listItem.arrOfVlue} unic={listItem.unicname} />);
+				if (listItem.formula == 'inputvalue') {
+                    //кнопка рассчета для бюджета
+                    if(listItem.unicname == 'budget'){
+                        usersControlFormula.push(<div><input className="width70" type="text"
+															 onChange={_this.changeValueInState}
+															 data-id={ listItem.unicname }
+															 value={listItem.multinumber}/>
+							<button className="mleft100" onClick={_this.setBudget} value={listItem.multinumber}>Рассчитать</button></div>);
+                    } else {
+                    //для всех остальных input(ов)
+                        usersControlFormula.push(<div><input className="width70" type="text"
+															 onChange={_this.changeValueInState}
+															 data-id={ listItem.unicname }
+															 value={listItem.multinumber}/></div>);
+                    }
+				} else if(listItem.formula=='select') {
+					//для всех selectov
+                        usersControlFormula.push(<ProductSelect onChange={_this.changeValueBySelect} category={listItem.arrOfVlue} unic={listItem.unicname} />);
                 }
 else {usersControlFormula.push(<div></div>);}
 //else {usersControlFormula.push(<div>zzzzzzzzzz</div>);}
@@ -309,7 +327,7 @@ else {usersControlFormula.push(<div></div>);}
 					useOrNotCheckbox.push(<input className='checkboxforprice hiddencheckbox' type='checkbox' id={listItem.unicname}   value={listItem.price} checked/>);
 				} else {
 					//useOrNotCheckbox.push(<input className='checkboxforprice' onChange={this.handleClickCheckbox.bind(null, listItem.price,index)} type='checkbox' id={listItem.unicname}  value={listItem.price} checked={this.ischecked} />);
-					useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={this.ischecked} />);
+					useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} />);
 				}
 		
 				//check prefix and set if exist
@@ -431,7 +449,7 @@ else {usersControlFormula.push(<div></div>);}
 				  </div>
 				  <div className="row colorblue">
 					  <div className="col-md-9">Среднее количество контактов за Программу</div>
-					  <div className="col-md-3">{this.state.contactsQuantity}</div>
+					  <div className="col-md-3">~ {this.state.contactsQuantity}</div>
 				  </div>
 
 

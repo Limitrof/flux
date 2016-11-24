@@ -12,10 +12,16 @@ AppDispatcher.register((payload) => {
   let valuebyid = payload.valuebyid;
   let valuebyidinselect = payload.valuebyidinselect;
   let id = payload.id;
+  //budget
+    let valuebudget = payload.valuebudget;
 
   switch(action) {
+      // Calculate budget
+      case 'set-budget':
+          ListStore.culculateBudget(valuebudget);
+          break;
 
-  // Respond to change value by id
+      // Respond to change value by id
       case 'change-value-by-id-select':
       ListStore.changeValueInSelect(valuebyidinselect);
       break;
@@ -29,7 +35,8 @@ AppDispatcher.register((payload) => {
 	case 'add-sum-item':
 		ListStore.addSumItem(id);
 		break;
-		
+
+
     // Respond to add-item action
     case 'add-item':
       ListStore.addItem(new_item);

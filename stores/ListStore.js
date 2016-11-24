@@ -14,8 +14,26 @@ import _ from 'lodash';
 
 let ListStore = _.extend({}, EventEmitter.prototype, {
 
+
+//Охват (количество участников)
+    usersQuantity: 1600,
+    inStore_getUsersQuantity: function(){
+        return this.usersQuantity;
+    },
+//Количество участников
+    /*usersQuantiy: 1600,
+    inStore_getUsersQuantiy: function(){
+        return this.usersQuantiy;
+    },*/
+
+//Количество победителей
+    vinnersQuantiy: 500,
+    inStore_getVinnersQuantiy: function(){
+        return this.vinnersQuantiy;
+    },
+
 //Количество дистрибьюторов
-    distributorQuantiy: 0,
+    distributorQuantiy: 1,
 	inStore_getDistributorQuantiy: function(){
     return this.distributorQuantiy;
 	},
@@ -44,20 +62,14 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
         return this.billBonus;
     },
 
-//Охват (количество участников)
-    usersQuantity: 0,
-	inStore_getUsersQuantity: function(){
-        return this.usersQuantity;
-    },
-
 //Качество контакта
-	qualityLevel:0,
+	qualityLevel:"высокое",
     inStore_getQualityLevel: function(){
     	return this.qualityLevel;
     },
 
 //Среднее количество контактов за Программу
-	contactsQuantity:0,
+	contactsQuantity:3200,
 	inStore_getContactsQuantity: function(){
 		return this.contactsQuantity;
     },
@@ -94,10 +106,11 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				price: '', 
 				stocked: true, 
 				name: 'Укажите длительность Программы', 
-			  	arrOfVlue:[{valOf:1,strInfo:'1-3 месяца'},{valOf:2,strInfo:'4-6 месяцев'},{valOf:5,strInfo:'более 6 месяцев'}],
+			  	arrOfVlue:[{valOf:1,strInfo:'1 месяц'},{valOf:2,strInfo:'2 месяца'},{valOf:3,strInfo:'3 месяца'},{valOf:4,strInfo:'4 месяца'},{valOf:5,strInfo:'5 месяцев'},{valOf:6,strInfo:'более 6' +
+                ' месяцев'}],
 				formula: 'select',
 				multinumber:1, 
-				needit: false, multinumber_source_unicname:'none'
+				needit: false, min:0,multinumber_source_unicname:'none'
 				},
 		//2
 			  {
@@ -117,7 +130,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				arrOfVlue:'none',
 				formula: 'inputvalue',
 				multinumber:1, 
-				needit: false, multinumber_source_unicname:'none'
+				needit: false, min:0,multinumber_source_unicname:'none'
 			  },
 			//3
 			  {
@@ -137,7 +150,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  arrOfVlue:50000, 
 				  formula: 'inputvalue',
 				  multinumber:50000,
-				  needit: false, multinumber_source_unicname:'none'
+				  needit: false, min:0,multinumber_source_unicname:'none'
 				  },
 			//4
 			  {
@@ -157,7 +170,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  arrOfVlue:[{valOf:1,strInfo:'Беларусь'},{valOf:2,strInfo:'Россия'},{valOf:2,strInfo:'Украина'},{valOf:3,strInfo:'Казахстан'},{valOf:4,strInfo:'Другие страны'},{valOf:4,strInfo:'Три страны Прим. Украина, Россия, Казахстан'}], 
 				  formula: 'select',
 				  multinumber:1, 
-				  needit: false, multinumber_source_unicname:'none'
+				  needit: false, min:0,multinumber_source_unicname:'none'
 				  },
 				  
 				{
@@ -177,7 +190,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  arrOfVlue:'none',
 				  formula: 'multi',
 				  multinumber:1, 
-				  needit: false, multinumber_source_unicname:'none'
+				  needit: false, min:0,multinumber_source_unicname:'none'
 				  },
 				  {
 					  id:6,
@@ -196,7 +209,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  arrOfVlue:'none',
 				  formula: 'multi',
 				  multinumber:1, 
-				  needit: false, multinumber_source_unicname:'none'
+				  needit: false, min:0,multinumber_source_unicname:'none'
 				  },
 
        {
@@ -216,7 +229,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
 	   {
            id:8,
@@ -235,7 +248,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'},
+           needit: false, min:0,multinumber_source_unicname:'none'},
        //ТРЕТИЙ раздел
        {
        	id:9,
@@ -254,12 +267,12 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
-       {id:10,unicname:'plat',indexid:22,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: '0',price: '', stocked: false, name: 'Функционал регистрации участников', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, multinumber_source_unicname:'none'},
-       {id:11,unicname:'turn',indexid:23,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',  showwordprefix:'', showwordsuffix:'', comment:'', baseprice: '0',price: '', stocked: false, name: 'Функционал загрузки оборотов', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, multinumber_source_unicname:'none'},
-       {id:12,unicname:'usernote',indexid:24,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: '0',price: '', stocked: false, name: 'Нотификация участников о результатах (e-mail)', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, multinumber_source_unicname:'none'},
-       {id:13,unicname:'somefunc',indexid:25,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: '0',price: '', stocked: false, name: 'Платформа для Программы лояльности: (website)', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, multinumber_source_unicname:'none'},
+       {id:10,unicname:'plat',indexid:22,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: '0',price: '', stocked: false, name: 'Функционал регистрации участников', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
+       {id:11,unicname:'turn',indexid:23,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',  showwordprefix:'', showwordsuffix:'', comment:'', baseprice: '0',price: '', stocked: false, name: 'Функционал загрузки оборотов', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
+       {id:12,unicname:'usernote',indexid:24,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: '0',price: '', stocked: false, name: 'Нотификация участников о результатах (e-mail)', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
+
 //ЧЕТВЕРТЫЙ раздел
        {
        	id:14,
@@ -278,7 +291,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
        	id:15,
@@ -297,7 +310,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
        	id:16,
@@ -316,7 +329,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:5,
-           needit: false, multinumber_source_unicname:'count_for_banner'
+           needit: false, min:0,multinumber_source_unicname:'count_for_banner'
        },
        {
        	id:17,
@@ -335,7 +348,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:5,
            formula: 'inputvalue',
            multinumber:5,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
        	id:18,
@@ -354,7 +367,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
 
@@ -374,7 +387,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
        //пятый раздел
        {
@@ -394,7 +407,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:1600,
            formula: 'inputvalue',
            multinumber:1600,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
 
        {
@@ -414,7 +427,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:500,
            formula: 'inputvalue',
            multinumber:500,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
 
        {
@@ -434,7 +447,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            formula: 'multi',
            arrOfVlue:'none',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'none'
+           needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
        	id:23,
@@ -453,7 +466,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:500,
-           needit: false, multinumber_source_unicname:'vinners_quantity'
+           needit: false, min:0,multinumber_source_unicname:'vinners_quantity'
        },
 
        {
@@ -473,7 +486,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:500,
-           needit: false, multinumber_source_unicname:'vinners_quantity'
+           needit: false, min:0,multinumber_source_unicname:'vinners_quantity'
        },
 
        {
@@ -493,7 +506,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:500,
-           needit: false, multinumber_source_unicname:'vinners_quantity'
+           needit: false, min:2100,multinumber_source_unicname:'vinners_quantity'
        },
 
        {
@@ -513,7 +526,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:[{valOf:2,strInfo:'Доставка дистрибьюторам'},{valOf:40,strInfo:'Адресная доставка победителям'}],
            formula: 'select',
            multinumber:500,
-           needit: false, multinumber_source_unicname:'vinners_quantity'
+           needit: false, min:600,multinumber_source_unicname:'vinners_quantity'
        },
 
        {
@@ -533,7 +546,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, multinumber_source_unicname:'distributorQuantiy'}
+           needit: false, min:0,multinumber_source_unicname:'distributorQuantiy'}
 
    ],
 
@@ -561,22 +574,31 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
   },
 	//перезаписываем значение из select(a)
     changeValueInSelect: function(valueandidinobj){
-
+        //let contactsQuantity = 0;//megaERROR - it actual only for "period"
+        let contactsQuantity = this.contactsQuantity;
+        let usersQuantity = this.usersQuantity;
         let items = this.items;
         items.map(function(currentRow,index) {
             if(currentRow.unicname == valueandidinobj.id || currentRow.multinumber_source_unicname == valueandidinobj.id ){
                 //в случае если изменен формат доставки
-                if(currentRow.unicname == "delivery"){
+                if(currentRow.unicname == "delivery" && currentRow.unicname == valueandidinobj.id ){
                     items[index].price=valueandidinobj.value;
 					//МЕНЯЕМ ЗНАЧЕНИЕ БАЗОВОЙ ЦЕНЫ
 				//во всех остальных случаях сохраняем новое значение в multinumber to do - возможно лучше хранить
 					// занчения в переменных
-				} else {
+				} else if(currentRow.unicname == "period") {
+                    alert("valueandidinobj.value="+valueandidinobj.value);
+                    //количество контактов = количество участников * количество месяцев проведения акции * 2
+                    contactsQuantity = usersQuantity * valueandidinobj.value * 2;
+                    alert("contactsQuantity="+contactsQuantity);
+                    items[index].multinumber=valueandidinobj.value;
+                } else {
                     items[index].multinumber=valueandidinobj.value;
 				}
             }
         });
         this.items = items;//ОЧЕНЬ важно обновить хранилище
+        this.contactsQuantity = contactsQuantity;
         this.addAndRecountAll();
         },
 
@@ -597,7 +619,62 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
         this.items = items;
         this.addAndRecountAll();
 	},
-  
+    //calculate budget
+    culculateBudget: function(value){
+        let levelQuality = this.qualityLevel;
+        if(value<20000){
+            alert("Проведение акции с бюджетом менее 30000 не рентабельно.");
+            return;
+        }else if(value<42000){
+            levelQuality = "среднее";
+        }else{
+            levelQuality = "высокое";
+        }
+        this.qualityLevel = levelQuality;
+        let items = this.items;
+        let simpleSum = 0;
+        let vinnerQuantity = 0;
+        let usersQuantity  = 0;
+        //let hiddenPay = 0
+        items.map(function(currentRow,index) {
+            //перебираем все чекбоксы и зачекиваем их
+            if(!currentRow.usehiddencheckbox){
+                items[index].ischecked = true;
+
+                //Определяем общую сумму всех услуг во всех разделах кроме currentRow.ischecked == "Призовой фонд" +
+                // подбор поощрений + сумма бонусов дистрибьюторам из "Призового фонда"
+                if(currentRow.category != "Призовой фонд" || currentRow.unicname == 'bonus_for_disr' || currentRow.unicname == 'bonus_find'){
+                    if(currentRow.unicname == 'bonus_for_disr'){
+                        alert('distr items[index].multinumber='+items[index].multinumber);
+                    }
+                    simpleSum  += items[index].price*items[index].multinumber;
+                }
+            }
+
+        });
+        //console.log('Стоимость услуг в разделах 2-4 ' + simpleSum);
+        //console.log("Призовой фонд="+ (value-simpleSum));
+        //3000 - сумма на юридические услуги
+        //66 - коэффициент рассчитываемый на основе  38 (за приз) + 5.7 (за брендирование приза) + 5(за хранение) +
+        // 2 (за доставку)
+        // + 15 (hidden)
+        vinnerQuantity = parseInt((value-simpleSum-3000)/66);
+        usersQuantity = vinnerQuantity*3;
+        items.map(function(currentRow,index) {
+            if(currentRow.unicname == 'vinners_quantity' || currentRow.multinumber_source_unicname == 'vinners_quantity'){
+                items[index].multinumber = vinnerQuantity;
+                //this.vinnerQuantity = vinnerQuantity; //ERRthis not contain vinnerQuantity;
+            } else if(currentRow.unicname == 'usersQuantity') {
+                items[index].multinumber = usersQuantity;
+
+            }
+        });
+        this.vinnersQuantiy = vinnerQuantity;
+        this.usersQuantity = usersQuantity;
+        this.items = items;
+        this.addAndRecountAll();
+    },
+
   //sum recount
      addSumItem: function(item_id){
 		  let items = this.items;
@@ -646,13 +723,20 @@ addAndRecountAll: function(){
                         var hiddenPay = items[index].multinumber*15 + 3000;
                         billBonus += hiddenPay + items[index].price*items[index].multinumber;
 					} else{
-                        billBonus += items[index].price*items[index].multinumber;
+                	    if(currentRow.min!=0 && items[index].price*items[index].multinumber<currentRow.min){
+                            items[index].price  = currentRow.min;
+                            billBonus += currentRow.min;
+                        } else {
+                            billBonus += items[index].price*items[index].multinumber;
+                        }
+
                     }
                     break
             }
         }
     });
     this.sum =  billDev + billPlatform + billDesign + billBonus;
+    this.items = items;
     this.billDev = billDev;
     this.billPlatform = billPlatform;
     this.billDesign = billDesign;
