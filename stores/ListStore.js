@@ -132,7 +132,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				needit: false, min:0,multinumber_source_unicname:'none'
 			  },
 			//3
-			  {
+/*			  {
 				  id:3,
 				  unicname:'budget',
 				  indexid:3,
@@ -151,7 +151,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  multinumber:50000,
 				  needit: false, min:0,multinumber_source_unicname:'none'
 				  },
-			//4
+			//4*/
 			  {
 				  id:4,
 				  unicname:'region',
@@ -166,7 +166,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  price: 0, 
 				  stocked: true,
 				  name: 'География программы',	  
-				  arrOfVlue:[{valOf:1,strInfo:'Беларусь'},{valOf:2,strInfo:'Россия'},{valOf:2,strInfo:'Украина'},{valOf:3,strInfo:'Казахстан'},{valOf:4,strInfo:'Другие страны'},{valOf:4,strInfo:'Три страны Прим. Украина, Россия, Казахстан'}], 
+				  arrOfVlue:[{valOf:4,strInfo:'Украина, Россия, Казахстан'},{valOf:4,strInfo:'Украина, Россия,' +
+                  ' Беларусь'},{valOf:1,strInfo:'Беларусь'},{valOf:2,strInfo:'Россия'},{valOf:2,strInfo:'Украина'},{valOf:3,strInfo:'Казахстан'},{valOf:4,strInfo:'Другие страны'},],
 				  formula: 'select',
 				  multinumber:1, 
 				  needit: false, min:0,multinumber_source_unicname:'none'
@@ -178,7 +179,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  indexid:10,
 				  usehiddencheckbox:false,
 				  ischecked:false,
-				  category: 'Разработка программы: услуги агентства', 
+				  category: 'Разработка программы', 
 				  showwordprefix:'от', 
 				  showwordsuffix:'€', 
 				  comment:'условия программы', 
@@ -197,7 +198,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  indexid:11,
 				  usehiddencheckbox:false,
 				  ischecked:false,
-				  category: 'Разработка программы: услуги агентства',
+				  category: 'Разработка программы',
 				  showwordprefix:'от', 
 				  showwordsuffix:'€',	
 				  comment:'концепция со слоганом, название',
@@ -217,7 +218,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:12,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'Разработка программы: услуги агентства',
+           category: 'Разработка программы',
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'презентация для дистрибьюторов',
@@ -236,7 +237,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:13,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'Разработка программы: услуги агентства',
+           category: 'Разработка программы',
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'инструкция для дистрибьюторов',
@@ -458,8 +459,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'закупка/изготовление поощрений',
-           baseprice:38,
-           price: 38,
+           baseprice:53,
+           price: 53,
            stocked: true,
            name: 'Закупка/изготовление поощрений',
            arrOfVlue:'none',
@@ -467,7 +468,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            multinumber:500,
            needit: false, min:0,multinumber_source_unicname:'vinners_quantity'
        },
-
+   //    baseprice:38,
+   // price: 38,
        {
        	id:24,
            unicname:'brending_goods',
@@ -545,7 +547,26 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:1,
-           needit: false, min:0,multinumber_source_unicname:'distributorQuantiy'}
+           needit: false, min:0,multinumber_source_unicname:'distributorQuantiy'},
+       {
+           id:28,
+           unicname:'buhlow',
+           indexid:50,
+           usehiddencheckbox:false,
+           ischecked:false,
+           category: 'Призовой фонд',
+           showwordprefix:'',
+           showwordsuffix:'€',
+           comment:'бухгалтерское и юридическое сопровождение',
+           baseprice: 0,
+           price: 3000,
+           stocked: true,
+           name: 'Бухгалтерское и юридическое сопровождение',
+           formula: 'multi',
+           arrOfVlue:'none',
+           multinumber:1,
+           needit: false, min:0,multinumber_source_unicname:'none'
+       }
 
    ],
 
@@ -598,7 +619,9 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             }
         });
         this.items = items;//ОЧЕНЬ важно обновить хранилище
-        this.contactsQuantity = contactsQuantity;
+        //if(contactsQuantity!=0){
+            this.contactsQuantity = contactsQuantity;
+        //}
         this.addAndRecountAll();
         },
 
@@ -645,7 +668,9 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 		if(users_quantity!=0){
 			this.usersQuantity=users_quantity;
 		}
-        this.usersQuantity=simple_users_quantity;
+		if(simple_users_quantity!=0){
+            this.usersQuantity=simple_users_quantity;
+        }
         this.items = items;
         this.addAndRecountAll();
 	},
@@ -746,19 +771,26 @@ addAndRecountAll: function(){
     items.map(function(currentRow,index) {
         if(currentRow.ischecked){
             switch (currentRow.category) {
-                case "Разработка программы: услуги агентства":
+                case "Разработка программы":
                     billDev += items[index].price*items[index].multinumber;
                     break
                 case "Платформа для Программы лояльности:":
                         billPlatform += items[index].price*items[index].multinumber;
                     break
                 case "Дизайн key visual:":
+                    if(currentRow.unicname=='price_for_banner'){
+                        billDesign =  billDesign + items[index].price*items[index].multinumber + 30;
+
+                    }else{
+
                         billDesign += items[index].price*items[index].multinumber;
+                    }
                     break
                 case "Призовой фонд":
                 	if(currentRow.unicname=='bonus_create'){
-                        var hiddenPay = items[index].multinumber*15 + 3000;
-                        billBonus += hiddenPay + items[index].price*items[index].multinumber;
+                       // var hiddenPay = items[index].multinumber*15 ;
+                        //billBonus += hiddenPay + items[index].price*items[index].multinumber;
+                        billBonus += items[index].price*items[index].multinumber;
 					} else{
                 	    if(currentRow.min!=0 && items[index].baseprice!=0 && items[index].baseprice*items[index].multinumber<currentRow.min){
                             items[index].price  = currentRow.min;

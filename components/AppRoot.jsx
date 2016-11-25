@@ -37,13 +37,15 @@ class ProductSelect extends React.Component {
         this.props.category.map(function (currOption, index) {
         	if(currOption.valOf=='checked'){
         		setChecked=currOption.strInfo;
-        	}
-
-			if(currOption.valOf == setChecked){
-				arrOfOptions.push(<option key={index} value={currOption.valOf} selected="selected">{currOption.strInfo}</option>);
-			} else {
-				arrOfOptions.push(<option key={index} value={currOption.valOf}>{currOption.strInfo}</option>);
+        	} else {
+                if(currOption.valOf == setChecked){
+                    arrOfOptions.push(<option key={index} value={currOption.valOf} selected="selected">{currOption.strInfo}</option>);
+                } else {
+                    arrOfOptions.push(<option key={index} value={currOption.valOf}>{currOption.strInfo}</option>);
+                }
 			}
+
+
         });
         return <div><select onChange={this.props.onChange} value={this.state.value} data-id={this.props.unic}>{arrOfOptions}</select></div>;
         //return <div><select onChange={this.props.onClick} value={this.state.value}>{arrOfOptions}</select></div>;
@@ -68,7 +70,7 @@ let getDistributorQuantiy = () => {
 
 //////////////////////
 // блок выходного чека
-//Разработка программы: услуги агентства
+//Разработка программы
 let getBillDev = () => {
     return {
         billDev: ListStore.inStore_getBillDev()
@@ -162,7 +164,7 @@ class AppRoot extends React.Component {
 
 
 
-//Разработка программы: услуги агентства
+//Разработка программы
       this.state.billDev = getBillDev();
 
 //Платформа для Программы лояльности
@@ -265,7 +267,7 @@ class AppRoot extends React.Component {
 	let lastCategory = '';
     let items = ListStore.getItems();
 
-      //Разработка программы: услуги агентства
+      //Разработка программы
       let billDev = ListStore.inStore_getBillDev();
 
 //Платформа для Программы лояльности
@@ -297,7 +299,7 @@ class AppRoot extends React.Component {
                         usersControlFormula.push(<div><input className="width70" type="text"
 															 onChange={_this.changeValueInState}
 															 data-id={ listItem.unicname }
-															 value={listItem.multinumber}/>
+															 value={listItem.multinumber} />
 							<button className="mleft100" onClick={_this.setBudget} value={listItem.multinumber}>Рассчитать</button></div>);
                    /* } else if(listItem.unicname == 'distributorQuantiy'){
                     	//кол-во дистрибьюторов с плюс-минусом
@@ -374,11 +376,13 @@ else {usersControlFormula.push(<div></div>);}
 		
 		//учитываем минимальное значение
 				var sumWithMinValue = 0;
-        if(listItem.min!=0 && (listItem.baseprice*listItem.multinumber)<listItem.min){
+        if (listItem.unicname=='price_for_banner'){
+            sumWithMinValue = parseInt(listItem.baseprice*listItem.multinumber) + 30;
+        }else if(listItem.min!=0 && (listItem.baseprice*listItem.multinumber)<listItem.min){
             sumWithMinValue = listItem.min;
         } else if (listItem.baseprice!=0 ){
 			 sumWithMinValue = parseInt(listItem.baseprice*listItem.multinumber);
-		} else{
+		}  else{
             sumWithMinValue = parseInt(listItem.price*listItem.multinumber);
         }
 		
@@ -413,7 +417,7 @@ else {usersControlFormula.push(<div></div>);}
 				 if (listItem.category !== lastCategory) {
 //ОТРИСОВЫВАЕМ БЛОКИ ИТОГО (кроме последнего)
 					switch (lastCategory) {
-								case "Разработка программы: услуги агентства":
+								case "Разработка программы":
 
                                     blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDev} €</div></div>);
 								  break;	   
@@ -474,7 +478,7 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-9">Разработка программы: услуги агентства</div>
+					  <div className="col-md-9">Разработка программы</div>
 					  <div className="col-md-3">{this.state.billDev} €</div>
 				  </div>
 
@@ -489,7 +493,7 @@ else {usersControlFormula.push(<div></div>);}
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-9"> Призовой фонд</div>
+					  <div className="col-md-9">Призовой фонд*</div>
 					  <div className="col-md-3">{this.state.billBonus} €</div>
 				  </div>
 
