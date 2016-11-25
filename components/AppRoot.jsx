@@ -33,8 +33,17 @@ class ProductSelect extends React.Component {
 
     render() {
         var arrOfOptions = [];
+        var setChecked = false;
         this.props.category.map(function (currOption, index) {
-            arrOfOptions.push(<option key={index} value={currOption.valOf}>{currOption.strInfo}</option>);
+        	if(currOption.valOf=='checked'){
+        		setChecked=currOption.strInfo;
+        	}
+
+			if(currOption.valOf == setChecked){
+				arrOfOptions.push(<option key={index} value={currOption.valOf} selected="selected">{currOption.strInfo}</option>);
+			} else {
+				arrOfOptions.push(<option key={index} value={currOption.valOf}>{currOption.strInfo}</option>);
+			}
         });
         return <div><select onChange={this.props.onChange} value={this.state.value} data-id={this.props.unic}>{arrOfOptions}</select></div>;
         //return <div><select onChange={this.props.onClick} value={this.state.value}>{arrOfOptions}</select></div>;
@@ -209,7 +218,6 @@ class AppRoot extends React.Component {
         });
 	}
   changeValueInState(e){
-    	alert("ready to send!");
   	//важно изменить через диспетчер в стейт придет само!
       let id = e.target.dataset.id;
 		let value = e.target.value;
@@ -291,15 +299,16 @@ class AppRoot extends React.Component {
 															 data-id={ listItem.unicname }
 															 value={listItem.multinumber}/>
 							<button className="mleft100" onClick={_this.setBudget} value={listItem.multinumber}>Рассчитать</button></div>);
-                    } else if(listItem.unicname == 'distributorQuantiy'){
+                   /* } else if(listItem.unicname == 'distributorQuantiy'){
                     	//кол-во дистрибьюторов с плюс-минусом
+
                         usersControlFormula.push(
                         	<div>
 							<div className="input-group width120">
           <span className="input-group-btn">
               <button type="button" onClick={_this.changeValueInState} className="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]"
 					  data-id={ listItem.unicname }
-					  value={listItem.multinumber-1}>
+					  value={parseInt(listItem.multinumber)-1}>
                   <span className="glyphicon glyphicon-minus"></span>
               </button>
           </span>
@@ -309,14 +318,14 @@ class AppRoot extends React.Component {
           <span className="input-group-btn">
               <button type="button" onClick={_this.changeValueInState} className="btn btn-default btn-number" data-type="plus" data-field="quant[1]"
 					  data-id={ listItem.unicname }
-					  value={listItem.multinumber+1}>
+					  value={parseInt(listItem.multinumber)+1}>
                   <span className="glyphicon glyphicon-plus"></span>
               </button>
           </span>
 							</div>
 							</div>
 
-						);//
+						);*/
 
                        /* usersControlFormula.push(<div><input className="width70" type="text"
 															 onChange={_this.changeValueInState}
@@ -368,9 +377,9 @@ else {usersControlFormula.push(<div></div>);}
         if(listItem.min!=0 && (listItem.baseprice*listItem.multinumber)<listItem.min){
             sumWithMinValue = listItem.min;
         } else if (listItem.baseprice!=0 ){
-			 sumWithMinValue = listItem.baseprice*listItem.multinumber;
+			 sumWithMinValue = parseInt(listItem.baseprice*listItem.multinumber);
 		} else{
-            sumWithMinValue = listItem.price*listItem.multinumber;
+            sumWithMinValue = parseInt(listItem.price*listItem.multinumber);
         }
 		
 		

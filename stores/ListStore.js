@@ -106,8 +106,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				price: 0, 
 				stocked: true, 
 				name: 'Укажите длительность Программы', 
-			  	arrOfVlue:[{valOf:1,strInfo:'1 месяц'},{valOf:2,strInfo:'2 месяца'},{valOf:3,strInfo:'3 месяца'},{valOf:4,strInfo:'4 месяца'},{valOf:5,strInfo:'5 месяцев'},{valOf:6,strInfo:'более 6' +
-                ' месяцев'}],
+			  	arrOfVlue:[{valOf:2,strInfo:'2 месяца'},{valOf:3,strInfo:'3 месяца'},{valOf:4,strInfo:'4 месяца'},{valOf:5,strInfo:'5 месяцев'}],
 				formula: 'select',
 				multinumber:1, 
 				needit: false, min:0,multinumber_source_unicname:'none'
@@ -126,9 +125,9 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				baseprice: 0, 
 				price: 0,
 				stocked: false, 
-				name: 'Укажите количество дистрибъюторов', 
-				arrOfVlue:'none',
-				formula: 'inputvalue',
+				name: 'Укажите количество дистрибъюторов',
+                  arrOfVlue:[{valOf:'checked',strInfo:'3'},{valOf:1,strInfo:'1'},{valOf:2,strInfo:'2'},{valOf:3,strInfo:'3'},{valOf:4,strInfo:'4'},{valOf:5,strInfo:'5'},{valOf:6,strInfo:'6'},{valOf:7,strInfo:'7'},{valOf:8,strInfo:'8'},{valOf:9,strInfo:'9'},{valOf:10,strInfo:'10'}],
+                  formula: 'select',
 				multinumber:1, 
 				needit: false, min:0,multinumber_source_unicname:'none'
 			  },
@@ -609,7 +608,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
         let items = this.items;
 		let users_quantity = 0;
         let vinners_quantity = 0;
-
+        let simple_users_quantity = 0;
         items.map(function(currentRow,index) {
         	
 			//инициализируем переменные для перерасчета кол-ва учатников на основе нового количества победителей
@@ -618,6 +617,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
                 users_quantity = valuebyid.value*3;//
             } else if(currentRow.unicname == valuebyid.id && currentRow.unicname == 'usersQuantity'){
                 vinners_quantity = parseInt(valuebyid.value/3);//valuebyid.value
+                simple_users_quantity = valuebyid.value;
             }
 			
 			
@@ -645,7 +645,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 		if(users_quantity!=0){
 			this.usersQuantity=users_quantity;
 		}
-		
+        this.usersQuantity=simple_users_quantity;
         this.items = items;
         this.addAndRecountAll();
 	},
