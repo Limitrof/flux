@@ -167,6 +167,11 @@ label {
   text-align: center;
 }
 
+.width120 {
+  width: 120px;
+  text-align: center;
+}
+
 .blueColor_h80_pt5 {
   color: #438bd5;
   height: 80px;

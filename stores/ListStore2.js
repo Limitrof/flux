@@ -3,15 +3,6 @@ import {EventEmitter} from 'events';
 import _ from 'lodash';
 
 
-
-
-
-
-
-
-
-
-
 let ListStore = _.extend({}, EventEmitter.prototype, {
 
 
@@ -583,7 +574,6 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
                 //в случае если изменен формат доставки
                 if(currentRow.unicname == "delivery" && currentRow.unicname == valueandidinobj.id ){
                     items[index].price=valueandidinobj.value;
-                    items[index].baseprice=valueandidinobj.value;
 					//МЕНЯЕМ ЗНАЧЕНИЕ БАЗОВОЙ ЦЕНЫ
 				//во всех остальных случаях сохраняем новое значение в multinumber to do - возможно лучше хранить
 					// занчения в переменных
@@ -642,8 +632,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 		if(vinners_quantity!=0){
 			this.vinnersQuantiy=vinners_quantity;
 		}		
-		if(users_quantity!=0){
-			this.usersQuantity=users_quantity;
+		if(vinners_quantity!=0){
+			this.usersQuantity=vinners_quantity;
 		}
 		
         this.items = items;
@@ -660,13 +650,6 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
         }else{
             levelQuality = "высокое";
         }
-
-       //let distributorQuantity = this.distributorQuantiy;
-        if( (this.distributorQuantiy*600) > (value/2) ){
-            alert("Для данного количество дистрибьюторов, при условии их премирования, бюджет недостаточен.");
-            return;
-        }
-
         this.qualityLevel = levelQuality;
         let items = this.items;
         let simpleSum = 0;

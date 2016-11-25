@@ -1,7 +1,7 @@
 // AppRoot.jsx
 import React from 'react';
-import ListStore from '../stores/ListStore';
-import AppDispatcher from '../dispatcher/AppDispatcher';
+import ListStore from '../stores/ListStore2';
+import AppDispatcher from '../dispatcher/AppDispatcher2';
 
 // Sub components
 import NewItemForm from './NewItemForm';
@@ -209,7 +209,6 @@ class AppRoot extends React.Component {
         });
 	}
   changeValueInState(e){
-    	alert("ready to send!");
   	//важно изменить через диспетчер в стейт придет само!
       let id = e.target.dataset.id;
 		let value = e.target.value;
@@ -291,38 +290,7 @@ class AppRoot extends React.Component {
 															 data-id={ listItem.unicname }
 															 value={listItem.multinumber}/>
 							<button className="mleft100" onClick={_this.setBudget} value={listItem.multinumber}>Рассчитать</button></div>);
-                    } else if(listItem.unicname == 'distributorQuantiy'){
-                    	//кол-во дистрибьюторов с плюс-минусом
-                        usersControlFormula.push(
-                        	<div>
-							<div className="input-group width120">
-          <span className="input-group-btn">
-              <button type="button" onClick={_this.changeValueInState} className="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]"
-					  data-id={ listItem.unicname }
-					  value={listItem.multinumber-1}>
-                  <span className="glyphicon glyphicon-minus"></span>
-              </button>
-          </span>
-								<input type="text" name="quant[1]" className="form-control input-number" min="1" max="10" onChange={_this.changeValueInState}
-									   data-id={ listItem.unicname }
-									   value={listItem.multinumber}/>
-          <span className="input-group-btn">
-              <button type="button" onClick={_this.changeValueInState} className="btn btn-default btn-number" data-type="plus" data-field="quant[1]"
-					  data-id={ listItem.unicname }
-					  value={listItem.multinumber+1}>
-                  <span className="glyphicon glyphicon-plus"></span>
-              </button>
-          </span>
-							</div>
-							</div>
-
-						);//
-
-                       /* usersControlFormula.push(<div><input className="width70" type="text"
-															 onChange={_this.changeValueInState}
-															 data-id={ listItem.unicname }
-															 value={listItem.multinumber}/></div>);*/
-					} else {
+                    } else {
                     //для всех остальных input(ов)
                         usersControlFormula.push(<div><input className="width70" type="text"
 															 onChange={_this.changeValueInState}
