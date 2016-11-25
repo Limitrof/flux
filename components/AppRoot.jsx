@@ -330,12 +330,26 @@ else {usersControlFormula.push(<div></div>);}
 					useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} />);
 				}
 		
+		
+		//учитываем минимальное значение
+				var sumWithMinValue = 0;
+        if(listItem.min!=0 && (listItem.baseprice*listItem.multinumber)<listItem.min){
+            sumWithMinValue = listItem.min;
+        } else if (listItem.baseprice!=0 ){
+			 sumWithMinValue = listItem.baseprice*listItem.multinumber;
+		} else{
+            sumWithMinValue = listItem.price*listItem.multinumber;
+        }
+		
+		
+		
+		
 				//check prefix and set if exist
 				//Блок подсчета суммы за текущую категорию
 				if (listItem.showwordprefix != '') {	
-					var pricewithprefix = listItem.showwordprefix + ' ' + (listItem.price*listItem.multinumber);
+					var pricewithprefix = listItem.showwordprefix + ' ' + sumWithMinValue;
 				} else {
-					pricewithprefix = (listItem.price*listItem.multinumber);
+					pricewithprefix = sumWithMinValue;
 				}				
 				//check suffix and set if exist
 				if (listItem.showwordsuffix != '') {	

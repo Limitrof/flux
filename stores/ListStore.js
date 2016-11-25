@@ -102,8 +102,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				showwordprefix:'', 
 				showwordsuffix:'', 
 				comment:'ориентировочное время проведения Программы',
-				baseprice: '0', 
-				price: '', 
+				baseprice: 0, 
+				price: 0, 
 				stocked: true, 
 				name: 'Укажите длительность Программы', 
 			  	arrOfVlue:[{valOf:1,strInfo:'1 месяц'},{valOf:2,strInfo:'2 месяца'},{valOf:3,strInfo:'3 месяца'},{valOf:4,strInfo:'4 месяца'},{valOf:5,strInfo:'5 месяцев'},{valOf:6,strInfo:'более 6' +
@@ -123,8 +123,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				showwordprefix:'',
 				showwordsuffix:'', 
 				comment:'кол-во дистрибьюторов',
-				baseprice: '0', 
-				price: '',
+				baseprice: 0, 
+				price: 0,
 				stocked: false, 
 				name: 'Укажите количество дистрибъюторов', 
 				arrOfVlue:'none',
@@ -143,8 +143,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  showwordprefix:'', 
 				  showwordsuffix:'', 
 				  comment:'рекомендуем оптимальный бюджет ',
-				  baseprice: '0', 
-				  price: '', 
+				  baseprice: 0, 
+				  price: 0, 
 				  stocked: false, 
 				  name: 'Ориентировочный бюджет Программы', 
 				  arrOfVlue:50000, 
@@ -163,8 +163,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  showwordprefix:'', 
 				  showwordsuffix:'', 
 				  comment:'some comment text', 
-				  baseprice: '0',
-				  price: '', 
+				  baseprice: 0,
+				  price: 0, 
 				  stocked: true,
 				  name: 'География программы',	  
 				  arrOfVlue:[{valOf:1,strInfo:'Беларусь'},{valOf:2,strInfo:'Россия'},{valOf:2,strInfo:'Украина'},{valOf:3,strInfo:'Казахстан'},{valOf:4,strInfo:'Другие страны'},{valOf:4,strInfo:'Три страны Прим. Украина, Россия, Казахстан'}], 
@@ -183,7 +183,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  showwordprefix:'от', 
 				  showwordsuffix:'€', 
 				  comment:'условия программы', 
-				  baseprice: '550', 
+				  baseprice:0, 
 				  price: 550, 
 				  stocked: true, 
 				  name: 'Условия программы',
@@ -202,7 +202,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  showwordprefix:'от', 
 				  showwordsuffix:'€',	
 				  comment:'концепция со слоганом, название',
-				  baseprice: '200', 
+				  baseprice: 0, 
 				  price: 200, 
 				  stocked: true, 
 				  name: 'Концепция со слоганом, название',
@@ -222,7 +222,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'презентация для дистрибьюторов',
-           baseprice: '150',
+           baseprice: 0,
            price: 150,
            stocked: true,
            name: 'Презентация для дистрибьюторов',
@@ -241,7 +241,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'инструкция для дистрибьюторов',
-           baseprice: '100',
+           baseprice: 0,
            price: 100,
            stocked: true,
            name: 'Инструкция для дистрибьюторов',
@@ -260,7 +260,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'website',
-           baseprice: '7800',
+           baseprice: 0,
            price: 7800,
            stocked: false,
            name: 'Платформа для Программы (website)',
@@ -269,9 +269,9 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            multinumber:1,
            needit: false, min:0,multinumber_source_unicname:'none'
        },
-       {id:10,unicname:'plat',indexid:22,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: '0',price: '', stocked: false, name: 'Функционал регистрации участников', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
-       {id:11,unicname:'turn',indexid:23,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',  showwordprefix:'', showwordsuffix:'', comment:'', baseprice: '0',price: '', stocked: false, name: 'Функционал загрузки оборотов', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
-       {id:12,unicname:'usernote',indexid:24,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: '0',price: '', stocked: false, name: 'Нотификация участников о результатах (e-mail)', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
+       {id:10,unicname:'plat',indexid:22,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: 0,price: '', stocked: false, name: 'Функционал регистрации участников', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
+       {id:11,unicname:'turn',indexid:23,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',  showwordprefix:'', showwordsuffix:'', comment:'', baseprice:0,price: '', stocked: false, name: 'Функционал загрузки оборотов', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
+       {id:12,unicname:'usernote',indexid:24,usehiddencheckbox:true,ischecked:false,category: 'Платформа для Программы лояльности:',   showwordprefix:'', showwordsuffix:'', comment:'',baseprice: 0,price: '', stocked: false, name: 'Нотификация участников о результатах (e-mail)', arrOfVlue:'none',formula: 'multi',multinumber:1, needit: false, min:0,multinumber_source_unicname:'none'},
 
 //ЧЕТВЕРТЫЙ раздел
        {
@@ -284,7 +284,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'дизайн для платформы',
-           baseprice: '1500',
+           baseprice: 0,
            price: 1500,
            stocked: true,
            name: 'Дизайн для платформы (website)',
@@ -303,7 +303,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'дизайн рекламного макета Программы',
-           baseprice: '150',
+           baseprice: 0,
            price: 150,
            stocked: true,
            name: 'Дизайн рекламного макета Программы',
@@ -322,7 +322,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'дизайн баннеров для дистрибьюторов',
-           baseprice: '30',
+           baseprice: 30,
            price: 30,
            stocked: true,
            name: 'Дизайн баннеров для дистрибьюторов',
@@ -341,7 +341,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'',
            comment:'количество баннеров',
-           baseprice: '0',
+           baseprice: 0,
            price: 0,
            stocked: true,
            name: 'Количество баннеров',
@@ -360,7 +360,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'дизайн рекламного макета Программы',
-           baseprice: '1500',
+           baseprice: 0,
            price: 1500,
            stocked: true,
            name: 'Дизайн рекламного макета Программы',
@@ -380,7 +380,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'дизайн сертификатов победителям',
-           baseprice: '200',
+           baseprice: 0,
            price: 200,
            stocked: true,
            name: 'Дизайн сертификатов победителям (до 3 макетов)',
@@ -400,7 +400,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'',
            comment:'укажите количество участников ИЛИ количество победителей',
-           baseprice: '0',
+           baseprice: 0,
            price: 0,
            stocked: true,
            name: 'Количество участников',
@@ -420,7 +420,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'',
            comment:'укажите количество участников ИЛИ количество победителей',
-           baseprice: '0',
+           baseprice: 0,
            price: 0,
            stocked: true,
            name: 'Количество победителей',
@@ -440,7 +440,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'подбор поощрений призового фонда',
-           baseprice: '200',
+           baseprice: 0,
            price: 200,
            stocked: true,
            name: 'Подбор поощрений призового фонда',
@@ -459,7 +459,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'закупка/изготовление поощрений',
-           baseprice: '19000',
+           baseprice:38,
            price: 38,
            stocked: true,
            name: 'Закупка/изготовление поощрений',
@@ -479,14 +479,14 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'брендирование поощрений',
-           baseprice: '(0.15*цена одного приза) * кол-во победителей || 5.7  * кол-во победителей',
+           baseprice: 5.7,
            price: 5.7,
            stocked: true,
            name: 'Брендирование поощрений',
            arrOfVlue:'none',
            formula: 'multi',
            multinumber:500,
-           needit: false, min:0,multinumber_source_unicname:'vinners_quantity'
+           needit: false, min:100,multinumber_source_unicname:'vinners_quantity'
        },
 
        {
@@ -499,7 +499,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'от',
            showwordsuffix:'€',
            comment:'логистика (хранение, упаковка)',
-           baseprice: '2100',
+           baseprice: 5,
            price: 5,
            stocked: true,
            name: 'Логистика (хранение, упаковка)',
@@ -519,7 +519,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'от',
            showwordsuffix:'€',
            comment:'доставка',
-           baseprice: '600',
+           baseprice: 2,
            price: 2,
            stocked: true,
            name: 'Доставка',
@@ -539,7 +539,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            showwordprefix:'от',
            showwordsuffix:'',
            comment:'Рассчет осуществляется на основе количества дистрибъюторов указаного во Вводном разделе',
-           baseprice: '600',
+           baseprice: 0,
            price: 600,
            stocked: true,
            name: 'Поощрения сотрудников дистрибьюторов (супервайзеров)',
@@ -606,16 +606,45 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
     changeValue:function(valuebyid){
   	//alert("We have id="+valuebyid.id+" and value="+valuebyid.value);
         let items = this.items;
-
+		let users_quantity = 0;
+        let vinners_quantity = 0;
 
         items.map(function(currentRow,index) {
         	
+			//инициализируем переменные для перерасчета кол-ва учатников на основе нового количества победителей
+            // введнных пользователем
+            if(currentRow.unicname == valuebyid.id && currentRow.unicname == 'vinners_quantity'){
+                users_quantity = valuebyid.value*3;//
+            } else if(currentRow.unicname == valuebyid.id && currentRow.unicname == 'usersQuantity'){
+                vinners_quantity = parseInt(valuebyid.value/3);//valuebyid.value
+            }
+			
+			
         	//- изменяем текущее значение инпута в соответствии со значением введенным пользователем
 			// ИЛИ !!! изменяем дополнительно значение используемое для рассчета суммы подарка
         	if(currentRow.unicname == valuebyid.id || currentRow.multinumber_source_unicname == valuebyid.id ){
                 items[index].multinumber=valuebyid.value;
 			}
         });
+		
+		  //на второй итерации вводим значение переменной
+        //запускаем ТОЛЬКО ЕСЛИ значения победителей или участников необходимо менять
+        if(users_quantity != 0 || vinners_quantity != 0){
+            items.map(function(currentRow,index) {
+                if( (currentRow.unicname == 'vinners_quantity' || currentRow.multinumber_source_unicname ==  'vinners_quantity' ) && vinners_quantity != 0){
+                    items[index].multinumber = vinners_quantity;
+                } else if( currentRow.unicname == 'usersQuantity' && users_quantity != 0){
+                    items[index].multinumber = users_quantity;
+                }
+            });
+        }
+		if(vinners_quantity!=0){
+			this.vinnersQuantiy=vinners_quantity;
+		}		
+		if(vinners_quantity!=0){
+			this.usersQuantity=vinners_quantity;
+		}
+		
         this.items = items;
         this.addAndRecountAll();
 	},
@@ -723,11 +752,17 @@ addAndRecountAll: function(){
                         var hiddenPay = items[index].multinumber*15 + 3000;
                         billBonus += hiddenPay + items[index].price*items[index].multinumber;
 					} else{
-                	    if(currentRow.min!=0 && items[index].price*items[index].multinumber<currentRow.min){
+                	    if(currentRow.min!=0 && items[index].baseprice!=0 && items[index].baseprice*items[index].multinumber<currentRow.min){
                             items[index].price  = currentRow.min;
                             billBonus += currentRow.min;
                         } else {
-                            billBonus += items[index].price*items[index].multinumber;
+                	        if(items[index].baseprice!=0){
+
+                                billBonus += items[index].baseprice*items[index].multinumber;
+                            }else{
+
+                                billBonus += items[index].price*items[index].multinumber;
+                            }
                         }
 
                     }
