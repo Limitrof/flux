@@ -815,7 +815,7 @@ addAndRecountAll: function(){
     this.billDev = billDev;
     this.billPlatform = billPlatform;
     this.billDesign = billDesign;
-    this.billBonus = billBonus;
+    this.billBonus = parseInt(billBonus);
 
 },
 
