@@ -132,7 +132,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				needit: false, min:0,multinumber_source_unicname:'none'
 			  },
 			//3
-/*			  {
+			  {
 				  id:3,
 				  unicname:'budget',
 				  indexid:3,
@@ -151,7 +151,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  multinumber:50000,
 				  needit: false, min:0,multinumber_source_unicname:'none'
 				  },
-			//4*/
+			//4
 			  {
 				  id:4,
 				  unicname:'region',

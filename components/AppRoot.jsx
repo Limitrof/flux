@@ -266,6 +266,8 @@ class AppRoot extends React.Component {
     let _this = this;
 	let lastCategory = '';
     let items = ListStore.getItems();
+    //ОПРЕДЕЛЯЕМ нужен ли самостоятельный рассчет
+	  var currentLocation = this.props.path.indexOf("self");
 
       //Разработка программы
       let billDev = ListStore.inStore_getBillDev();
@@ -295,12 +297,15 @@ class AppRoot extends React.Component {
 				 var usersControlFormula = [];
 				if (listItem.formula == 'inputvalue') {
                     //кнопка рассчета для бюджета
-                    if(listItem.unicname == 'budget'){
+                    if(listItem.unicname == 'budget' && currentLocation != -1){
+
                         usersControlFormula.push(<div><input className="width70" type="text"
 															 onChange={_this.changeValueInState}
 															 data-id={ listItem.unicname }
 															 value={listItem.multinumber} />
 							<button className="mleft100" onClick={_this.setBudget} value={listItem.multinumber}>Рассчитать</button></div>);
+
+
                    /* } else if(listItem.unicname == 'distributorQuantiy'){
                     	//кол-во дистрибьюторов с плюс-минусом
 
@@ -440,19 +445,43 @@ else {usersControlFormula.push(<div></div>);}
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
         lastCategory = listItem.category;
-				
-				
-		//		<div className={hideinputonphone}>{usersControlFormula}</div>
-      return <div>{blockTitle}<div className="row" key={ listItem.id } title={listItem.comment}>
-					<div className="col-md-5 bcgray">
-				{useOrNotCheckbox}
-						<label   htmlFor={listItem.unicname}>{listItem.name}</label>
+
+        if(listItem.unicname == 'budget') {
+            if(currentLocation != -1){
+                return <div>{blockTitle}
+					<div className="row" key={ listItem.id } title={listItem.comment}>
+						<div className="col-md-5 bcgray">
+                            {useOrNotCheckbox}
+							<label htmlFor={listItem.unicname}>{listItem.name}</label>
+						</div>
+
+						<div className={hideinputonphone}>{usersControlFormula}</div>
+
+						<div className={hidepriceonphone}><SomeSum priceinrow={pricewithprefixandsuffix} key={listItem.id}/>
+						</div>
 					</div>
-					
+                    {blockItogo}</div>;
+			} else {
+            	return <div></div>;
+			}
+            //		<div className={hideinputonphone}>{usersControlFormula}</div>
+
+        }else {
+            return <div>{blockTitle}
+				<div className="row" key={ listItem.id } title={listItem.comment}>
+					<div className="col-md-5 bcgray">
+                        {useOrNotCheckbox}
+						<label htmlFor={listItem.unicname}>{listItem.name}</label>
+					</div>
+
 					<div className={hideinputonphone}>{usersControlFormula}</div>
-					
-					<div className={hidepriceonphone}><SomeSum priceinrow={pricewithprefixandsuffix} key={listItem.id} /></div>
-	          </div>{blockItogo}</div>;
+
+					<div className={hidepriceonphone}><SomeSum priceinrow={pricewithprefixandsuffix} key={listItem.id}/>
+					</div>
+				</div>
+                {blockItogo}</div>;
+		}
+
     });
 		 // <button onClick={ _this.removeItem } data-id={ listItem.id }>×</button>
 
