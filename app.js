@@ -1,10 +1,14 @@
 import React from 'react';
 import AppRoot from './components/AppRoot';
-//import AppRoot2 from './components/AppRoot2';
+import AppRoot2 from './components/AppRoot2';
 var forPath=window.location.href;
 React.render(
   <AppRoot path={forPath} />,
   document.getElementById('app-root')
+);
+React.render(
+    <AppRoot2 path="marketing" />,
+    document.getElementById('app-root2')
 );
 /*
 React.render(

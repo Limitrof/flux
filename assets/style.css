@@ -1,8 +1,9 @@
 /* main container*/
 .tabbablefirst{
-padding:30px;
+padding:0 60px;
 width:1280px;
 margin:0 auto;
+	background-color: #f0f4f7;
 }
 /* create buttons on tabs*/
 /* .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { */
@@ -47,6 +48,9 @@ height:80px;
 .tabbablefirst>.nav{
 	margin-left: -32px;
 }
+#app-root2{
+	padding-bottom:10px;
+}
 #app-root select{
 	height: 50px;
 	margin-top: -15px;
@@ -63,7 +67,7 @@ float: left;
 }
 #staticPrice{
 	width:100%;
-	height:300px;
+	height:320px !important;
 	margin-top:80px;
 	/*position:absolute;
 	border:1px solid gray;
@@ -71,7 +75,7 @@ float: left;
 	border-radius:20px;
 	right:40px;
 	 */
-	
+
 	padding:5px;
 	background-color:white;
 }
@@ -163,6 +167,7 @@ margin:0 auto;
 }
 #longImg{
 background-image:url('../img/calc.png');
+	background-color: #f0f4f7;
 width:1280px;
 height:431px;
 margin:0 auto;

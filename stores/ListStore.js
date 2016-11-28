@@ -2,16 +2,6 @@
 import {EventEmitter} from 'events';
 import _ from 'lodash';
 
-
-
-
-
-
-
-
-
-
-
 let ListStore = _.extend({}, EventEmitter.prototype, {
 
 
@@ -91,6 +81,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
       id: 1
     }
   ], */
+
+
    items: [{
 	   id:1,
 				name:'period',
