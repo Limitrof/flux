@@ -375,7 +375,7 @@ else {usersControlFormula.push(<div></div>);}
 					useOrNotCheckbox.push(<input className='checkboxforprice hiddencheckbox' type='checkbox' id={listItem.unicname}   value={listItem.price} checked/>);
 				} else {
 					//useOrNotCheckbox.push(<input className='checkboxforprice' onChange={this.handleClickCheckbox.bind(null, listItem.price,index)} type='checkbox' id={listItem.unicname}  value={listItem.price} checked={this.ischecked} />);
-					useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} />);
+					useOrNotCheckbox.push(<div className="labelpos  floatLeft heigth80p"><div className="switch demo3"><input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} /> <label><i></i></label></div></div>);
 				}
 		
 		
@@ -456,7 +456,7 @@ else {usersControlFormula.push(<div></div>);}
 					<div className="row" key={ listItem.id } title={listItem.comment}>
 						<div className="col-md-5 bcgray">
                             {useOrNotCheckbox}
-							<label htmlFor={listItem.unicname}>{listItem.name}</label>
+							<label className="main-label-text" htmlFor={listItem.unicname}>{listItem.name}</label>
 						</div>
 
 						<div className={hideinputonphone}>{usersControlFormula}</div>
@@ -475,7 +475,7 @@ else {usersControlFormula.push(<div></div>);}
 				<div className="row" key={ listItem.id } title={listItem.comment}>
 					<div className="col-md-5 bcgray">
                         {useOrNotCheckbox}
-						<label htmlFor={listItem.unicname}>{listItem.name}</label>
+						<label className="main-label-text"  htmlFor={listItem.unicname}>{listItem.name}</label>
 					</div>
 
 					<div className={hideinputonphone}>{usersControlFormula}</div>
