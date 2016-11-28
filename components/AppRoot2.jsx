@@ -419,28 +419,10 @@ else {usersControlFormula.push(<div></div>);}
 					hidepriceonphone = "col-md-3 bcgray hidden-sm hidden-xs";
 				}
 				
-				 if (listItem.category !== lastCategory) {
-//ОТРИСОВЫВАЕМ БЛОКИ ИТОГО (кроме последнего)
-					switch (lastCategory) {
-								case "Разработка программы":
-
-                                    blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDev} €</div></div>);
-								  break;	   
-							  case "Платформа для Программы лояльности:":
-                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billPlatform} €</div></div>);
-								  break;
-							  case "PR":
-                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDesign} €</div></div>);
-								  break;
-
-							}
-//ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
-                      blockTitle.push(<div><div className="row bcwhite margintop80"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
-					
-				 } else if( (arrSize-1) == index){
+				 if( (arrSize-1) == index){
 
                      blockItogo.push(<div className="row">
-				<div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billBonus} €</div>
+				<div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billDesign} €</div>
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
         lastCategory = listItem.category;
@@ -506,38 +488,10 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-9">Разработка программы</div>
-					  <div className="col-md-3">{this.state.billDev} €</div>
-				  </div>
-
-				  <div className="row">
-					  <div className="col-md-9">Платформа для Программы лояльности</div>
-					  <div className="col-md-3">{this.state.billPlatform} €</div>
-				  </div>
-
-				  <div className="row">
-					  <div className="col-md-9">Дизайн key visual</div>
+					  <div className="col-md-9">PR</div>
 					  <div className="col-md-3">{this.state.billDesign} €</div>
 				  </div>
 
-				  <div className="row">
-					  <div className="col-md-9">Призовой фонд*</div>
-					  <div className="col-md-3">{this.state.billBonus} €</div>
-				  </div>
-
-				  <hr/>
-				  <div className="row colorblue">
-					  <div className="col-md-9">Охват (количество участников)</div>
-					  <div className="col-md-3">{this.state.usersQuantity}</div>
-				  </div>
-				  <div className="row colorblue">
-					  <div className="col-md-9">Качество контакта</div>
-					  <div className="col-md-3">{this.state.qualityLevel}</div>
-				  </div>
-				  <div className="row colorblue">
-					  <div className="col-md-9">Среднее количество контактов за Программу</div>
-					  <div className="col-md-3">~ {this.state.contactsQuantity}</div>
-				  </div>
 
 
 				  <hr/>

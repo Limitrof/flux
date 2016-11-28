@@ -99,9 +99,9 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            price: 65,
            stocked: true,
            name: 'Перевод и адаптация технических/ обучающих текстов (до 2000 знаков)',
-           arrOfVlue:3,
+           arrOfVlue:1,
            formula: 'inputvalue',
-           multinumber:3,
+           multinumber:1,
            needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
@@ -125,7 +125,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
        },
        {
            id:3,
-           unicname:'price_for_banner',
+           unicname:'price_banner',
            indexid:33,
            usehiddencheckbox:false,
            ischecked:false,
@@ -142,20 +142,20 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            multinumber:1,
            needit: false, min:0,multinumber_source_unicname:'none'
        },  {
-           id:1,
-           unicname:'distributorQuantiy',
-           indexid:2,
-           usehiddencheckbox:true,
+           id:26,
+           unicname:'delivery',
+           indexid:47,
+           usehiddencheckbox:false,
            ischecked:false,
            category: 'PR',
            showwordprefix:'',
-           showwordsuffix:'',
-           comment:'кол-во дистрибьюторов',
+           showwordsuffix:'€',
+           comment:'E-mail рассылка по базе AGV',
            baseprice: 250,
            price: 250,
-           stocked: false,
-           name: 'Укажите количество дистрибъюторов',
-           arrOfVlue:[{valOf:1,strInfo:'1000'},{valOf:2,strInfo:'2000'},{valOf:3,strInfo:'3000'},{valOf:4,strInfo:'4000'},{valOf:5,strInfo:'5000'},{valOf:6,strInfo:'6000'},{valOf:7,strInfo:'7000'},{valOf:8,strInfo:'8000'},{valOf:9,strInfo:'9000'},{valOf:10,strInfo:'10 000'},{valOf:11,strInfo:'11 000'},{valOf:12,strInfo:'12 000'},{valOf:13,strInfo:'13 000'},{valOf:14,strInfo:'14 000'},{valOf:15,strInfo:'15 000'},{valOf:16,strInfo:'16 000'},{valOf:17,strInfo:'17 000'},{valOf:18,strInfo:'18 000'},{valOf:19,strInfo:'19 000'}],
+           stocked: true,
+           name: 'E-mail рассылка по базе AGV (СТО и автомагазины, 19000)',
+           arrOfVlue:[{valOf:1,strInfo:'1000 адресатов'},{valOf:2,strInfo:'2000 адресатов'},{valOf:3,strInfo:'3000 адресатов'},{valOf:4,strInfo:'4000 адресатов'},{valOf:5,strInfo:'5000 адресатов'},{valOf:6,strInfo:'6000 адресатов'},{valOf:7,strInfo:'7000 адресатов'},{valOf:8,strInfo:'8000 адресатов'},{valOf:9,strInfo:'9000 адресатов'},{valOf:10,strInfo:'10 000 адресатов'},{valOf:11,strInfo:'11 000 адресатов'},{valOf:12,strInfo:'12 000 адресатов'},{valOf:13,strInfo:'13 000 адресатов'},{valOf:14,strInfo:'14 000 адресатов'},{valOf:15,strInfo:'15 000 адресатов'},{valOf:16,strInfo:'16 000 адресатов'},{valOf:17,strInfo:'17 000 адресатов'},{valOf:18,strInfo:'18 000 адресатов'},{valOf:19,strInfo:'19 000 адресатов'}],
            formula: 'select',
            multinumber:1,
            needit: false, min:0,multinumber_source_unicname:'none'
@@ -195,9 +195,11 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
         items.map(function(currentRow,index) {
             if(currentRow.unicname == valueandidinobj.id || currentRow.multinumber_source_unicname == valueandidinobj.id ){
                 //в случае если изменен формат доставки
-                if(currentRow.unicname == "delivery" && currentRow.unicname == valueandidinobj.id ){
+                /*if(currentRow.unicname == "delivery" && currentRow.unicname == valueandidinobj.id ){
+                    /!*
                     items[index].price=valueandidinobj.value;
                     items[index].baseprice=valueandidinobj.value;
+                    *!/
 					//МЕНЯЕМ ЗНАЧЕНИЕ БАЗОВОЙ ЦЕНЫ
 				//во всех остальных случаях сохраняем новое значение в multinumber to do - возможно лучше хранить
 					// занчения в переменных
@@ -207,9 +209,9 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
                     contactsQuantity = usersQuantity * valueandidinobj.value * 2;
                     //alert("contactsQuantity="+contactsQuantity);
                     items[index].multinumber=valueandidinobj.value;
-                } else {
+                } else {*/
                     items[index].multinumber=valueandidinobj.value;
-				}
+				/*}*/
             }
         });
         this.items = items;//ОЧЕНЬ важно обновить хранилище
