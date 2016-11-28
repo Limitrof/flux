@@ -2,6 +2,10 @@
 .main-label-text{
 height:100%;
 /*	border:1px solid black;*/
+	display:block;
+}
+.display-linebreak {
+	white-space: pre-line;
 }
 .topm10{
 	height: inherit;

@@ -471,7 +471,7 @@ else {usersControlFormula.push(<div></div>);}
 				<div className="row" key={ listItem.id } title={listItem.comment}>
 					<div className="col-md-5 bcgray">
                         {useOrNotCheckbox}
-						<label htmlFor={listItem.unicname}>{listItem.name}</label>
+						<label className={(listItem.name.indexOf('\n')>0?'display-linebreak':'')} htmlFor={listItem.unicname}>{listItem.name}</label>
 					</div>
 
 					<div className={hideinputonphone}>{usersControlFormula}</div>
