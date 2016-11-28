@@ -1,7 +1,13 @@
 /*\\\\\\\\\\\\\\\\\\\\\\\checkbox*/
 
 .main-label-text {
-  padding-left: 20px;
+  height: 100%;
+  /*	border:1px solid black;*/
+}
+
+.topm10 {
+  height: inherit;
+  margin-top: -10px;
 }
 
 *,
@@ -12,6 +18,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.mtopmin17 {
+  /*margin-top:-17px;*/
+  vertical-align: middle;
+  height: 100%;
 }
 
 .labelpos {

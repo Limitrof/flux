@@ -474,8 +474,12 @@ else {usersControlFormula.push(<div></div>);}
             return <div>{blockTitle}
 				<div className="row" key={ listItem.id } title={listItem.comment}>
 					<div className="col-md-5 bcgray">
-                        {useOrNotCheckbox}
-						<label className="main-label-text"  htmlFor={listItem.unicname}>{listItem.name}</label>
+						<div className="row mtopmin17">
+							<div className="col-md-3">{useOrNotCheckbox}</div>
+							<div className="col-md-9 topm10">
+								<label className="main-label-text"  htmlFor={listItem.unicname}>{listItem.name}</label>
+							</div>
+						</div>
 					</div>
 
 					<div className={hideinputonphone}>{usersControlFormula}</div>
