@@ -446,6 +446,10 @@ else {usersControlFormula.push(<div></div>);}
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
         lastCategory = listItem.category;
 
+
+
+
+//особый рендер для автоматического рассчета бюджета
         if(listItem.unicname == 'budget') {
             if(currentLocation != -1){
                 return <div>{blockTitle}

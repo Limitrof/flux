@@ -5,6 +5,17 @@ width:1280px;
 margin:0 auto;
 	background-color: #f0f4f7;
 }
+/* checkbox bigger */
+input[type=checkbox]
+{
+	/* Double-sized Checkboxes */
+	-ms-transform: scale(2); /* IE */
+	-moz-transform: scale(2); /* FF */
+	-webkit-transform: scale(2); /* Safari and Chrome */
+	-o-transform: scale(2); /* Opera */
+	padding: 10px;
+}
+
 /* create buttons on tabs*/
 /* .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover { 

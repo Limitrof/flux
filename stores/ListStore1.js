@@ -158,8 +158,17 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 				  price: 0, 
 				  stocked: true,
 				  name: 'География программы',	  
-				  arrOfVlue:[{valOf:4,strInfo:'Украина, Россия, Казахстан'},{valOf:4,strInfo:'Украина, Россия,' +
-                  ' Беларусь'},{valOf:1,strInfo:'Беларусь'},{valOf:2,strInfo:'Россия'},{valOf:2,strInfo:'Украина'},{valOf:3,strInfo:'Казахстан'},{valOf:4,strInfo:'Другие страны'},],
+				  arrOfVlue:[
+                      {valOf:4,strInfo:'Беларусь, Казахстан, Россия, Украина'},
+                      {valOf:4,strInfo:'Беларусь, Россия, Украина'},
+                      {valOf:4,strInfo:'Беларусь, Казахстан, Россия'},
+                      {valOf:4,strInfo:'Беларусь, Казахстан, Украина'},
+                      {valOf:4,strInfo:'Казахстан, Россия, Украина'},
+                      {valOf:1,strInfo:'Беларусь'},
+                      {valOf:2,strInfo:'Россия'},
+                      {valOf:2,strInfo:'Украина'},
+                      {valOf:3,strInfo:'Казахстан'},
+                      {valOf:4,strInfo:'Другие страны'},],
 				  formula: 'select',
 				  multinumber:1, 
 				  needit: false, min:0,multinumber_source_unicname:'none'
