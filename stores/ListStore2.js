@@ -91,7 +91,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:33,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'Marketing:',
+           category: 'PR',
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'перевод и адаптация технических/ обучающих текстов (до 2000 знаков)',
@@ -110,7 +110,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:33,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'Marketing:',
+           category: 'PR',
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'Написание профессиональных пресс-релизов, новостей, медиа-релизов (до 2000 знаков)',
@@ -129,7 +129,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:33,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'Marketing:',
+           category: 'PR',
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'Создание анимированного баннера',
@@ -147,7 +147,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:2,
            usehiddencheckbox:true,
            ischecked:false,
-           category: 'Вводные данные: общая информация о программе лояльности',
+           category: 'PR',
            showwordprefix:'',
            showwordsuffix:'',
            comment:'кол-во дистрибьюторов',
@@ -371,7 +371,7 @@ addAndRecountAll: function(){
                 case "Платформа для Программы лояльности:":
                         billPlatform += items[index].price*items[index].multinumber;
                     break
-                case "Marketing:":
+                case "PR":
                     if(currentRow.unicname=='price_for_banner'){
                         billDesign =  billDesign + items[index].price*items[index].multinumber + 30;
 

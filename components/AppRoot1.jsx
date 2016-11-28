@@ -1,7 +1,7 @@
 // AppRoot.jsx
 import React from 'react';
-import ListStore from '../stores/ListStore2';
-import AppDispatcher from '../dispatcher/AppDispatcher2';
+import ListStore from '../stores/ListStore1';
+import AppDispatcher from '../dispatcher/AppDispatcher1';
 
 // Sub components
 import NewItemForm from './NewItemForm';
@@ -133,7 +133,7 @@ let getAllSum = () => {
 
 
 
-class AppRoot2 extends React.Component {
+class AppRoot1 extends React.Component {
   
   // Method to setState based upon Store changes
   _onChange() {
@@ -409,9 +409,9 @@ else {usersControlFormula.push(<div></div>);}
 				}
 		
 				//show or hide select or input
-				var hideinputonphone = "col-md-3 bcgray";
+				var hideinputonphone = "col-md-4 bcgray";
 				if (listItem.formula == 'none') {
-					hideinputonphone = "col-md-3 bcgray hidden-sm hidden-xs";
+					hideinputonphone = "col-md-4 bcgray hidden-sm hidden-xs";
 				}		
 				//show or hide price
 				var hidepriceonphone = "col-md-3 bcgray";
@@ -429,7 +429,7 @@ else {usersControlFormula.push(<div></div>);}
 							  case "Платформа для Программы лояльности:":
                                   blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billPlatform} €</div></div>);
 								  break;
-							  case "PR":
+							  case "Дизайн key visual:":
                                   blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDesign} €</div></div>);
 								  break;
 
@@ -440,7 +440,8 @@ else {usersControlFormula.push(<div></div>);}
 				 } else if( (arrSize-1) == index){
 
                      blockItogo.push(<div className="row">
-				<div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billBonus} €</div>
+				<div className="col-md-7">*Призовой фонд
+					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billBonus} €</div>
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
         lastCategory = listItem.category;
@@ -449,7 +450,7 @@ else {usersControlFormula.push(<div></div>);}
             if(currentLocation != -1){
                 return <div>{blockTitle}
 					<div className="row" key={ listItem.id } title={listItem.comment}>
-						<div className="col-md-6 bcgray">
+						<div className="col-md-5 bcgray">
                             {useOrNotCheckbox}
 							<label htmlFor={listItem.unicname}>{listItem.name}</label>
 						</div>
@@ -468,7 +469,7 @@ else {usersControlFormula.push(<div></div>);}
         }else {
             return <div>{blockTitle}
 				<div className="row" key={ listItem.id } title={listItem.comment}>
-					<div className="col-md-6 bcgray">
+					<div className="col-md-5 bcgray">
                         {useOrNotCheckbox}
 						<label htmlFor={listItem.unicname}>{listItem.name}</label>
 					</div>
@@ -497,7 +498,7 @@ else {usersControlFormula.push(<div></div>);}
 	  <div  className="row" key="mainform" id="reactroot">
 		  <div className="col-md-8">{itemHtml}</div>
 		  <div className="col-md-4">
-			  <div id="staticPrice2">
+			  <div id="staticPrice1">
 
 				  <div className="row">
 					  <div className="col-md-9 colorblue">Результаты</div>
@@ -664,4 +665,4 @@ else {usersControlFormula.push(<div></div>);}
   
 }
 
-export default AppRoot2;
+export default AppRoot1;
