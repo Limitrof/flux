@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Easy Flux Example</title>
+	<title>agv-aftermarket</title>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,6 +11,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="dist/style.css"/>
+	<link rel="stylesheet" media="print" href="dist/print.css"/>
 
 	<script>
 
@@ -134,6 +135,7 @@
 
 </head>
 <body>
+<div id="titleprint"><img id="logoImg" src="img/titlepint.jpg"/></div>
 <!--div style="position: fixed;top:200px;left:100px;background-image: url('labut.gif');width:80px;height:50px;"></div-->
 <div class="xxx" data-name="quantity" data-value="10" data-id="1"></div>
 <div id="longBlueRow" class="row">
@@ -145,7 +147,7 @@
 	</div>
 </div>
 <div id="longImg"></div>
-<div class="tabbable tabbablefirst">
+<div id="mainTab" class="tabbable tabbablefirst">
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#tab10" data-toggle="tab">AGV</a></li>
 		<li><a href="#tab20" data-toggle="tab">AGV lab</a></li>
@@ -163,7 +165,7 @@
 				</ul>
 				<div class="tab-content">
 					<div class="tab-pane" id="tab100">
-						<p style="margin-top:20px;">Marketing</p>
+						<p style="margin-top:10px;"></p>
 						<div id="app-root2">
 						</div>
 					</div>
@@ -171,18 +173,18 @@
 						<!--------------------------------third tab START-------------------->
 						<div class="tabbable">
 							<ul class="nav nav-tabs third-level">
-								<li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li>
+								<!--li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li-->
 								<li class="active"><a href="#tab2000" data-toggle="tab">Самостоятельный расчет</a></li>
 							</ul>
 							<div class="tab-content">
-								<div class="tab-pane" id="tab1000">
+								<!--div class="tab-pane" id="tab1000">
 									<p>Расчет от бюджета</p>
 									<div id="app-root1">
 
 									</div>
-								</div>
+								</div-->
 								<div class="tab-pane active" id="tab2000">
-									<p style="margin-top:20px;">Самостоятельный расчет</p>
+									<!--p style="margin-top:20px;">Самостоятельный расчет</p-->
 									<div id="app-root">
 									</div>
 								</div>
@@ -210,8 +212,9 @@
 		</div>
 	</div>
 </div>
-
-
+<div style="width:30%;margin:10px auto;">
+<button class="btn btn-primary hipstr" type="button" onclick="window.print()" />Распечатать</button>
+</div>
 <!-- bottom-->
 <div id="longBlueRowBottom" class="row">
 	<div class="col-md-12">

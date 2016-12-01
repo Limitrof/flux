@@ -435,7 +435,7 @@ else {usersControlFormula.push(<div></div>);}
 
 							}
 //ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
-                      blockTitle.push(<div><div className="row bcwhite margintop80"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
+                      blockTitle.push(<div><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
 					
 				 } else if( (arrSize-1) == index){
 

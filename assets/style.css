@@ -1,4 +1,9 @@
-/*\\\\\\\\\\\\\\\\\\\\\\\checkbox*/
+#titleprint{
+	/*display:none;*/
+	background-image:url('../img/titlepint.jpg');
+	width:100%;
+	height:300px;
+}
 .main-label-text{
 height:100%;
 /*	border:1px solid black;*/
@@ -356,6 +361,9 @@ padding-top: 5px;
 }
 .margintop80{
 margin-top:80px;
+}
+.margintop10{
+	margin-top:10px;
 }
 #longBlueRow{
 background-color:#033860;
