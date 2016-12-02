@@ -1,8 +1,14 @@
+.grayinrow{
+	background-color: #dfe2e5;
+	padding-bottom:10px;
+}
 #titleprint{
-	/*display:none;*/
+	display:none;
 	background-image:url('../img/titlepint.jpg');
 	width:100%;
 	height:300px;
+}
+#staticPriceBrandPromo{
 }
 .main-label-text{
 height:100%;
@@ -274,7 +280,7 @@ margin:20px 0 0 60px;
 display:block;
 float: left;
 }
-#staticPrice,#staticPrice1,#staticPrice2{
+#staticPrice,#staticPrice1,#staticPrice2,#staticPriceBrandPromo{
 	width:100%;
 	height:320px !important;
 	margin-top:80px;
@@ -353,6 +359,11 @@ text-align: center;
 .width120{
 width: 120px;
 text-align: center;
+}
+.width120-center{
+width: 120px;
+text-align: center;
+	margin: 0 auto;
 }
 .blueColor_h80_pt5{
 color:#438bd5;

@@ -8,6 +8,11 @@
     position:fixed !important;
     top:150px !important;
 }
+#staticPriceBrandPromo{
+    max-width:1200px;
+    position:fixed !important;
+    top:150px !important;
+}
 .hipstr,.col-md-8,.nav .nav-tabs,.nav-tabs li,#longBlueRow{
     display:none;
 }

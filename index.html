@@ -125,6 +125,38 @@
                     $('#staticPrice2').css({"margin-top":"10px","top":"0px","height":"470px"});
                 }
 
+                if($('#staticPriceBrandPromo').offset().left > 100)
+                {
+                    $('#staticPriceBrandPromo').css("height","300px");
+                    var basePosition = $('#app-brand-promo').offset().top;
+                    var startPosition = $('#staticPriceBrandPromo').offset().top;
+                    var bottomPosition = $('#longBlueRowBottom').offset().top;
+                    //console.log("bottomPosition="+bottomPosition);
+
+                    var staticPositionPlusHeight = $('#staticPriceBrandPromo').offset().top +  410;
+					/* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
+					 console.log ($('#staticPrice').offset().top);
+					 console.log ($(window).scrollTop()); */
+                    //if position smaller then current top & currentPos + Height < than longBlueRowBottom
+                    var currStaticIfNotMove = $('#staticPriceBrandPromo').offset().top - $(window).scrollTop();
+                    if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
+                        //if ( currStaticIfNotMove < 100){
+                        //console.log('bzzz '+ currStaticIfNotMove);
+                        var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                        $('#staticPriceBrandPromo').offset({"top":forNewPos});
+                    }
+                    $('#staticPriceBrandPromo').offset().top
+                    if ( ( $('#staticPriceBrandPromo').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                        //console.log("left buttom position");
+                        var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                        $('#staticPriceBrandPromo').offset({"top":forNewPos});
+                    }
+                } else {
+                    $('#staticPriceBrandPromo').css({"margin-top":"10px","top":"0px","height":"470px"});
+                }
+
             }
             $( window ).resize(moveBillContainer);
             $( window ).scroll(moveBillContainer);
@@ -135,7 +167,7 @@
 
 </head>
 <body>
-<div id="titleprint"><img id="logoImg" src="img/titlepint.jpg"/></div>
+<div id="titleprint"><img src="img/titlepint.jpg"/></div>
 <!--div style="position: fixed;top:200px;left:100px;background-image: url('labut.gif');width:80px;height:50px;"></div-->
 <div class="xxx" data-name="quantity" data-value="10" data-id="1"></div>
 <div id="longBlueRow" class="row">
@@ -158,9 +190,10 @@
 			<div class="tabbable">
 				<ul class="nav nav-tabs second-level">
 					<li><a href="#tab100" data-toggle="tab">Marketing</a></li>
-					<li class="active"><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li>
+					<!-- li class="active"><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li-->
+					<li><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li>
 					<li><a href="#tab300" data-toggle="tab">Direct Research</a></li>
-					<li><a href="#tab400" data-toggle="tab">POS Products 1</a></li>
+					<li class="active"><a href="#tab400" data-toggle="tab">Brand Promotion</a></li>
 					<li><a href="#tab500" data-toggle="tab">POS Products 2</a></li>
 				</ul>
 				<div class="tab-content">
@@ -169,12 +202,12 @@
 						<div id="app-root2">
 						</div>
 					</div>
-					<div class="tab-pane active" id="tab200">
+					<div class="tab-pane" id="tab200">
 						<!--------------------------------third tab START-------------------->
 						<div class="tabbable">
 							<ul class="nav nav-tabs third-level">
 								<!--li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li-->
-								<li class="active"><a href="#tab2000" data-toggle="tab">Самостоятельный расчет</a></li>
+								<li><a href="#tab2000" data-toggle="tab">Самостоятельный расчет</a></li>
 							</ul>
 							<div class="tab-content">
 								<!--div class="tab-pane" id="tab1000">
@@ -183,7 +216,7 @@
 
 									</div>
 								</div-->
-								<div class="tab-pane active" id="tab2000">
+								<div class="tab-pane" id="tab2000">
 									<!--p style="margin-top:20px;">Самостоятельный расчет</p-->
 									<div id="app-root">
 									</div>
@@ -195,8 +228,9 @@
 					<div class="tab-pane" id="tab300">
 						Direct Research
 					</div>
-					<div class="tab-pane" id="tab400">
-						POS Products 1
+					<div class="tab-pane active" id="tab400">
+
+						<div id="app-brand-promo"></div>
 					</div>
 					<div class="tab-pane" id="tab500">
 						POS Products 2
