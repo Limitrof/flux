@@ -289,13 +289,97 @@ class AppBrandPromo extends React.Component {
         var promopart = [];
         switch (listItem.category) {
             case "Пакет “А” Optimal online (B2B), 3 месяца":
-                promopart.push('for first!<hr/>');
+                promopart.push(
+				<div className="row grayinrow border-bottom">
+					<div className="col-md-9 grayinrow " >
+						<div className="row heigth40 text-center" >
+							<div className="col-md-4 bggraycol border-right ">Ресурс</div>
+							<div className="col-md-6 bggraycol border-right">Формат</div>
+						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
+						</div>
+						<div className="row heigth90" >
+							<div className="col-md-4 text bggraycol border-right imgpadding text-center">
+								<img className="inheritcenterimg" src="img/infoparts.png"/>
+								<span>online</span>
+							</div>
+							<div className="col-md-6 bggraycol border-right">
+								<ul>
+									<li>баннер* 785х120 рх в ротации 1/3</li>
+									<li>написание и размещение статей**</li>
+									<li>e-mail digest</li>
+									<li>репост статей в соц. сетях</li>
+								</ul>
+							</div>
+							<div className="col-md-2 bggraycol border-left">
+								<ul>
+									<li>1</li>
+									<li>6</li>
+									<li>6</li>
+									<li>6</li>
+								</ul>
+							</div>
+						</div>
+						<div className="row heigth90" >
+							<div className="col-md-4 bggraycol border-right imgpadding text-center"><img className="inheritcenterimg" src="img/kuzov.png"/><span>offline</span></div>
+							<div className="col-md-6 bggraycol border-right ">
+								<ul>
+									<li>баннер 217 х 358 рх на главной</li>
+									<li>размещение статьи</li>
+								</ul>
+							</div>
+							<div className="col-md-2 bggraycol border-left">
+								<ul>
+									<li>1</li>
+									<li>3</li>
+								</ul>
+							</div>
+						</div>
+						<div className="row heigth90" >
+							<div className="col-md-4 bggraycol border-right imgpadding text-center"><img className="inheritcenterimg" src="img/autokomp.png"/><span>offline</span></div>
+							<div className="col-md-6 bggraycol border-right ">	<ul>
+								<li>баннер 1052 х 90 рх на главной</li>
+								<li>размещение статьи</li>
+							</ul>
+							</div>
+							<div className="col-md-2 bggraycol border-left">
+								<ul>
+									<li>1</li>
+									<li>3</li>
+								</ul>
+							</div>
+						</div>
+						<div className="row heigth90" >
+							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center"><img className="inheritcenterimg" src="img/abs.png"/><span>offline</span></div>
+							<div className="col-md-6 bggraycol-nobottom border-right ">
+								<ul>
+									<li>баннер сквозной 280х190 рх</li>
+									<li>статья в топ-ротации с баннером на главной</li>
+								</ul>
+							</div>
+							<div className="col-md-2 bggraycol-nobottom border-left">
+								<ul>
+									<li>1</li>
+									<li>3</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				<div className="col-md-3 text-center bggraycolinher">
+					<div className="fontblue">
+						Охват ЦА <br/><span className="size24">{listItem.name}</span>.
+					</div>
+					<br/>
+					<div className="fontgreen">
+						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>.
+					</div>
+				</div>
+			</div>);
                 break
             case "Пакет “B” Online + Ofline (B2B), 3 месяца":
-                promopart.push('for 2!<hr/>');
+                promopart.push(<div>123for 2!<hr/></div>);
                 break
             case "Пакет “С” Online + Ofline VIP (B2B), 3 месяца":
-                promopart.push('for 3!<hr/>');
+                promopart.push(' 3!<hr/>');
                 break
             case "Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца":
                 promopart.push('for 4!<hr/>');
@@ -306,22 +390,25 @@ class AppBrandPromo extends React.Component {
 
 
             return <div>
-				<div>
+
 					<div className="row bcwhite margintop10">
-						<div className="col-md-12 blueColor_h80_pt5">
+						<div className="col-md-12 blueColor_pt5">
 							<h3>{listItem.category}</h3>
+							Охват ЦА {listItem.name}. Стоимость контакта {listItem.comment}.
 						</div>
 					</div>
-				</div>
 
-<div>
+
+
 	{promopart}
-</div>
+
 
 				<div className="row grayinrow">
-					<div className="col-md-7">*Призовой фонд
-						(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div>
-					<div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{listItem.price} €</div>
+
+					<div className="col-md-3 tiny-text">* изготовление банера включено</div>
+					<div className="col-md-4 tiny-text">** авторство AGV/клиент - 50/50</div>
+					<div className="col-md-2 itogo">ИТОГО:</div>
+					<div className="col-md-3 itogo_sell">{listItem.price} €</div>
 				</div>
 
 				<div className="row grayinrow">
