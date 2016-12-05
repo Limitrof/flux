@@ -110,7 +110,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:33,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'Пакет “B” Online + Ofline (B2B), 3 месяца',
+           category: 'Пакет “B” Online + Offline (B2B), 3 месяца',
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'0,068',
@@ -129,7 +129,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            indexid:33,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'Пакет “С” Online + Ofline VIP (B2B), 3 месяца',
+           category: 'Пакет “С” Online + Offline VIP (B2B), 3 месяца',
            showwordprefix:'',
            showwordsuffix:'€',
            comment:'0,065',
@@ -370,10 +370,10 @@ addAndRecountAll: function(){
                 case "Пакет “А” Optimal online (B2B), 3 месяца":
                     billDev += items[index].price*items[index].multinumber;
                     break
-                case "Пакет “B” Online + Ofline (B2B), 3 месяца":
+                case "Пакет “B” Online + Offline (B2B), 3 месяца":
                         billPlatform += items[index].price*items[index].multinumber;
                     break
-                case "Пакет “С” Online + Ofline VIP (B2B), 3 месяца":
+                case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
                         billDesign += items[index].price*items[index].multinumber;
                     break
                 case "Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца":
