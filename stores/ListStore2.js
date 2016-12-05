@@ -415,7 +415,16 @@ addAndRecountAll: function(){
 
 },
 
-
+    clearCategory: function(categoryName){
+        let items = this.items;
+        items.map(function(currentRow,index) {
+            if (items[index].category == categoryName){
+                items[index].ischecked = false;
+            }
+        });
+        this.items = items;
+        this.addAndRecountAll();
+    },
 
   // Emit Change event
   emitChange: function(){

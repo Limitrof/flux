@@ -239,7 +239,14 @@ class AppRoot2 extends React.Component {
             valuebudget: valuebudget
         });
 	}
-
+    cleanCategory(e){
+        //addSumItem
+        let category = e.target.dataset.id;
+        AppDispatcher.dispatch({
+            action: 'clean-category',
+            category: category
+        });
+    }
 
   addToSum(e){
 	 //addSumItem
@@ -489,7 +496,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <div className="row">
 					  <div className="col-md-9">PR</div>
-					  <div className="col-md-3">{this.state.billDesign} €</div>
+					  <div className="col-md-3">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="PR" src="/img/clear.png" /></div>
 				  </div>
 
 
@@ -550,7 +557,7 @@ else {usersControlFormula.push(<div></div>);}
 	}
 	
 		setBudgetInStateOnly(indexinarray,event){
-			alert("budget");
+		//	alert("budget");
 		/*		  var valueForBudget = event.target.value;
 		   	this.setState({ budget: valueForBudget });
 		   	this.setState({ allAmount: 0 });
@@ -567,7 +574,7 @@ else {usersControlFormula.push(<div></div>);}
 	}	
 	
 	setBannerQuantiy(indexinarray,event){
-		alert("Banner");
+		//alert("Banner");
 /* 		 var valueForBannerQuantity = event.target.value;
 		 var newArrForFormula = this.state.resultPrices;
 		 newArrForFormula[indexinarray].multinumber = valueForBannerQuantity;

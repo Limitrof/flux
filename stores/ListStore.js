@@ -675,6 +675,34 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
         this.items = items;
         this.addAndRecountAll();
     },
+    clearCategory: function(categoryName){
+        let items = this.items;
+        items.map(function(currentRow,index) {
+            if (items[index].category == categoryName){
+                items[index].ischecked = false;
+            }
+              /*  switch (categoryName) {
+                    items[index].ischecked = false;
+                case "Разработка программы":
+                    break;
+                case "Платформа для Программы лояльности:":
+                    items[index].ischecked = false;
+                    break;
+                case "Дизайн key visual:":
+                    items[index].ischecked = false;
+                    break;
+                case "Призовой фонд":
+                    items[index].ischecked = false;
+            }*/
+
+
+    });
+
+        this.items = items;
+        this.addAndRecountAll();
+
+
+    },
     //calculate budget
     culculateBudget: function(value){
         let levelQuality = this.qualityLevel;

@@ -14,8 +14,15 @@ AppDispatcher.register((payload) => {
   let id = payload.id;
   //budget
     let valuebudget = payload.valuebudget;
+  //clean category
+    let category = payload.category;
 
   switch(action) {
+      // clean category
+      case 'clean-category':
+          ListStore.clearCategory(category);
+          break;
+
       // Calculate budget
       case 'set-budget':
           ListStore.culculateBudget(valuebudget);
