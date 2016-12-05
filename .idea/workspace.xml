@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="833f9154-7f50-43b9-87c4-dc2843f634d8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/AppRoot.jsx" afterPath="$PROJECT_DIR$/components/AppRoot.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/AppRoot2.jsx" afterPath="$PROJECT_DIR$/components/AppRoot2.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcher.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcher1.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcher1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcher2.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcher2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/AppBrandPromo.jsx" afterPath="$PROJECT_DIR$/components/AppBrandPromo.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js" afterPath="$PROJECT_DIR$/dist/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.min.js" afterPath="$PROJECT_DIR$/dist/bundle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/style.css" afterPath="$PROJECT_DIR$/dist/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStore.js" afterPath="$PROJECT_DIR$/stores/ListStore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStore1.js" afterPath="$PROJECT_DIR$/stores/ListStore1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStore2.js" afterPath="$PROJECT_DIR$/stores/ListStore2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStoreBrandPromo.js" afterPath="$PROJECT_DIR$/stores/ListStoreBrandPromo.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -48,7 +39,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListStore1.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppBrandPromo.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/AppBrandPromo.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="594" column="62" lean-forward="false" selection-start-line="594" selection-start-column="62" selection-end-line="594" selection-end-column="62" />
+              <folding>
+                <element signature="e#15#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListStore1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stores/ListStore1.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
@@ -90,16 +93,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppDispatcher1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AppDispatcher2.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher2.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,7 +106,7 @@
       <file leaf-file-name="ListStoreBrandPromo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stores/ListStoreBrandPromo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="548">
               <caret line="402" column="6" lean-forward="false" selection-start-line="402" selection-start-column="6" selection-end-line="402" selection-end-column="6" />
               <folding />
             </state>
@@ -209,7 +202,6 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/dispatcher/AppBrandPromo.js" />
         <option value="$PROJECT_DIR$/assets/print.css" />
-        <option value="$PROJECT_DIR$/components/AppBrandPromo.jsx" />
         <option value="$PROJECT_DIR$/assets/style.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/components/AppRoot.jsx" />
@@ -222,6 +214,7 @@
         <option value="$PROJECT_DIR$/stores/ListStoreBrandPromo.js" />
         <option value="$PROJECT_DIR$/components/AppRoot2.jsx" />
         <option value="$PROJECT_DIR$/stores/ListStore2.js" />
+        <option value="$PROJECT_DIR$/components/AppBrandPromo.jsx" />
       </list>
     </option>
   </component>
@@ -491,12 +484,12 @@
       <workItem from="1480496373969" duration="2955000" />
       <workItem from="1480586371114" duration="10647000" />
       <workItem from="1480669509290" duration="22554000" />
-      <workItem from="1480924124029" duration="5651000" />
+      <workItem from="1480924124029" duration="6385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129064000" />
+    <option name="totallyTimeSpent" value="129798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="187" y="15" width="1501" height="1056" extended-state="0" />
@@ -799,18 +792,8 @@
         <state relative-caret-position="-1903">
           <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/AppBrandPromo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2697">
-          <caret line="292" column="59" lean-forward="false" selection-start-line="292" selection-start-column="59" selection-end-line="292" selection-end-column="59" />
-          <folding>
-            <element signature="e#15#41#0" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -843,14 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stores/ListStoreBrandPromo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="402" column="6" lean-forward="false" selection-start-line="402" selection-start-column="6" selection-end-line="402" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -912,6 +887,24 @@
         <state relative-caret-position="149">
           <caret line="822" column="0" lean-forward="false" selection-start-line="822" selection-start-column="0" selection-end-line="831" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stores/ListStoreBrandPromo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="402" column="6" lean-forward="false" selection-start-line="402" selection-start-column="6" selection-end-line="402" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/AppBrandPromo.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="594" column="62" lean-forward="false" selection-start-line="594" selection-start-column="62" selection-end-line="594" selection-end-column="62" />
+          <folding>
+            <element signature="e#15#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
