@@ -544,7 +544,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             baseprice: 0,
             price: 600,
             stocked: true,
-            name: 'Поощрения сотрудников дистрибьюторов/супервайзеров',
+            name: 'Поощрения сотрудников дистрибьюторов',
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,

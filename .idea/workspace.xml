@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ListStore.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ListStore.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="640" column="64" lean-forward="false" selection-start-line="640" selection-start-column="64" selection-end-line="640" selection-end-column="64" />
+            <state relative-caret-position="146">
+              <caret line="671" column="18" lean-forward="false" selection-start-line="671" selection-start-column="18" selection-end-line="671" selection-end-column="18" />
               <folding>
                 <element signature="e#16#52#0" expanded="true" />
               </folding>
@@ -79,10 +79,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="566">
               <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="21" />
               <folding />
             </state>
@@ -133,7 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>blueColor_h80_pt5</find>
       <find>bggraycol</find>
       <find>img</find>
       <find>addToSum</find>
@@ -163,6 +162,7 @@
       <find>*3</find>
       <find>vinners_quantity</find>
       <find>usersQuantity</find>
+      <find>супервайзеров</find>
     </findStrings>
     <replaceStrings>
       <replace>needit: false, multinumber_source_unicname:none</replace>
@@ -480,16 +480,16 @@
       <workItem from="1480496373969" duration="2955000" />
       <workItem from="1480586371114" duration="10647000" />
       <workItem from="1480669509290" duration="22554000" />
-      <workItem from="1480924124029" duration="13073000" />
+      <workItem from="1480924124029" duration="14974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136486000" />
+    <option name="totallyTimeSpent" value="138387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="426" y="0" width="1227" height="1056" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25020644" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -877,14 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
@@ -895,11 +887,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="640" column="64" lean-forward="false" selection-start-line="640" selection-start-column="64" selection-end-line="640" selection-end-column="64" />
+        <state relative-caret-position="146">
+          <caret line="671" column="18" lean-forward="false" selection-start-line="671" selection-start-column="18" selection-end-line="671" selection-end-column="18" />
           <folding>
             <element signature="e#16#52#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
