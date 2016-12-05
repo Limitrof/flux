@@ -9,6 +9,7 @@
 	height:300px;
 }
 #staticPriceBrandPromo{
+	
 }
 .main-label-text{
 height:100%;
@@ -294,6 +295,8 @@ float: left;
 	padding:5px;
 	background-color:white;
 }
+
+
 #staticPrice .col-md{
 	top:80px;
 }

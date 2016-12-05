@@ -482,7 +482,7 @@ else {usersControlFormula.push(<div></div>);}
 			  <div id="staticPrice2">
 
 				  <div className="row">
-					  <div className="col-md-9 colorblue">Результаты</div>
+					  <div className="col-md-9">Результаты</div>
 
 				  </div>
 
