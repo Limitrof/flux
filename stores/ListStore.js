@@ -638,9 +638,11 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             //инициализируем переменные для перерасчета кол-ва учатников на основе нового количества победителей
             // введнных пользователем
             if(currentRow.unicname == valuebyid.id && currentRow.unicname == 'vinners_quantity'){
-                users_quantity = valuebyid.value*3;//
+                users_quantity = parseInt(valuebyid.value*3.333);//
+               // alert("от победителей");
             } else if(currentRow.unicname == valuebyid.id && currentRow.unicname == 'usersQuantity'){
-                vinners_quantity = parseInt(valuebyid.value/3);//valuebyid.value
+                vinners_quantity = parseInt((valuebyid.value/100)*30);//valuebyid.value
+               // alert("от участников");
                 simple_users_quantity = valuebyid.value;
             }
 
@@ -750,7 +752,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
         // 2 (за доставку)
         // + 15 (hidden)
         vinnerQuantity = parseInt((value-simpleSum-3000)/66);
-        usersQuantity = vinnerQuantity*3;
+        usersQuantity = parseInt(vinnerQuantity*3.333);
         items.map(function(currentRow,index) {
             if(currentRow.unicname == 'vinners_quantity' || currentRow.multinumber_source_unicname == 'vinners_quantity'){
                 items[index].multinumber = vinnerQuantity;

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833f9154-7f50-43b9-87c4-dc2843f634d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/style.css" afterPath="$PROJECT_DIR$/assets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStore.js" afterPath="$PROJECT_DIR$/stores/ListStore.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ListStore.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ListStore.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="854" column="25" lean-forward="false" selection-start-line="854" selection-start-column="19" selection-end-line="854" selection-end-column="25" />
+            <state relative-caret-position="166">
+              <caret line="640" column="64" lean-forward="false" selection-start-line="640" selection-start-column="64" selection-end-line="640" selection-end-column="64" />
               <folding>
                 <element signature="e#16#52#0" expanded="true" />
               </folding>
@@ -80,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="281">
@@ -93,7 +92,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="665">
               <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
@@ -134,12 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width12</find>
-      <find>height560</find>
-      <find>ProductSelect</find>
-      <find>grayinrow</find>
-      <find>'</find>
-      <find>80</find>
       <find>blueColor_h80_pt5</find>
       <find>bggraycol</find>
       <find>img</find>
@@ -164,6 +157,12 @@
       <find>change</find>
       <find>heigth90</find>
       <find>paddin</find>
+      <find>nob</find>
+      <find>*</find>
+      <find>/3</find>
+      <find>*3</find>
+      <find>vinners_quantity</find>
+      <find>usersQuantity</find>
     </findStrings>
     <replaceStrings>
       <replace>needit: false, multinumber_source_unicname:none</replace>
@@ -201,7 +200,6 @@
         <option value="$PROJECT_DIR$/dispatcher/AppBrandPromo.js" />
         <option value="$PROJECT_DIR$/assets/print.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/stores/ListStore.js" />
         <option value="$PROJECT_DIR$/stores/ListStore1.js" />
         <option value="$PROJECT_DIR$/dispatcher/AppDispatcher.js" />
         <option value="$PROJECT_DIR$/dispatcher/AppDispatcher1.js" />
@@ -213,6 +211,7 @@
         <option value="$PROJECT_DIR$/components/AppRoot.jsx" />
         <option value="$PROJECT_DIR$/components/AppBrandPromo.jsx" />
         <option value="$PROJECT_DIR$/assets/style.css" />
+        <option value="$PROJECT_DIR$/stores/ListStore.js" />
       </list>
     </option>
   </component>
@@ -233,7 +232,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="677" />
+    <option name="x" value="426" />
     <option name="width" value="1227" />
     <option name="height" value="1056" />
   </component>
@@ -481,15 +480,15 @@
       <workItem from="1480496373969" duration="2955000" />
       <workItem from="1480586371114" duration="10647000" />
       <workItem from="1480669509290" duration="22554000" />
-      <workItem from="1480924124029" duration="11066000" />
+      <workItem from="1480924124029" duration="13073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134479000" />
+    <option name="totallyTimeSpent" value="136486000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="677" y="0" width="1227" height="1056" extended-state="0" />
+    <frame x="426" y="0" width="1227" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -842,14 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -876,16 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="854" column="25" lean-forward="false" selection-start-line="854" selection-start-column="19" selection-end-line="854" selection-end-column="25" />
-          <folding>
-            <element signature="e#16#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/AppBrandPromo.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -901,6 +882,24 @@
         <state relative-caret-position="281">
           <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="640" column="64" lean-forward="false" selection-start-line="640" selection-start-column="64" selection-end-line="640" selection-end-column="64" />
+          <folding>
+            <element signature="e#16#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
