@@ -446,7 +446,7 @@ class AppBrandPromo extends React.Component {
 				</div>
 			</div>);
                 break
-            case "Пакет “С” Online + Ofline VIP (B2B), 3 месяца":
+            case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
                 promopart.push(<div className="row grayinrow border-bottom">
 					<div className="col-md-9 grayinrow " >
 						<div className="row heigth40 text-center" >

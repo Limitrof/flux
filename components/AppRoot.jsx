@@ -240,6 +240,14 @@ class AppRoot extends React.Component {
         });
 	}
 
+    cleanCategory(e){
+        //addSumItem
+        let category = e.target.dataset.id;
+        AppDispatcher.dispatch({
+            action: 'clean-category',
+            category: category
+        });
+    }
 
   addToSum(e){
 	 //addSumItem
@@ -516,22 +524,22 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <div className="row">
 					  <div className="col-md-9">Разработка программы</div>
-					  <div className="col-md-3">{this.state.billDev} €</div>
+					  <div className="col-md-3">{this.state.billDev} € <img onClick={_this.cleanCategory} data-id="Разработка программы" src="/img/clear.png" /></div>
 				  </div>
 
 				  <div className="row">
 					  <div className="col-md-9">Платформа для Программы лояльности</div>
-					  <div className="col-md-3">{this.state.billPlatform} €</div>
+					  <div className="col-md-3">{this.state.billPlatform} € <img onClick={_this.cleanCategory} data-id="Платформа для Программы лояльности:" src="/img/clear.png" /> </div>
 				  </div>
 
 				  <div className="row">
 					  <div className="col-md-9">Дизайн key visual</div>
-					  <div className="col-md-3">{this.state.billDesign} €</div>
+					  <div className="col-md-3">{this.state.billDesign} € <img onClick={_this.cleanCategory} data-id="Дизайн key visual:" src="/img/clear.png" /></div>
 				  </div>
 
 				  <div className="row">
 					  <div className="col-md-9">Призовой фонд*</div>
-					  <div className="col-md-3">{this.state.billBonus} €</div>
+					  <div className="col-md-3">{this.state.billBonus} € <img onClick={_this.cleanCategory} data-id="Призовой фонд" src="/img/clear.png" /></div>
 				  </div>
 
 				  <hr/>

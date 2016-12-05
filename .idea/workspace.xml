@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="833f9154-7f50-43b9-87c4-dc2843f634d8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/body.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/style.css" afterPath="$PROJECT_DIR$/assets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/AppBrandPromo.jsx" afterPath="$PROJECT_DIR$/components/AppBrandPromo.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/AppRoot.jsx" afterPath="$PROJECT_DIR$/components/AppRoot.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/AppRoot2.jsx" afterPath="$PROJECT_DIR$/components/AppRoot2.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcher.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcher.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcher1.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcher1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcher2.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcher2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js" afterPath="$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.js" afterPath="$PROJECT_DIR$/dist/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle.min.js" afterPath="$PROJECT_DIR$/dist/bundle.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/style.css" afterPath="$PROJECT_DIR$/dist/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStore.js" afterPath="$PROJECT_DIR$/stores/ListStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStore1.js" afterPath="$PROJECT_DIR$/stores/ListStore1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStore2.js" afterPath="$PROJECT_DIR$/stores/ListStore2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stores/ListStoreBrandPromo.js" afterPath="$PROJECT_DIR$/stores/ListStoreBrandPromo.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -33,8 +39,8 @@
       <file leaf-file-name="ListStore.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12882">
-              <caret line="103" column="63" lean-forward="false" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
+            <state relative-caret-position="204">
+              <caret line="684" column="27" lean-forward="true" selection-start-line="684" selection-start-column="27" selection-end-line="684" selection-end-column="27" />
               <folding>
                 <element signature="e#16#52#0" expanded="true" />
               </folding>
@@ -42,23 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppBrandPromo.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/AppBrandPromo.jsx">
+      <file leaf-file-name="ListStore1.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stores/ListStore1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="292" column="59" lean-forward="false" selection-start-line="292" selection-start-column="59" selection-end-line="292" selection-end-column="59" />
-              <folding>
-                <element signature="e#15#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDispatcher.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="149">
+              <caret line="822" column="0" lean-forward="false" selection-start-line="822" selection-start-column="0" selection-end-line="831" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -67,8 +61,18 @@
       <file leaf-file-name="AppRoot2.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/AppRoot2.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="78" column="11" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+            <state relative-caret-position="223">
+              <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListStore2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stores/ListStore2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="417" column="42" lean-forward="false" selection-start-line="417" selection-start-column="42" selection-end-line="417" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -77,8 +81,8 @@
       <file leaf-file-name="AppRoot.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/AppRoot.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="349" column="48" lean-forward="false" selection-start-line="349" selection-start-column="48" selection-end-line="349" selection-end-column="158" />
+            <state relative-caret-position="347">
+              <caret line="249" column="5" lean-forward="true" selection-start-line="242" selection-start-column="2" selection-end-line="249" selection-end-column="5" />
               <folding>
                 <element signature="e#15#41#0" expanded="true" />
               </folding>
@@ -86,35 +90,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/print.css">
+      <file leaf-file-name="AppDispatcher1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="494">
+              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/style.css">
+      <file leaf-file-name="AppDispatcher2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="285">
+              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1315">
-              <caret line="81" column="69" lean-forward="true" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -122,11 +113,29 @@
       <file leaf-file-name="ListStoreBrandPromo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stores/ListStoreBrandPromo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="100" column="25" lean-forward="false" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
-              <folding>
-                <element signature="e#16#52#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="377">
+              <caret line="402" column="6" lean-forward="false" selection-start-line="402" selection-start-column="6" selection-end-line="402" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppRoot1.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/AppRoot1.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-551">
+              <caret line="473" column="149" lean-forward="false" selection-start-line="473" selection-start-column="24" selection-end-line="473" selection-end-column="149" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDispatcherBrandPromo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,16 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>indexof</find>
-      <find>100%</find>
-      <find>label</find>
-      <find>,multinumber_source_unicname:</find>
-      <find>addToSum</find>
-      <find>margin-top</find>
-      <find>marginto</find>
-      <find>url</find>
-      <find>Самостоятельный расчет</find>
-      <find>margintop80</find>
       <find>Марке</find>
       <find>AppRoot2</find>
       <find>categor</find>
@@ -153,7 +152,6 @@
       <find>staticPrice</find>
       <find>lastCategory</find>
       <find>hipstr</find>
-      <find>billDev</find>
       <find>itemHtml</find>
       <find>class</find>
       <find>class=</find>
@@ -165,6 +163,17 @@
       <find>80</find>
       <find>blueColor_h80_pt5</find>
       <find>bggraycol</find>
+      <find>img</find>
+      <find>addToSum</find>
+      <find>culculateBudget</find>
+      <find>Призовой фондculculateBudget</find>
+      <find>clear</find>
+      <find>billDev</find>
+      <find>addAndRecountAll</find>
+      <find>set-budget</find>
+      <find>cleanCategory</find>
+      <find>alert</find>
+      <find>ischecked</find>
     </findStrings>
     <replaceStrings>
       <replace>needit: false, multinumber_source_unicname:none</replace>
@@ -190,28 +199,29 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/dispatcher/AppDispatcher.js" />
         <option value="$PROJECT_DIR$/components/AppRootSimple.jsx" />
         <option value="$PROJECT_DIR$/dist/body.css" />
         <option value="$PROJECT_DIR$/dist/style.css" />
         <option value="$PROJECT_DIR$/var.html" />
         <option value="$PROJECT_DIR$/self.html" />
-        <option value="$PROJECT_DIR$/dispatcher/AppDispatcher2.js" />
-        <option value="$PROJECT_DIR$/dispatcher/AppDispatcher1.js" />
-        <option value="$PROJECT_DIR$/components/AppRoot2.jsx" />
-        <option value="$PROJECT_DIR$/stores/ListStore2.js" />
         <option value="$PROJECT_DIR$/components/AppRoot1.jsx" />
-        <option value="$PROJECT_DIR$/stores/ListStore.js" />
-        <option value="$PROJECT_DIR$/stores/ListStore1.js" />
-        <option value="$PROJECT_DIR$/components/AppRoot.jsx" />
         <option value="$PROJECT_DIR$/dist/print.css" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/dispatcher/AppBrandPromo.js" />
         <option value="$PROJECT_DIR$/assets/print.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/stores/ListStoreBrandPromo.js" />
         <option value="$PROJECT_DIR$/components/AppBrandPromo.jsx" />
         <option value="$PROJECT_DIR$/assets/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/components/AppRoot.jsx" />
+        <option value="$PROJECT_DIR$/stores/ListStore.js" />
+        <option value="$PROJECT_DIR$/stores/ListStore1.js" />
+        <option value="$PROJECT_DIR$/dispatcher/AppDispatcher.js" />
+        <option value="$PROJECT_DIR$/dispatcher/AppDispatcher1.js" />
+        <option value="$PROJECT_DIR$/dispatcher/AppDispatcher2.js" />
+        <option value="$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js" />
+        <option value="$PROJECT_DIR$/stores/ListStoreBrandPromo.js" />
+        <option value="$PROJECT_DIR$/components/AppRoot2.jsx" />
+        <option value="$PROJECT_DIR$/stores/ListStore2.js" />
       </list>
     </option>
   </component>
@@ -232,8 +242,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="321" />
-    <option name="y" value="47" />
+    <option name="x" value="187" />
+    <option name="y" value="15" />
     <option name="width" value="1501" />
     <option name="height" value="1056" />
   </component>
@@ -252,8 +262,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -464,6 +474,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="833f9154-7f50-43b9-87c4-dc2843f634d8" name="Default" comment="" />
@@ -477,15 +490,16 @@
       <workItem from="1480324423037" duration="20639000" />
       <workItem from="1480496373969" duration="2955000" />
       <workItem from="1480586371114" duration="10647000" />
-      <workItem from="1480669509290" duration="21749000" />
+      <workItem from="1480669509290" duration="22554000" />
+      <workItem from="1480924124029" duration="5651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122608000" />
+    <option name="totallyTimeSpent" value="129064000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="321" y="47" width="1501" height="1056" extended-state="0" />
+    <frame x="187" y="15" width="1501" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -710,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="169" column="9" lean-forward="false" selection-start-line="169" selection-start-column="9" selection-end-line="169" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,30 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stores/ListStore2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="103" column="24" lean-forward="false" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-          <folding>
-            <element signature="e#16#52#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -775,31 +764,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/AppRoot1.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8949">
-          <caret line="473" column="149" lean-forward="false" selection-start-line="473" selection-start-column="24" selection-end-line="473" selection-end-column="149" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/TodoApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-          <folding>
-            <element signature="e#60#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stores/ListStore1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="818" column="25" lean-forward="false" selection-start-line="818" selection-start-column="25" selection-end-line="818" selection-end-column="25" />
-          <folding>
-            <element signature="e#16#52#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,50 +782,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/print.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12882">
-          <caret line="103" column="63" lean-forward="false" selection-start-line="103" selection-start-column="63" selection-end-line="103" selection-end-column="63" />
-          <folding>
-            <element signature="e#16#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/body.css" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1315">
-          <caret line="81" column="69" lean-forward="true" selection-start-line="81" selection-start-column="69" selection-end-line="81" selection-end-column="69" />
+        <state relative-caret-position="-1903">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -866,10 +805,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/AppBrandPromo.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2697">
+          <caret line="292" column="59" lean-forward="false" selection-start-line="292" selection-start-column="59" selection-end-line="292" selection-end-column="59" />
+          <folding>
+            <element signature="e#15#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="109" column="32" lean-forward="false" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcherBrandPromo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stores/ListStoreBrandPromo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="402" column="6" lean-forward="false" selection-start-line="402" selection-start-column="6" selection-end-line="402" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/AppRoot1.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-551">
+          <caret line="473" column="149" lean-forward="false" selection-start-line="473" selection-start-column="24" selection-end-line="473" selection-end-column="149" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dispatcher/AppDispatcher2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/AppRoot.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="349" column="48" lean-forward="false" selection-start-line="349" selection-start-column="48" selection-end-line="349" selection-end-column="158" />
+        <state relative-caret-position="347">
+          <caret line="249" column="5" lean-forward="true" selection-start-line="242" selection-start-column="2" selection-end-line="249" selection-end-column="5" />
           <folding>
             <element signature="e#15#41#0" expanded="true" />
           </folding>
@@ -878,44 +883,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/AppRoot2.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="78" column="11" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+        <state relative-caret-position="223">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stores/ListStoreBrandPromo.js">
+    <entry file="file://$PROJECT_DIR$/stores/ListStore2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="100" column="25" lean-forward="false" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
+        <state relative-caret-position="204">
+          <caret line="417" column="42" lean-forward="false" selection-start-line="417" selection-start-column="42" selection-end-line="417" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stores/ListStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="684" column="27" lean-forward="true" selection-start-line="684" selection-start-column="27" selection-end-line="684" selection-end-column="27" />
           <folding>
             <element signature="e#16#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/AppBrandPromo.jsx">
+    <entry file="file://$PROJECT_DIR$/stores/ListStore1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="292" column="59" lean-forward="false" selection-start-line="292" selection-start-column="59" selection-end-line="292" selection-end-column="59" />
-          <folding>
-            <element signature="e#15#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/body.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="149">
+          <caret line="822" column="0" lean-forward="false" selection-start-line="822" selection-start-column="0" selection-end-line="831" selection-end-column="6" />
           <folding />
         </state>
       </provider>
