@@ -265,15 +265,12 @@
         <h4 class="modal-title">Отправить заявку</h4>
         </div>
         <div class="modal-body">
-			<form action="" method=post>
-
-			<p>Вводный текст перед формой <p>
-			<div align="center">
-			Teма<br />
-			<input type="text" name="title" size="40"><br />
-			Сообщение<br />
-			<textarea name="mess" rows="10" cols="40"></textarea>
-			<br />
+			<form action="" method="post">
+	
+			<input type='title' name='title' placeholder='ФИО*' required/><br><br>
+			<input type='email' name='email' placeholder='E-mail*' required/><br><br>
+			<input type='text' name='company' placeholder='Компания*' required/><br><br>
+			<textarea name='msg' placeholder='Комментарий' style='width:300px;height:200px;'></textarea><br><br>
 			<input type="submit" value="Отправить" name="submit"></div>
 			</form>
         </div>
@@ -294,9 +291,9 @@
 			  });
 			  <?php endif; ?>
 
-				jQuery("#getFeedbackForm").click(function(){
+/* 				jQuery("#getFeedbackForm").click(function(){
 					jQuery( "#feedback_div" ).dialog({width:400,modal: true});
-				});
+				}); */
 
 			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
 			{/*function SendForm(){
@@ -325,23 +322,23 @@
 // если была нажата кнопка "Отправить"
 if($_POST['submit']) {
 
-
-        $title = substr(htmlspecialchars(trim($_POST['fio'])), 0, 1000);
-        $tile .= ' ('.substr(htmlspecialchars(trim($_POST['company'])), 0, 1000).')';
-        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
-        // $to - кому отправляем
-        $to = 'zdan@bk.ru';
-        // $from - от кого
+        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично 
+        $title = substr(htmlspecialchars(trim($_POST['title'])), 0, 1000); 
+        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000); 
+        // $to - кому отправляем 
+        $to = 'zdan@bk.ru'; 
+        // $from - от кого 
         $from=$_POST['email'];
-
-        if(mail($to, $title, $mess, 'From:'.$from))
+        // функция, которая отправляет наше письмо. 
+$issend=mail($to, $title, $mess, 'From:'.$from);
+       /*  if($issend)
 		{
 			echo 'Спасибо! Ваше письмо отправлено.';
 		}
 		else
 		{
 			echo 'что-то не так';
-		}
+		} */
 }
 ?>
 
