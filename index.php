@@ -178,6 +178,10 @@
 	</div>
 </div>
 <div id="longImg"></div>
+		<!-- mail feedback-->
+        <div id="feedback"></div>
+
+
 <div id="mainTab" class="tabbable tabbablefirst">
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#tab10" data-toggle="tab">AGV</a></li>
@@ -261,17 +265,18 @@
         <h4 class="modal-title">Отправить заявку</h4>
         </div>
         <div class="modal-body">
-			<form name='agvfeedback' method='post'>
-			<input type='text' name='fio' placeholder='ФИО*' required/><br><br>
-			<input type='email' name='email' placeholder='E-mail*' required/><br><br>
-			<input type='text' name='company' placeholder='Компания*' required/><br><br>
-			<textarea name='msg' placeholder='Комментарий' style='width:300px;height:200px;'></textarea><br><br>
-			<input type='hidden' value='' name='can_send'>
-			<input type='hidden' value='0' name='modalform'>
-			<!--input type='button' onclick="SendForm();" value='Отправить'-->
-			<input type='submit' name='submit' value='Отправить'>
+			<form action="" method=post>
+
+			<p>Вводный текст перед формой <p>
+			<div align="center">
+			Teма<br />
+			<input type="text" name="title" size="40"><br />
+			Сообщение<br />
+			<textarea name="mess" rows="10" cols="40"></textarea>
+			<br />
+			<input type="submit" value="Отправить" name="submit"></div>
 			</form>
-		</div>
+        </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Отменить</button>
         </div>
@@ -294,7 +299,7 @@
 				});
 
 			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
-			function SendForm(){
+			{/*function SendForm(){
 				if(agvfeedback.fio.value=='') {
 					alert("Укажите ФИО отправителя!");
 					return false;
@@ -307,13 +312,13 @@
 					alert("Укажите Компанию отправителя!");
 					return false;
 				}
-				{/*if(agvfeedback.msg.value=='') {
+				/!*if(agvfeedback.msg.value=='') {
 					alert("Укажите текст сообщения!");
 					return false;
-				}*/}
+				}*!/
 				//agvfeedback.can_send.value='ok';
 				agvfeedback.submit();
-			}
+			}*/}
 		</script>
 
 <?php
