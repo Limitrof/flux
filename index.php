@@ -280,9 +280,9 @@
         </div>
 
         <script type="text/javascript">
-		/*   jQuery( "#feedback_div" ).hide();
+        jQuery( "#feedback_div" ).hide();
         <?php
-{
+
 		if(isset($_REQUEST['modalform']) && $_REQUEST['modalform']==1):?>
 			  jQuery(function() {
 				jQuery( "#feedback_div" ).dialog({width:400,modal: true});
@@ -291,10 +291,10 @@
 
 				jQuery("#getFeedbackForm").click(function(){
 					jQuery( "#feedback_div" ).dialog({width:400,modal: true});
-				});}*/
+				});
 
 			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
-			{/*function SendForm(){
+			function SendForm(){
 				if(agvfeedback.fio.value=='') {
 					alert("Укажите ФИО отправителя!");
 					return false;
@@ -307,13 +307,13 @@
 					alert("Укажите Компанию отправителя!");
 					return false;
 				}
-				/!*if(agvfeedback.msg.value=='') {
+				{/*if(agvfeedback.msg.value=='') {
 					alert("Укажите текст сообщения!");
 					return false;
-				}*!/
+				}*/}
 				//agvfeedback.can_send.value='ok';
 				agvfeedback.submit();
-			}}*/
+			}
 		</script>
 
 <?php
