@@ -688,7 +688,7 @@ class AppBrandPromo extends React.Component {
 				<div className="row grayinrow">
 					<div className="col-md-12">
 						<div className="width120-center">
-							<button className='checkboxforprice btn btn-primary'  onClick={ _this.addToSum } data-id={ listItem.id } id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked}>ДОБАВИТЬ В КОРЗИНУ</button>
+							<button className='checkboxforprice btn btn-primary'  onClick={ _this.addToSum } data-id={ listItem.id } id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} disabled={listItem.ischecked}>ДОБАВИТЬ В КОРЗИНУ</button>
 						</div>
 					</div>
 				</div>
