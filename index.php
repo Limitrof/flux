@@ -166,6 +166,7 @@
 </script>
 </head>
 <body>
+<!-- only for printer title -->
 		<div id="titleprint"><img src="img/titlepint.jpg"/></div>
 <!--div style="position: fixed;top:200px;left:100px;background-image: url('labut.gif');width:80px;height:50px;"></div-->
 <div class="xxx" data-name="quantity" data-value="10" data-id="1"></div>
@@ -178,8 +179,13 @@
 	</div>
 </div>
 <div id="longImg"></div>
-		<!-- mail feedback-->
-        <div id="feedback"></div>
+		<!-- mail success block -->
+<div class="alert alert-success" id="success-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong>Спасибо!</strong>
+   Ваше письмо отправлено.st.
+</div>
+<!---->
 
 
 <div id="mainTab" class="tabbable tabbablefirst">
@@ -330,15 +336,17 @@ if($_POST['submit']) {
         // $from - от кого 
         $from=$_POST['email'];
         // функция, которая отправляет наше письмо. 
-$issend=mail($to, $title, $mess, 'From:'.$from);
-       /*  if($issend)
-		{
-			echo 'Спасибо! Ваше письмо отправлено.';
-		}
-		else
-		{
-			echo 'что-то не так';
-		} */
+
+     if(mail($to, $title, $mess, 'From:'.$from))	{
+			echo '<script>$(document).ready (function(){
+
+                $("#success-alert").alert();
+                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+               $("#success-alert").slideUp(500);
+                });   
+
+ });</script>';
+		}	else	{ echo 'Что-то не так.';	} 
 }
 ?>
 
