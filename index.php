@@ -310,7 +310,7 @@
 					alert("Укажите текст сообщения!");
 					return false;
 				}*/}
-				agvfeedback.can_send.value='ok';
+				//agvfeedback.can_send.value='ok';
 				agvfeedback.submit();
 			}
 		</script>
@@ -318,16 +318,15 @@
 <?php
 // если была нажата кнопка "Отправить"
 if($_POST['agvfeedback']) {
-echo "get it".$_POST['fio'];
-        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично
-        $title = substr(htmlspecialchars(trim($_POST['fio'])), 0, 1000);
-        $tile .= substr(htmlspecialchars(trim($_POST['company'])), 0, 1000);
-        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
+
+
+        $title = substr(htmlspecialchars(trim($_POST['agvfeedback.fio'])), 0, 1000);
+        $tile .= ' ('.substr(htmlspecialchars(trim($_POST['agvfeedback.company'])), 0, 1000).')';
+        $mess =  substr(htmlspecialchars(trim($_POST['agvfeedback.msg'])), 0, 1000000);
         // $to - кому отправляем
         $to = 'zdan@bk.ru';
         // $from - от кого
-        $from=$_POST['email'];
-        // функция, которая отправляет наше письмо.
+        $from=$_POST['agvfeedback.email'];
 
         if(mail($to, $title, $mess, 'From:'.$from))
 		{
