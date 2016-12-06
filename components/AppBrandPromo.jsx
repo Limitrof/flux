@@ -712,7 +712,7 @@ class AppBrandPromo extends React.Component {
 	  <div  className="row" key="mainform" id="reactroot">
 		  <div className="col-md-8">{itemHtml}</div>
 		  <div className="col-md-4">
-  <div id="staticPriceBrandPromo" className="fixed">
+  <div id="staticPriceBrandPromo">
 
 				  <div className="row">
 					  <div className="col-md-9 colorblue">Результаты</div>

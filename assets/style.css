@@ -402,7 +402,12 @@ float: left;
 	padding:5px;
 	background-color:white;
 }
-
+ #staticPrice2  {
+ margin-top: 0 !important;
+}
+ #staticPriceBrandPromo {
+ margin-top: 10px !important;
+}
 
 #staticPrice .col-md{
 	top:80px;
