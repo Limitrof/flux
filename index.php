@@ -261,7 +261,7 @@
         <h4 class="modal-title">Отправить заявку</h4>
         </div>
         <div class="modal-body">
-			<form name='agvfeedback' method='post'>
+			<form name='submit' method='post'>
 			<input type='text' name='fio' placeholder='ФИО*' required/><br><br>
 			<input type='email' name='email' placeholder='E-mail*' required/><br><br>
 			<input type='text' name='company' placeholder='Компания*' required/><br><br>
@@ -318,14 +318,15 @@
 <?php
 // если была нажата кнопка "Отправить"
 if($_POST['submit']) {
-echo "get it".$_POST['title'];
+echo "get it".$_POST['fio'];
         // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично
-        $title = substr(htmlspecialchars(trim($_POST['title'])), 0, 1000);
-        $mess =  substr(htmlspecialchars(trim($_POST['mess'])), 0, 1000000);
+        $title = substr(htmlspecialchars(trim($_POST['fio'])), 0, 1000);
+        $tile .= substr(htmlspecialchars(trim($_POST['company'])), 0, 1000);
+        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
         // $to - кому отправляем
         $to = 'zdan@bk.ru';
         // $from - от кого
-        $from='alexinby@gmail.com';
+        $from=$_POST['email'];
         // функция, которая отправляет наше письмо.
 
         if(mail($to, $title, $mess, 'From:'.$from))
