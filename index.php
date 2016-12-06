@@ -163,45 +163,10 @@
 
 
         });
-	</script>
-<style>
-#staticPrice2 {
- margin-top: 0 !important;
-}
-
-</style>
+</script>
 </head>
 <body>
-
-<?php
-// если была нажата кнопка "Отправить"
-if($_POST['submit']) {
-echo "get it".$_POST['title'];
-        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично
-        $title = substr(htmlspecialchars(trim($_POST['title'])), 0, 1000);
-        $mess =  substr(htmlspecialchars(trim($_POST['mess'])), 0, 1000000);
-        // $to - кому отправляем
-        $to = 'zdan@bk.ru';
-        // $from - от кого
-        $from='alexinby@gmail.com';
-        // функция, которая отправляет наше письмо.
-        mail($to, $title, $mess, 'From:'.$from);
-        echo 'Спасибо! Ваше письмо отправлено.';
-}
-?>
-<form action="" method=post>
-
-	<p>Вводный текст перед формой <p>
-	<div align="center">
-		Teма<br />
-		<input type="text" name="title" size="40"><br />
-		Сообщение<br />
-		<textarea name="mess" rows="10" cols="40"></textarea>
-		<br />
-		<input type="submit" value="Отправить" name="submit"></div>
-</form>
-
-<div id="titleprint"><img src="img/titlepint.jpg"/></div>
+		<div id="titleprint"><img src="img/titlepint.jpg"/></div>
 <!--div style="position: fixed;top:200px;left:100px;background-image: url('labut.gif');width:80px;height:50px;"></div-->
 <div class="xxx" data-name="quantity" data-value="10" data-id="1"></div>
 <div id="longBlueRow" class="row">
@@ -282,7 +247,98 @@ echo "get it".$_POST['title'];
 </div>
 <div style="width:30%;margin:10px auto;">
 <button class="btn btn-primary hipstr" type="button" onclick="window.print()" />Распечатать</button>
+        <a href="#defaultModal"data-toggle="modal">
+		<button class="btn btn-primary hipstr" type="button" />Отправить заявку</button>
+		</a>
 </div>
+
+
+        <div id="defaultModal" class="modal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Отправить заявку</h4>
+        </div>
+        <div class="modal-body">
+			<form name='agvfeedback' method='post'>
+			<input type='text' name='fio' placeholder='ФИО*' required/><br><br>
+			<input type='email' name='email' placeholder='E-mail*' required/><br><br>
+			<input type='text' name='company' placeholder='Компания*' required/><br><br>
+			<textarea name='msg' placeholder='Комментарий' style='width:300px;height:200px;'></textarea><br><br>
+			<input type='hidden' value='' name='can_send'>
+			<input type='hidden' value='0' name='modalform'>
+			<input type='button' onclick="SendForm();" value='Отправить'>
+			</form>
+		</div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Отменить</button>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <script type="text/javascript">
+        jQuery( "#feedback_div" ).hide();
+        <?php
+
+		if(isset($_REQUEST['modalform']) && $_REQUEST['modalform']==1):?>
+			  jQuery(function() {
+				jQuery( "#feedback_div" ).dialog({width:400,modal: true});
+			  });
+			  <?php endif; ?>
+
+				jQuery("#getFeedbackForm").click(function(){
+					jQuery( "#feedback_div" ).dialog({width:400,modal: true});
+				});
+
+			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
+			function SendForm(){
+				if(agvfeedback.fio.value=='') {
+					alert("Укажите ФИО отправителя!");
+					return false;
+				}
+				if(agvfeedback.email.value=='') {
+					alert("Укажите E-mail отправителя!");
+					return false;
+				}
+				if(agvfeedback.company.value=='') {
+					alert("Укажите Компанию отправителя!");
+					return false;
+				}
+				{/*if(agvfeedback.msg.value=='') {
+					alert("Укажите текст сообщения!");
+					return false;
+				}*/}
+				agvfeedback.can_send.value='ok';
+				agvfeedback.submit();
+			}
+		</script>
+
+<?php
+// если была нажата кнопка "Отправить"
+if($_POST['submit']) {
+echo "get it".$_POST['title'];
+        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично
+        $title = substr(htmlspecialchars(trim($_POST['title'])), 0, 1000);
+        $mess =  substr(htmlspecialchars(trim($_POST['mess'])), 0, 1000000);
+        // $to - кому отправляем
+        $to = 'zdan@bk.ru';
+        // $from - от кого
+        $from='alexinby@gmail.com';
+        // функция, которая отправляет наше письмо.
+
+        if(mail($to, $title, $mess, 'From:'.$from))
+		{
+			echo 'Спасибо! Ваше письмо отправлено.';
+		}
+		else
+		{
+			echo 'что-то не так';
+		}
+}
+?>
+
 <!-- bottom-->
 <div id="longBlueRowBottom" class="row">
 	<div class="col-md-12">
