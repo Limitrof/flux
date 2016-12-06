@@ -280,9 +280,9 @@
         </div>
 
         <script type="text/javascript">
-        jQuery( "#feedback_div" ).hide();
+		/*   jQuery( "#feedback_div" ).hide();
         <?php
-{/*
+{
 		if(isset($_REQUEST['modalform']) && $_REQUEST['modalform']==1):?>
 			  jQuery(function() {
 				jQuery( "#feedback_div" ).dialog({width:400,modal: true});
@@ -291,7 +291,7 @@
 
 				jQuery("#getFeedbackForm").click(function(){
 					jQuery( "#feedback_div" ).dialog({width:400,modal: true});
-				});*/}
+				});}*/
 
 			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
 			{/*function SendForm(){
@@ -313,7 +313,7 @@
 				}*!/
 				//agvfeedback.can_send.value='ok';
 				agvfeedback.submit();
-			}*/}
+			}}*/
 		</script>
 
 <?php
