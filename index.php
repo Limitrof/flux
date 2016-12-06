@@ -268,7 +268,8 @@
 			<textarea name='msg' placeholder='Комментарий' style='width:300px;height:200px;'></textarea><br><br>
 			<input type='hidden' value='' name='can_send'>
 			<input type='hidden' value='0' name='modalform'>
-			<input type='button' onclick="SendForm();" value='Отправить'>
+			<!--input type='button' onclick="SendForm();" value='Отправить'-->
+			<input type='submit' name='submit' value='Отправить'>
 			</form>
 		</div>
         <div class="modal-footer">
@@ -281,7 +282,7 @@
         <script type="text/javascript">
         jQuery( "#feedback_div" ).hide();
         <?php
-
+{/*
 		if(isset($_REQUEST['modalform']) && $_REQUEST['modalform']==1):?>
 			  jQuery(function() {
 				jQuery( "#feedback_div" ).dialog({width:400,modal: true});
@@ -290,10 +291,10 @@
 
 				jQuery("#getFeedbackForm").click(function(){
 					jQuery( "#feedback_div" ).dialog({width:400,modal: true});
-				});
+				});*/}
 
 			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
-			function SendForm(){
+			{/*function SendForm(){
 				if(agvfeedback.fio.value=='') {
 					alert("Укажите ФИО отправителя!");
 					return false;
@@ -306,27 +307,27 @@
 					alert("Укажите Компанию отправителя!");
 					return false;
 				}
-				{/*if(agvfeedback.msg.value=='') {
+				/!*if(agvfeedback.msg.value=='') {
 					alert("Укажите текст сообщения!");
 					return false;
-				}*/}
+				}*!/
 				//agvfeedback.can_send.value='ok';
 				agvfeedback.submit();
-			}
+			}*/}
 		</script>
 
 <?php
 // если была нажата кнопка "Отправить"
-if($_POST['agvfeedback']) {
+if($_POST['submit']) {
 
 
-        $title = substr(htmlspecialchars(trim($_POST['agvfeedback.fio'])), 0, 1000);
-        $tile .= ' ('.substr(htmlspecialchars(trim($_POST['agvfeedback.company'])), 0, 1000).')';
-        $mess =  substr(htmlspecialchars(trim($_POST['agvfeedback.msg'])), 0, 1000000);
+        $title = substr(htmlspecialchars(trim($_POST['fio'])), 0, 1000);
+        $tile .= ' ('.substr(htmlspecialchars(trim($_POST['company'])), 0, 1000).')';
+        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
         // $to - кому отправляем
         $to = 'zdan@bk.ru';
         // $from - от кого
-        $from=$_POST['agvfeedback.email'];
+        $from=$_POST['email'];
 
         if(mail($to, $title, $mess, 'From:'.$from))
 		{
