@@ -261,7 +261,7 @@
         <h4 class="modal-title">Отправить заявку</h4>
         </div>
         <div class="modal-body">
-			<form name='submit' method='post'>
+			<form name='agvfeedback' method='post'>
 			<input type='text' name='fio' placeholder='ФИО*' required/><br><br>
 			<input type='email' name='email' placeholder='E-mail*' required/><br><br>
 			<input type='text' name='company' placeholder='Компания*' required/><br><br>
@@ -317,7 +317,7 @@
 
 <?php
 // если была нажата кнопка "Отправить"
-if($_POST['submit']) {
+if($_POST['agvfeedback']) {
 echo "get it".$_POST['fio'];
         // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично
         $title = substr(htmlspecialchars(trim($_POST['fio'])), 0, 1000);
