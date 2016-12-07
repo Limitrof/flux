@@ -566,9 +566,9 @@ float:left;
 
 /* blu color ul-marker in Brand Promotion 20161206 ardjuna */
 .col-md-6>.ulnotbulleted > li:before {
-     color:#448bd8;
 	 content: "•";
 	 padding-right: 10px;
+     color:#448bd8;
 	 }
 /*  padding-left "с банером на главной" in Brand Promotion 20161206 ardjuna */	 
 .ulnotbulleted>li>p {
