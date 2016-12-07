@@ -5,6 +5,11 @@
 	height:inherit;
 	!*border-bottom:1px solid #b6b6bb;*!
 }*/
+#success-alert{
+	display: none;
+	width:1280px;
+	margin:0 auto;
+}
 .fontblue{
 	color:darkblue;
 	margin-top:100px;

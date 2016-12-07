@@ -174,6 +174,7 @@
 >>>>>>> 9d4a8e46e1527cd6bc62ee13d06602bb13f28e02:index.php
 </head>
 <body>
+<!-- only for printer title -->
 		<div id="titleprint"><img src="img/titlepint.jpg"/></div>
 <!--div style="position: fixed;top:200px;left:100px;background-image: url('labut.gif');width:80px;height:50px;"></div-->
 <div class="xxx" data-name="quantity" data-value="10" data-id="1"></div>
@@ -186,8 +187,13 @@
 	</div>
 </div>
 <div id="longImg"></div>
-		<!-- mail feedback-->
-        <div id="feedback"></div>
+		<!-- mail success block -->
+<div class="alert alert-success" id="success-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+    <strong>Спасибо!</strong>
+   Ваше письмо отправлено.st.
+</div>
+<!---->
 
 
 <div id="mainTab" class="tabbable tabbablefirst">
@@ -273,15 +279,12 @@
         <h4 class="modal-title">Отправить заявку</h4>
         </div>
         <div class="modal-body">
-			<form action="" method=post>
-
-			<p>Вводный текст перед формой <p>
-			<div align="center">
-			Teма<br />
-			<input type="text" name="title" size="40"><br />
-			Сообщение<br />
-			<textarea name="mess" rows="10" cols="40"></textarea>
-			<br />
+			<form action="" method="post">
+	
+			<input type='title' name='title' placeholder='ФИО*' required/><br><br>
+			<input type='email' name='email' placeholder='E-mail*' required/><br><br>
+			<input type='text' name='company' placeholder='Компания*' required/><br><br>
+			<textarea name='msg' placeholder='Комментарий' style='width:300px;height:200px;'></textarea><br><br>
 			<input type="submit" value="Отправить" name="submit"></div>
 			</form>
         </div>
@@ -302,9 +305,9 @@
 			  });
 			  <?php endif; ?>
 
-				jQuery("#getFeedbackForm").click(function(){
+/* 				jQuery("#getFeedbackForm").click(function(){
 					jQuery( "#feedback_div" ).dialog({width:400,modal: true});
-				});
+				}); */
 
 			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
 			{/*function SendForm(){
@@ -333,23 +336,25 @@
 // если была нажата кнопка "Отправить"
 if($_POST['submit']) {
 
-
-        $title = substr(htmlspecialchars(trim($_POST['fio'])), 0, 1000);
-        $tile .= ' ('.substr(htmlspecialchars(trim($_POST['company'])), 0, 1000).')';
-        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
-        // $to - кому отправляем
-        $to = 'zdan@bk.ru';
-        // $from - от кого
+        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично 
+        $title = substr(htmlspecialchars(trim($_POST['title'])), 0, 1000); 
+        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000); 
+        // $to - кому отправляем 
+        $to = 'zdan@bk.ru'; 
+        // $from - от кого 
         $from=$_POST['email'];
+        // функция, которая отправляет наше письмо. 
 
-        if(mail($to, $title, $mess, 'From:'.$from))
-		{
-			echo 'Спасибо! Ваше письмо отправлено.';
-		}
-		else
-		{
-			echo 'что-то не так';
-		}
+     if(mail($to, $title, $mess, 'From:'.$from))	{
+			echo '<script>$(document).ready (function(){
+
+                $("#success-alert").alert();
+                $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+               $("#success-alert").slideUp(500);
+                });   
+
+ });</script>';
+		}	else	{ echo 'Что-то не так.';	} 
 }
 ?>
 
