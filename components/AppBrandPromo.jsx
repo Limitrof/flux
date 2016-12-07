@@ -487,7 +487,7 @@ class AppBrandPromo extends React.Component {
 							<div className="col-md-4 bggraycol border-right imgpadding text-center"><img className="inheritcenterimg" src="img/autokomp.png"/><span>offline</span></div>
 							<div className="col-md-6 bggraycol border-right ">	
 							<ul className="ulnotbulleted">
-								<li>макет, 2-я обложка 215х275 мм +бонус (статья/макет)</li>
+								<li>макет, 2-я обложка 215х275 мм <p className="colorblue">+бонус (статья/макет)</p></li>
 								<li>статья 1/2 полосы</li>
 							</ul>
 							</div>
