@@ -166,12 +166,7 @@
 
 
         });
-<<<<<<< HEAD:index.html
-	</script>
-
-=======
 </script>
->>>>>>> 9d4a8e46e1527cd6bc62ee13d06602bb13f28e02:index.php
 </head>
 <body>
 <!-- only for printer title -->
