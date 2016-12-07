@@ -32,7 +32,14 @@
 	margin-top:10px;
 }
 .bggraycol ul{
-	margin-left:10px;
+	/* margin-left:10px; */
+	margin-left:30px; /* 20161206 ardjuna */
+	color:black;
+}
+
+.col-md-6>.ulnotbulleted {
+	/* margin-left:10px; */
+	margin-left:20px !important; /* 20161206 ardjuna */
 	color:black;
 }
 .bggraycol-nobottom {
@@ -46,7 +53,8 @@
 	 margin-top:5px;
  }
 .bggraycol-nobottom ul{
-	margin-left:5px;
+	/* margin-left:5px; */
+	margin-left:25px; /* 20161206 ardjuna */
 	color:black;
 }
 
@@ -407,7 +415,12 @@ float: left;
 	padding:5px;
 	background-color:white;
 }
-
+ #staticPrice2  {
+ margin-top: 0 !important;
+}
+ #staticPriceBrandPromo {
+ margin-top: 10px !important;
+}
 
 #staticPrice .col-md{
 	top:80px;
@@ -544,4 +557,20 @@ margin-right:-100px;
 }
 .floatLeft{
 float:left;
+}
+
+/* ul-list without marker in Brand Promotion 20161206 ardjuna */
+.ulnotbulleted {
+	list-style-type:none;
+}
+
+/* blu color ul-marker in Brand Promotion 20161206 ardjuna */
+.col-md-6>.ulnotbulleted > li:before {
+     color:#448bd8;
+	 content: "•";
+	 padding-right: 10px;
+	 }
+/*  padding-left "с банером на главной" in Brand Promotion 20161206 ardjuna */	 
+.ulnotbulleted>li>p {
+	padding-left: 15px;
 }

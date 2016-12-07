@@ -25,42 +25,40 @@
 
 
             function moveBillContainer(){
-                if($('#staticPrice').offset().left > 100)
+                if($('#staticPrice').offset().left > 100) // якщо позиція <div id="staticPrice"> зліва більша за 100
                 {
-                    $('#staticPrice').css("height","300px");
-                    var basePosition = $('#app-root').offset().top;
-                    var startPosition = $('#staticPrice').offset().top;
-                    var bottomPosition = $('#longBlueRowBottom').offset().top;
+                    $('#staticPrice').css("height","300px"); // присвоїти <div id="staticPrice"> висоту 300px
+                    var basePosition = $('#app-root').offset().top; // створит змінну і їй присвоїти позицію top <div id="app-root">
+                    var startPosition = $('#staticPrice').offset().top; // створит змінну і їй присвоїти позицію top <div id="staticPrice">
+                    var bottomPosition = $('#longBlueRowBottom').offset().top; // створит змінну і їй присвоїти позицію top <div id="longBlueRowBottom">
                     //console.log("bottomPosition="+bottomPosition);
 
-                    var staticPositionPlusHeight = $('#staticPrice').offset().top +  410;
+                    var staticPositionPlusHeight = $('#staticPrice').offset().top +  410; // створит змінну, їй присвоїти позицію top <div id="staticPrice">, і додати 410px
 					/* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
 					 console.log ($('#staticPrice').offset().top);
 					 console.log ($(window).scrollTop()); */
                     //if position smaller then current top & currentPos + Height < than longBlueRowBottom
-                    var currStaticIfNotMove = $('#staticPrice').offset().top - $(window).scrollTop();
-                    if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
+                    var currStaticIfNotMove = $('#staticPrice').offset().top - $(window).scrollTop();				// створити змінну, присвоїти їй позицію top <div id="staticPrice"> і відняти величину прокрутки.
+                    if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){ // якщо позиція staticprice при прокрутці менша за 100 і позиція staticprice +410 менша за нижню межу
                         //if ( currStaticIfNotMove < 100){
                         //console.log('bzzz '+ currStaticIfNotMove);
-                        var forNewPos =  $(window).scrollTop() + 100;
+                        var forNewPos =  $(window).scrollTop() + 100; // створити змінну, яка дорівнює розміру скролу +100
                         //console.log("forNewPos="+forNewPos);
-                        $('#staticPrice').offset({"top":forNewPos});
-                    }
-                    $('#staticPrice').offset().top
-                    if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                        $('#staticPrice').offset({"top":forNewPos}); // зробити позицію топ staticprice, яка дорівнює forNewPos
+						}
+                    $('#staticPrice').offset().top // визначити позицію топ staticPrice
+                    if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){ // якщо ця позиція більша за позицію сусідньої таблиці +100 і позиція при скролі більша 100 
                         //console.log("left buttom position");
-                        var forNewPos =  $(window).scrollTop() + 100;
+                        var forNewPos =  $(window).scrollTop() + 100; // створити змінну, яка дорівнює розміру скролу +100
                         //console.log("forNewPos="+forNewPos);
-                        $('#staticPrice').offset({"top":forNewPos});
+                        $('#staticPrice').offset({"top":forNewPos});// зробити позицію топ staticprice, яка дорівнює forNewPos
                     }
                 } else {
-                    $('#staticPrice').css({"margin-top":"10px","top":"0px","height":"470px"});
+                    $('#staticPrice').css({"margin-top":"10px","top":"0px","height":"470px"}); // Для staticPrice
                 }
 
-
-
-
-                if($('#staticPrice1').offset().left > 100)
+				
+				if($('#staticPrice1').offset().left > 100)
                 {
                     $('#staticPrice1').css("height","300px");
                     var basePosition = $('#app-root1').offset().top;
@@ -91,9 +89,12 @@
                 } else {
                     $('#staticPrice1').css({"margin-top":"10px","top":"0px","height":"470px"});
                 }
-
-
-                if($('#staticPrice2').offset().left > 100)
+				
+				
+				
+				
+				
+                  if($('#staticPrice2').offset().left > 100)
                 {
                     $('#staticPrice2').css("height","300px");
                     var basePosition = $('#app-root2').offset().top;
@@ -125,7 +126,10 @@
                     $('#staticPrice2').css({"margin-top":"10px","top":"0px","height":"470px"});
                 }
 
-                if($('#staticPriceBrandPromo').offset().left > 100)
+				
+				
+				
+                  if($('#staticPriceBrandPromo').offset().left > 100)
                 {
                     $('#staticPriceBrandPromo').css("height","300px");
                     var basePosition = $('#app-brand-promo').offset().top;
@@ -147,7 +151,7 @@
                         $('#staticPriceBrandPromo').offset({"top":forNewPos});
                     }
                     $('#staticPriceBrandPromo').offset().top
-                    if ( ( $('#staticPriceBrandPromo').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                    if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
                         //console.log("left buttom position");
                         var forNewPos =  $(window).scrollTop() + 100;
                         //console.log("forNewPos="+forNewPos);
@@ -156,14 +160,18 @@
                 } else {
                     $('#staticPriceBrandPromo').css({"margin-top":"10px","top":"0px","height":"470px"});
                 }
-
             }
             $( window ).resize(moveBillContainer);
             $( window ).scroll(moveBillContainer);
 
 
         });
+<<<<<<< HEAD:index.html
+	</script>
+
+=======
 </script>
+>>>>>>> 9d4a8e46e1527cd6bc62ee13d06602bb13f28e02:index.php
 </head>
 <body>
 <!-- only for printer title -->
