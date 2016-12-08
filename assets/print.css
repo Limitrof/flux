@@ -78,11 +78,22 @@ div>img[src="/img/clear.png"]{
     text-align: left;
 }
 
-.col-md-6 .bggraycol-nobottom>.ulnotbulleted {
+.widthprint {
     width:310px !important;
 }
 
-.col-md-2 .bggraycol-nobottom>.ulnotbulleted {
-    margin-left: 20px;
+#staticPriceBrandPromo .row {
+    width: 100% !important;
+}
+
+#staticPriceBrandPromo .row .col-md-8,
+#staticPriceBrandPromo .row .col-md-3,
+#staticPriceBrandPromo .row .col-md-1 {
+
+    float: left !important;
+    /*width:100% !important;*/
+}
+.pagebreak {
+    page-break-after: always;
 }
 
