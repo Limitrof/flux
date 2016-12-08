@@ -370,7 +370,7 @@
                             $from .= "Content-type: text/html\r\n";
                             // функция, которая отправляет наше письмо.
 
-                         if(mail($to, $title, $mess, .$from))	{
+                         if(mail($to, $title, $mess, $from))	{
                                 echo '<script>$(document).ready (function(){
 
                                     $("#success-alert").alert();
