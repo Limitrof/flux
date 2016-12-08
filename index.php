@@ -357,7 +357,7 @@
                             $to = 'zdan@bk.ru';
                             // $from - от кого
                             $from=$_POST['email'];
-                            $from .= "Content-type: text/html\r\n";
+                            $from .= ";Content-type: text/html\r\n";
                             // функция, которая отправляет наше письмо.
 
                          if(mail($to, $title, $mess, 'From:'.$from))	{
