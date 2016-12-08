@@ -264,6 +264,7 @@ class AppBrandPromo extends React.Component {
   render(){
 
     let _this = this;
+    let classNameShow = '';
 	let lastCategory = '';
     let items = ListStore.getItems();
     //ОПРЕДЕЛЯЕМ нужен ли самостоятельный рассчет
@@ -292,14 +293,14 @@ class AppBrandPromo extends React.Component {
                 promopart.push(
 				<div className="row grayinrow border-bottom">
 					<div className="col-md-9 grayinrow " >
-						<div className="row heigth40 text-center" >
-							<div className="col-md-4 bggraycol border-right ">Ресурс</div>
+						<div className="row heigth40 text-center hidden-print" >
+							<div className="col-md-4 bggraycol border-right">Ресурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
 						</div>
 						<div className="row heigth100" >
-							<div className="col-md-4 text bggraycol border-right imgpadding text-center">
-								<img className="inheritcenterimg" src="img/infoparts.png"/>
+							<div className="col-md-4 bggraycol border-right imgpadding text-cente width120">
+								<img className="" src="img/infoparts.png"/>
 								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span>online</span></p>
 							</div>
 							<div className="col-md-6 bggraycol border-right">
@@ -320,7 +321,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row heigth100" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center"><img className="inheritcenterimg" src="img/kuzov.png"/>	<a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-cente width120"><img className="" src="img/kuzov.png"/>	<a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span>online</span></p></div>
 							<div className="col-md-6 bggraycol border-right ">
 								<ul className="ulnotbulleted">
 									<li>баннер 217 х 358 рх на главной</li>
@@ -335,7 +336,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row heigth100" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center"><img className="inheritcenterimg" src="img/autokomp.png"/><a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120"><img className="inheritcenterimg" src="img/autokomp.png"/><a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span>online</span></p></div>
 							<div className="col-md-6 bggraycol border-right ">	
 							<ul className="ulnotbulleted">
 								<li>баннер 1052 х 90 рх на главной</li>
@@ -350,7 +351,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row heigth100" >
-							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center"><img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120"><img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span>online</span></p></div>
 							<div className="col-md-6 bggraycol-nobottom border-right ">
 								<ul className="ulnotbulleted">
 									<li>баннер сквозной 280х190 рх</li>
@@ -441,7 +442,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 					</div>
-				<div className="col-md-3 text-center bggraycolinher">
+				<div className="col-md-3 text-center grbgaycolinher">
 					<div className="fontblue">
 						Охват ЦА <br/><span className="size24">{listItem.name}</span>.
 					</div>
@@ -459,7 +460,7 @@ class AppBrandPromo extends React.Component {
 						<div className="row heigth40 text-center" >
 							<div className="col-md-4 bggraycol border-right ">Ресурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
-						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
+						   <div className="col-md-2 bggraycol border-left">Кол-во</div>
 						</div>
 						<div className="row heigth100" >
 							<div className="col-md-4 text bggraycol border-right imgpadding text-center">
@@ -664,10 +665,14 @@ class AppBrandPromo extends React.Component {
                 break
         }
 
+if(listItem.ischecked){
+    classNameShow = "showItForPrint";
+} else {
+    classNameShow = "hideItForPrint";
+}
 
 
-
-            return <div>
+            return <div className={classNameShow}>
 
 					<div className="row bcwhite margintop10">
 						<div className="col-md-12 blueColor_pt5">
@@ -726,23 +731,35 @@ class AppBrandPromo extends React.Component {
 
 
 				  <div className="row">
-					  <div className="col-md-9">Пакет “А” Optimal online (B2B), 3 месяца</div>
-					  <div className="col-md-3">{this.state.billDev} €  <img onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Пакет “А” Optimal online (B2B), 3 месяца</div>
+					  <div className="col-md-3">{this.state.billDev} €  </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-9">Пакет “B” Online + Offline (B2B), 3 месяца</div>
-					  <div className="col-md-3">{this.state.billPlatform} €  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Пакет “B” Online + Offline (B2B), 3 месяца</div>
+					  <div className="col-md-3">{this.state.billPlatform} €    </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-9">Пакет “С” Online + Offline VIP (B2B), 3 месяца</div>
-					  <div className="col-md-3">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Пакет “С” Online + Offline VIP (B2B), 3 месяца</div>
+					  <div className="col-md-3">{this.state.billDesign} €    </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-9">Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца</div>
-					  <div className="col-md-3">{this.state.billBonus} €  <img onClick={_this.cleanCategory} data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца</div>
+					  <div className="col-md-3">{this.state.billBonus} €    </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <hr/>
