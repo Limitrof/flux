@@ -25,6 +25,46 @@
 
 
             function moveBillContainer(){
+            	//////////
+				// promo block
+                if($('#staticPriceBrandPromo').offset().left > 100)
+                {
+
+                    $('#staticPriceBrandPromo').css("height","300px");
+                    var basePosition = $('#app-brand-promo').offset().top;
+                    var startPosition = $('#staticPriceBrandPromo').offset().top;
+                    var bottomPosition = $('#longBlueRowBottom').offset().top;
+                    //console.log("bottomPosition="+bottomPosition);
+
+                    var staticPositionPlusHeight = $('#staticPriceBrandPromo').offset().top +  410;
+					/* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
+					 console.log ($('#staticPrice').offset().top);
+					 console.log ($(window).scrollTop()); */
+                    //if position smaller then current top & currentPos + Height < than longBlueRowBottom
+                    var currStaticIfNotMove = $('#staticPriceBrandPromo').offset().top - $(window).scrollTop();
+                    if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
+                        //if ( currStaticIfNotMove < 100){
+                        //console.log('bzzz '+ currStaticIfNotMove);
+                        var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                        $('#staticPriceBrandPromo').offset({"top":forNewPos});
+                    }
+                    $('#staticPriceBrandPromo').offset().top
+                    if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                        //console.log("left buttom position");
+                        var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                        $('#staticPriceBrandPromo').offset({"top":forNewPos});
+                    }
+                } else {
+                    $('#staticPriceBrandPromo').css({"margin-top":"10px","top":"0px","height":"470px"});
+                }
+                //
+				//////////////
+
+
+
+
                 if($('#staticPrice').offset().left > 100) // якщо позиція <div id="staticPrice"> зліва більша за 100
                 {
                     $('#staticPrice').css("height","300px"); // присвоїти <div id="staticPrice"> висоту 300px
@@ -129,37 +169,7 @@
 				
 				
 				
-                  if($('#staticPriceBrandPromo').offset().left > 100)
-                {
-                    $('#staticPriceBrandPromo').css("height","300px");
-                    var basePosition = $('#app-brand-promo').offset().top;
-                    var startPosition = $('#staticPriceBrandPromo').offset().top;
-                    var bottomPosition = $('#longBlueRowBottom').offset().top;
-                    //console.log("bottomPosition="+bottomPosition);
 
-                    var staticPositionPlusHeight = $('#staticPriceBrandPromo').offset().top +  410;
-					/* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
-					 console.log ($('#staticPrice').offset().top);
-					 console.log ($(window).scrollTop()); */
-                    //if position smaller then current top & currentPos + Height < than longBlueRowBottom
-                    var currStaticIfNotMove = $('#staticPriceBrandPromo').offset().top - $(window).scrollTop();
-                    if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
-                        //if ( currStaticIfNotMove < 100){
-                        //console.log('bzzz '+ currStaticIfNotMove);
-                        var forNewPos =  $(window).scrollTop() + 100;
-                        //console.log("forNewPos="+forNewPos);
-                        $('#staticPriceBrandPromo').offset({"top":forNewPos});
-                    }
-                    $('#staticPriceBrandPromo').offset().top
-                    if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
-                        //console.log("left buttom position");
-                        var forNewPos =  $(window).scrollTop() + 100;
-                        //console.log("forNewPos="+forNewPos);
-                        $('#staticPriceBrandPromo').offset({"top":forNewPos});
-                    }
-                } else {
-                    $('#staticPriceBrandPromo').css({"margin-top":"10px","top":"0px","height":"470px"});
-                }
             }
             $( window ).resize(moveBillContainer);
             $( window ).scroll(moveBillContainer);
