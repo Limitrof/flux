@@ -284,13 +284,14 @@
         <h4 class="modal-title">Отправить заявку</h4>
         </div>
         <div class="modal-body">
-			<form action="" method="post">
+			<form name="agvfeedback" action="" method="post">
 	
 			<input type='title' name='title' placeholder='ФИО*' required/><br><br>
 			<input type='email' name='email' placeholder='E-mail*' required/><br><br>
 			<input type='text' name='company' placeholder='Компания*' required/><br><br>
+			<input type='hidden' name='pricelist'/><br><br>
 			<textarea name='msg' placeholder='Комментарий' style='width:300px;height:200px;'></textarea><br><br>
-			<input type="submit" value="Отправить" name="submit"></div>
+			<input type="button" onclick="SendForm()" value="Отправить" name="submit"></div>
 			</form>
         </div>
         <div class="modal-footer">
@@ -315,8 +316,12 @@
 				}); */
 
 			//jQuery().colorbox({html:jQuery("#feedback_div").html()});
-			{/*function SendForm(){
-				if(agvfeedback.fio.value=='') {
+			function SendForm(){
+
+				var forSendAsText=jQuery("#staticPrice").html();
+alert("forSendAsText="+forSendAsText);
+
+				if(agvfeedback.title.value=='') {
 					alert("Укажите ФИО отправителя!");
 					return false;
 				}
@@ -328,27 +333,27 @@
 					alert("Укажите Компанию отправителя!");
 					return false;
 				}
-				/!*if(agvfeedback.msg.value=='') {
-					alert("Укажите текст сообщения!");
-					return false;
-				}*!/
-				//agvfeedback.can_send.value='ok';
+
+				agvfeedback.pricelist.value = forSendAsText;
+
 				agvfeedback.submit();
-			}*/}
+			}
 		</script>
 
 <?php
 // если была нажата кнопка "Отправить"
-if($_POST['submit']) {
+if($_POST['agvfeedback']) {
 
-        // $_POST['title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично 
-        $title = substr(htmlspecialchars(trim($_POST['title'])), 0, 1000); 
-        $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000); 
+        // $_POST['agvfeedback.title'] содержит данные из поля "Тема", trim() - убираем все лишние пробелы и переносы строк, htmlspecialchars() - преобразует специальные символы в HTML сущности, будем считать для того, чтобы простейшие попытки взломать наш сайт обломались, ну и  substr($_POST['agvfeedback.title'], 0, 1000) - урезаем текст до 1000 символов. Для переменной $_POST['mess'] все аналогично
+        $title = substr(htmlspecialchars(trim($_POST['agvfeedback.title'])), 0, 1000);
+        $mess =  substr(htmlspecialchars(trim($_POST['agvfeedback.msg'])), 0, 1000000);
+        $mess .= "<hr />".$_POST['agvfeedback.pricelist'];
         // $to - кому отправляем 
         $to = 'zdan@bk.ru'; 
         // $from - от кого 
-        $from=$_POST['email'];
-        // функция, которая отправляет наше письмо. 
+        $from = $_POST['agvfeedback.email'];
+        $from .= "Content-type: text/html\r\n";
+        //$from .= "\r\nContent-Type: multipart/alternative; boundary=\"PHP-alt-".$random_hash."\";
 
      if(mail($to, $title, $mess, 'From:'.$from))	{
 			echo '<script>$(document).ready (function(){
