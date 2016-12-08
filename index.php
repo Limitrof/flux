@@ -338,7 +338,17 @@
 					 }*/}
 
                     function moveInfoInMail(){
-                        var forSendAsText=jQuery("#staticPrice").html();
+                    	console.log($('.nav-tabs .active').text());
+                        var forSendAsText='';
+
+							 if(($('.nav-tabs .active').text()).indexof('AGVBrand Promotion') >= 0 ){
+								forSendAsText=jQuery("#staticPrice").html();
+
+							} else {
+								forSendAsText='avc';
+
+							}
+
                         jQuery("#forPrice").val(forSendAsText);
                     }
 
@@ -356,11 +366,11 @@
                             // $to - кому отправляем
                             $to = 'zdan@bk.ru';
                             // $from - от кого
-                            $from=$_POST['email'];
-                            $from .= ";Content-type: text/html\r\n";
+                            $from= "From: ".$_POST['email']."\r\n";
+                            $from .= "Content-type: text/html\r\n";
                             // функция, которая отправляет наше письмо.
 
-                         if(mail($to, $title, $mess, 'From:'.$from))	{
+                         if(mail($to, $title, $mess, .$from))	{
                                 echo '<script>$(document).ready (function(){
 
                                     $("#success-alert").alert();
