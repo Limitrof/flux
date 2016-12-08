@@ -338,15 +338,18 @@
 					 }*/}
 
                     function moveInfoInMail(){
-                    	console.log($('.nav-tabs .active').text());
+
                         var forSendAsText='';
 
-							 if(($('.nav-tabs .active').text()).indexof('AGVBrand Promotion') >= 0 ){
+							 if(($('.nav-tabs .active').text()).indexOf('staticPriceBrandPromo') >= 0 ){
 								forSendAsText=jQuery("#staticPrice").html();
-
+                        console.log($('.nav-tabs .active').text());
+							} else if(($('.nav-tabs .active').text()).indexOf('AGVSales Push CampaignesСамостоятельный расчет') >= 0 ){
+								forSendAsText=jQuery("#staticPrice").html();
+                        console.log($('.nav-tabs .active').text());
 							} else {
-								forSendAsText='avc';
-
+                        	forSendAsText=jQuery("#staticPrice2").html();
+                        console.log($('.nav-tabs .active').text());
 							}
 
                         jQuery("#forPrice").val(forSendAsText);
