@@ -302,6 +302,8 @@ class AppRoot extends React.Component {
 
         if(listItem.ischecked){
             classNameShow = "showItForPrint";
+        } else if(listItem.usehiddencheckbox && listItem.category != "Платформа для Программы лояльности:"){
+            classNameShow = "showItForPrint";
         } else {
             classNameShow = "hideItForPrint";
         }
@@ -440,22 +442,22 @@ else {usersControlFormula.push(<div></div>);}
 					switch (lastCategory) {
 								case "Разработка программы":
 
-                                    blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDev} €</div></div>);
+                                    blockTitle.push(<div className="row hideItForPrint"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDev} €</div></div>);
 								  break;	   
 							  case "Платформа для Программы лояльности:":
-                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billPlatform} €</div></div>);
+                                  blockTitle.push(<div className="row hideItForPrint"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billPlatform} €</div></div>);
 								  break;
 							  case "Дизайн key visual:":
-                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDesign} €</div></div>);
+                                  blockTitle.push(<div className="row hideItForPrint"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDesign} €</div></div>);
 								  break;
 
 							}
 //ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
-                      blockTitle.push(<div><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
+                      blockTitle.push(<div className="hideItForPrint"><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
 					
 				 } else if( (arrSize-1) == index){
 
-                     blockItogo.push(<div className="row">
+                     blockItogo.push(<div className="row hideItForPrint">
 				<div className="col-md-7">*Призовой фонд
 					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billBonus} €</div>
 			</div>);
@@ -463,11 +465,11 @@ else {usersControlFormula.push(<div></div>);}
         lastCategory = listItem.category;
 
 
-        if(listItem.ischecked){
+        /*if(listItem.ischecked){
             classNameShow = "showItForPrint";
         } else {
             classNameShow = "hideItForPrint";
-		}
+		}*/
 
 //особый рендер для автоматического рассчета бюджета
         if(listItem.unicname == 'budget') {
@@ -526,7 +528,7 @@ else {usersControlFormula.push(<div></div>);}
       return (
 <div>
 	  <div className="row" key="mainform" id="reactroot">
-		  <div className="col-md-8">-{itemHtml}-</div>
+		  <div className="col-md-8" id="onebyone">-{itemHtml}-</div>
 		  <div className="col-md-4">
 			  <div id="staticPrice">
 

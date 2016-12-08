@@ -56,6 +56,9 @@
 div>img[src="/img/clear.png"]{
     display:none;
 }
+input[type="checkbox"]{
+    display:none;
+}
 
 .heigth100{
     padding:10px;
@@ -98,10 +101,31 @@ div>img[src="/img/clear.png"]{
     top:0 !important;
 }
 #staticPrice .row {
-    width: 100% !important;
+    width: 750px !important;
 }
-#staticPrice .row .col-md-8,#staticPrice .row .col-md-3,#staticPrice .row .col-md-1{
+#staticPrice .row .col-md-8,#staticPrice .row .col-md-3,#staticPrice .row .col-md-1,#staticPrice .row .col-md-9,#staticPrice .row .col-md-3{
 
     float:left !important;
+    /*width:100px;*/
+}
+#onebyone .row {
+    /*width: 100% !important;
+    border-bottom: 1px solid gray;*/
+}
+#onebyone .row .col-md-5{
+    float:left !important;
+    width:400px;
+}
+#onebyone .row .col-md-4 select,#onebyone .row .col-md-4 input,#onebyone .row .col-md-4 select option {
+    border:none !important;
+    widht:200px !important;
+}
+#onebyone .row .col-md-4{
+   float:left !important;
+    width:200px !important;
+}
+#onebyone .row .col-md-3{
+    float:left !important;
+    width:150px;
     /*width:100px;*/
 }
