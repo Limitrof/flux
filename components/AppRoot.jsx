@@ -272,6 +272,7 @@ class AppRoot extends React.Component {
   render(){
 
     let _this = this;
+    let classNameShow = '';
 	let lastCategory = '';
     let items = ListStore.getItems();
     //ОПРЕДЕЛЯЕМ нужен ли самостоятельный рассчет
@@ -295,8 +296,17 @@ class AppRoot extends React.Component {
       //this.state.allAmount = ListStore.getSum();
       var arrSize = items.length;//ПОЛУЧАЕМ последнее занчение для вывода последнего блока ИТОГО (раздела "Призовой
 	  // фонд")
+
 	let itemHtml = items.map(( listItem,index ) => {
-		
+
+
+        if(listItem.ischecked){
+            classNameShow = "showItForPrint";
+        } else if(listItem.usehiddencheckbox && listItem.category != "Платформа для Программы лояльности:"){
+            classNameShow = "showItForPrint";
+        } else {
+            classNameShow = "hideItForPrint";
+        }
 		//UNIC FORMULA
         var buttonListElements = [];
 
@@ -307,7 +317,7 @@ class AppRoot extends React.Component {
                     //кнопка рассчета для бюджета
                     if(listItem.unicname == 'budget' && currentLocation != -1){
 
-                        usersControlFormula.push(<div><input className="width70" type="text"
+                        usersControlFormula.push(<div className={classNameShow}><input className="width70" type="text"
 															 onChange={_this.changeValueInState}
 															 data-id={ listItem.unicname }
 															 value={listItem.multinumber} />
@@ -348,7 +358,7 @@ class AppRoot extends React.Component {
 															 value={listItem.multinumber}/></div>);*/
 					} else {
                     //для всех остальных input(ов)
-                        usersControlFormula.push(<div><input className="width70" type="text"
+                        usersControlFormula.push(<div className={classNameShow}><input className="width70" type="text"
 															 onChange={_this.changeValueInState}
 															 data-id={ listItem.unicname }
 															 value={listItem.multinumber}/></div>);
@@ -376,15 +386,15 @@ else {usersControlFormula.push(<div></div>);}
 				} else {		
 					usersControlFormula.push(<listItemSelect onClick={this.changeItemPriceMulti} category={listItem.arrOfVlue} key={listItem.indexid} />);
 				}  */
-		
-				//USE OR NOT checkbox
-				var useOrNotCheckbox = [];
-				if (listItem.usehiddencheckbox) {
-					useOrNotCheckbox.push(<input className='checkboxforprice hiddencheckbox' type='checkbox' id={listItem.unicname}   value={listItem.price} checked/>);
-				} else {
-					//useOrNotCheckbox.push(<input className='checkboxforprice' onChange={this.handleClickCheckbox.bind(null, listItem.price,index)} type='checkbox' id={listItem.unicname}  value={listItem.price} checked={this.ischecked} />);
-					useOrNotCheckbox.push(<div className="labelpos  floatLeft heigth80p"><div className="switch demo3"><input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} /> <label><i></i></label></div></div>);
-				}
+        //USE OR NOT checkbox
+        var useOrNotCheckbox = [];
+        if (listItem.usehiddencheckbox) {
+            useOrNotCheckbox.push(<input className='checkboxforprice hiddencheckbox' type='checkbox' id={listItem.unicname}   value={listItem.price} checked/>);
+        } else {
+            //useOrNotCheckbox.push(<input className='checkboxforprice' onChange={this.handleClickCheckbox.bind(null, listItem.price,index)} type='checkbox' id={listItem.unicname}  value={listItem.price} checked={this.ischecked} />);
+            useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} />);
+        }
+
 		
 		
 		//учитываем минимальное значение
@@ -432,22 +442,22 @@ else {usersControlFormula.push(<div></div>);}
 					switch (lastCategory) {
 								case "Разработка программы":
 
-                                    blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDev} €</div></div>);
+                                    blockTitle.push(<div className="row hideItForPrint"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDev} €</div></div>);
 								  break;	   
 							  case "Платформа для Программы лояльности:":
-                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billPlatform} €</div></div>);
+                                  blockTitle.push(<div className="row hideItForPrint"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billPlatform} €</div></div>);
 								  break;
 							  case "Дизайн key visual:":
-                                  blockTitle.push(<div className="row"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDesign} €</div></div>);
+                                  blockTitle.push(<div className="row hideItForPrint"><div className="col-md-9 itogo">ИТОГО: </div><div className="col-md-3 itogo_sell">{billDesign} €</div></div>);
 								  break;
 
 							}
 //ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
-                      blockTitle.push(<div><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
+                      blockTitle.push(<div className="hideItForPrint"><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
 					
 				 } else if( (arrSize-1) == index){
 
-                     blockItogo.push(<div className="row">
+                     blockItogo.push(<div className="row hideItForPrint">
 				<div className="col-md-7">*Призовой фонд
 					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billBonus} €</div>
 			</div>);
@@ -455,12 +465,16 @@ else {usersControlFormula.push(<div></div>);}
         lastCategory = listItem.category;
 
 
-
+        /*if(listItem.ischecked){
+            classNameShow = "showItForPrint";
+        } else {
+            classNameShow = "hideItForPrint";
+		}*/
 
 //особый рендер для автоматического рассчета бюджета
         if(listItem.unicname == 'budget') {
             if(currentLocation != -1){
-                return <div>{blockTitle}
+                return <div className={classNameShow}>{blockTitle}
 					<div className="row" key={ listItem.id } title={listItem.comment}>
 						<div className="col-md-5 bcgray">
                             {useOrNotCheckbox}
@@ -479,7 +493,7 @@ else {usersControlFormula.push(<div></div>);}
             //		<div className={hideinputonphone}>{usersControlFormula}</div>
 
         }else {
-            return <div>{blockTitle}
+            return <div className={classNameShow}>{blockTitle}
 				<div className="row" key={ listItem.id } title={listItem.comment}>
 					<div className="col-md-5 bcgray">
 						<div className="row mtopmin17">
@@ -510,9 +524,11 @@ else {usersControlFormula.push(<div></div>);}
       </div>
     );*/
 
+
       return (
-	  <div  className="row" key="mainform" id="reactroot">
-		  <div className="col-md-8">{itemHtml}</div>
+<div>
+	  <div className="row" key="mainform" id="reactroot">
+		  <div className="col-md-8" id="onebyone">-{itemHtml}-</div>
 		  <div className="col-md-4">
 			  <div id="staticPrice">
 
@@ -523,23 +539,35 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-9">Разработка программы</div>
-					  <div className="col-md-3">{this.state.billDev} € <img onClick={_this.cleanCategory} data-id="Разработка программы" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Разработка программы</div>
+					  <div className="col-md-3">{this.state.billDev} € </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Разработка программы" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-9">Платформа для Программы лояльности</div>
-					  <div className="col-md-3">{this.state.billPlatform} € <img onClick={_this.cleanCategory} data-id="Платформа для Программы лояльности:" src="/img/clear.png" /> </div>
+					  <div className="col-md-8">Платформа для Программы лояльности</div>
+					  <div className="col-md-3">{this.state.billPlatform} € </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Платформа для Программы лояльности:" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-9">Дизайн key visual</div>
-					  <div className="col-md-3">{this.state.billDesign} € <img onClick={_this.cleanCategory} data-id="Дизайн key visual:" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Дизайн key visual</div>
+					  <div className="col-md-3">{this.state.billDesign} € </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Дизайн key visual:" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-9">Призовой фонд*</div>
-					  <div className="col-md-3">{this.state.billBonus} € <img onClick={_this.cleanCategory} data-id="Призовой фонд" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Призовой фонд*</div>
+					  <div className="col-md-3">{this.state.billBonus} € </div>
+					  <div className="col-md-1">
+						  <img onClick={_this.cleanCategory} data-id="Призовой фонд" src="/img/clear.png" />
+					  </div>
 				  </div>
 
 				  <hr/>
@@ -566,6 +594,7 @@ else {usersControlFormula.push(<div></div>);}
 			  </div>
 
 		  </div>
+	  </div>
 	  </div>);
   }
  //////////////////////////////
