@@ -517,7 +517,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 
         {
             id:26,
-            unicname:'delivery',
+            unicname:'delivery2',
             indexid:47,
             usehiddencheckbox:false,
             ischecked:false,

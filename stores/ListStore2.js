@@ -127,7 +127,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 
        {
            id:3,
-           unicname:'price_banner',
+           unicname:'price_rer',
            indexid:33,
            usehiddencheckbox:false,
            ischecked:false,
@@ -145,7 +145,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            needit: false, min:0,multinumber_source_unicname:'none'
        },  {
            id:26,
-           unicname:'delivery',
+           unicname:'price_pr',
            indexid:47,
            usehiddencheckbox:false,
            ischecked:false,

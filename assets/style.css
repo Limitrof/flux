@@ -575,3 +575,12 @@ float:left;
 .ulnotbulleted>li>p {
 	padding-left: 15px;
 }
+
+
+/*dependent check in Sales Push Compaignes 20161209 ardjuna*/
+#brending_goods,
+#logistic,
+#delivery2 {
+	margin-left: 40px;
+	width: 10px;
+}
