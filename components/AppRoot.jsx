@@ -59,6 +59,13 @@ let getListState = () => {
     items: ListStore.getItems()
   };
 }
+//////////////////////
+// определение статуса зависимых блоков
+let getBonusCreateStatus = () => {
+	return {
+        bonusCreateStatus: ListStore.inStore_getBonusCreateStatus()
+	}
+}
 //////////////////////////////////////
 // блок данных вводимых пользователем
 let getDistributorQuantiy = () => {
@@ -150,16 +157,17 @@ class AppRoot extends React.Component {
     this.setState(getContactsQuantity());
 
     this.setState(getAllSum());
+    this.setState(getBonusCreateStatus())
   }
 
   constructor() {
     super();
     this.state = getListState();
+//Доступ к чекинту подразделов "Призового фонда"
+      this.state.bonusCreateStatus = getBonusCreateStatus();
 
 //Данные о количестве дистрибьюторов
       this.state.distributorQuantiy = getDistributorQuantiy();
-
-
 
 
 
@@ -278,6 +286,8 @@ class AppRoot extends React.Component {
     //ОПРЕДЕЛЯЕМ нужен ли самостоятельный рассчет
 	  var currentLocation = this.props.path.indexOf("self");
 
+	  let checkedBonus = ListStore.inStore_getBonusCreateStatus();
+
       //Разработка программы
       let billDev = ListStore.inStore_getBillDev();
 
@@ -309,7 +319,6 @@ class AppRoot extends React.Component {
         }
 		//UNIC FORMULA
         var buttonListElements = [];
-
         var blockTitle = [];
         var blockItogo = [];
 				 var usersControlFormula = [];
@@ -392,7 +401,13 @@ else {usersControlFormula.push(<div></div>);}
             useOrNotCheckbox.push(<input className='checkboxforprice hiddencheckbox' type='checkbox' id={listItem.unicname}   value={listItem.price} checked/>);
         } else {
             //useOrNotCheckbox.push(<input className='checkboxforprice' onChange={this.handleClickCheckbox.bind(null, listItem.price,index)} type='checkbox' id={listItem.unicname}  value={listItem.price} checked={this.ischecked} />);
-            useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} />);
+			//дополнительная проверка для организации\блокирования доступа к некоторым подразделам блока "Призовой фонд"
+			if (listItem.unicname != 'bonus_create' && listItem.multinumber_source_unicname == 'vinners_quantity'){
+                useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} disabled={checkedBonus} />);
+			} else {
+                useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} />);
+			}
+
         }
 
 		

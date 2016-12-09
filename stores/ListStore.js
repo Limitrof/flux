@@ -21,7 +21,11 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
     inStore_getVinnersQuantiy: function(){
         return this.vinnersQuantiy;
     },
-
+//Статус чекбокса bonus_create
+    bonuscreatestatus: true,
+    inStore_getBonusCreateStatus : function(){
+        return this.bonuscreatestatus;
+    },
 //Количество дистрибьюторов
     distributorQuantiy: 1,
     inStore_getDistributorQuantiy: function(){
@@ -776,17 +780,31 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
          let billPlatform = this.billPlatform;
          let billDesign = this.billDesign;
          let billBonus = this.billBonus;*/
-
+        let bonuscreatestatus = this.bonuscreatestatus;
         items.map(function(currentRow,index) {
             if(currentRow.id == item_id){
+
+
                 if(currentRow.ischecked == false){
                     items[index].ischecked=true;
+                    //если изменена запись "закупка" - меняем глобальную переменную хранилища
+                    if(items[index].unicname == 'bonus_create') { bonuscreatestatus = false}
                 } else {
                     items[index].ischecked=false;
+                    if(items[index].unicname == 'bonus_create') { bonuscreatestatus = true}
+                    //если изменена запись "закупка" - меняем глобальную переменную хранилища
                 }
-
             }
         });
+        //только в случае если с 'bonus_create' снят чекбокс - блокируем зависимые от него области
+        if ( this.bonuscreatestatus != bonuscreatestatus && bonuscreatestatus == true) {
+            items.map(function(currentRow,index) {
+                if (currentRow.unicname != 'bonus_create' && currentRow.multinumber_source_unicname == 'vinners_quantity'){
+                    items[index].ischecked=false;
+                }
+            });
+        }
+        this.bonuscreatestatus = bonuscreatestatus;
         this.items = items;
         this.addAndRecountAll();
     },
