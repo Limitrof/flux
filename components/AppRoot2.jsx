@@ -432,7 +432,7 @@ else {usersControlFormula.push(<div></div>);}
 				 if( (arrSize-1) == index){
 
                      blockItogo.push(<div className="row">
-				<div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billDesign} €</div>
+						 <div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billDesign} €</div>
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
         lastCategory = listItem.category;
@@ -459,7 +459,7 @@ else {usersControlFormula.push(<div></div>);}
 
         }else {
             return <div id={currRowPos}>{blockTitle}
-				<div className="row" key={ listItem.id } title={listItem.comment}>
+				<div className="row hideItForPrint showItForPrint" key={ listItem.id } title={listItem.comment}>
 					<div className="col-md-6 bcgray">
                         {useOrNotCheckbox}
 						<label htmlFor={listItem.unicname}>{listItem.name}</label>
@@ -488,7 +488,7 @@ else {usersControlFormula.push(<div></div>);}
       return (
 	  <div  className="row" key="mainform" id="reactroot">
 		  <div className="col-md-8">{itemHtml}</div>
-		  <div className="col-md-4">
+		  <div className="col-md-4 hidden-print">
 			  <div id="staticPrice2">
 
 				  <div className="row">

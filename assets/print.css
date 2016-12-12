@@ -140,3 +140,26 @@ input[type="checkbox"]{
     width:150px;
     /*width:100px;*/
 }
+
+/*print style for Marketing 20161212 ardjuna*/
+#pos1 .row .col-md-6,
+#pos1 .row .col-md-3,
+#pos1 .row .col-md-3,
+#pos2 .row .col-md-6,
+#pos2 .row .col-md-3,
+#pos2 .row .col-md-3,
+#pos3 .row .col-md-6,
+#pos3 .row .col-md-3,
+#pos3 .row .col-md-3,
+#pos4 .row .col-md-7,
+#pos4 .row .col-md-2,
+#pos4 .row .col-md-3
+#pos4 .row .col-md-6,
+#pos4 .row .col-md-3,
+#pos4 .row .col-md-3 {
+    float:left !important;
+}
+/*print style for Marketing 20161212 ardjuna*/
+#pos4>.row>.col-md-6 {
+    width: 400px;
+}
