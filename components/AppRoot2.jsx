@@ -293,9 +293,12 @@ class AppRoot2 extends React.Component {
 	//alert('currentSum='+currentSum);
       //this.state.allAmount = ListStore.getSum();
       var arrSize = items.length;//ПОЛУЧАЕМ последнее занчение для вывода последнего блока ИТОГО (раздела "Призовой
-	  // фонд")
+	  //
+	  var num = 0
+	  var currRowPos = 0;
 	let itemHtml = items.map(( listItem,index ) => {
-		
+        num += 1;
+        currRowPos = 'pos' + num;
 		//UNIC FORMULA
         var buttonListElements = [];
 
@@ -455,7 +458,7 @@ else {usersControlFormula.push(<div></div>);}
             //		<div className={hideinputonphone}>{usersControlFormula}</div>
 
         }else {
-            return <div>{blockTitle}
+            return <div id={currRowPos}>{blockTitle}
 				<div className="row" key={ listItem.id } title={listItem.comment}>
 					<div className="col-md-6 bcgray">
                         {useOrNotCheckbox}
