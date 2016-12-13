@@ -361,6 +361,12 @@ color: white;
     border: 1px solid transparent;
   /*   border-radius: 4px 4px 0 0; */
     border-radius: 4px;
+	background: white;
+	color: grey;
+	/*font-weight: bolder;*/
+	width: 200px;
+	margin-left: 30px;
+	text-align: center;
 }
 
 .nav-tabs {
@@ -368,7 +374,7 @@ color: white;
 		 border-bottom:none;
 }
 .second-level {
-height:90px;
+height:114px;
     margin-left: -30px;
 	    padding-top: 30px;
 background-color:#dfe2e5;
@@ -403,7 +409,7 @@ float: left;
 }
 #staticPrice,#staticPrice1,#staticPrice2,#staticPriceBrandPromo{
 	width:100%;
-	height:320px !important;
+	height:100% !important;
 	margin-top:80px;
 	/*position:absolute;
 	border:1px solid gray;
@@ -588,8 +594,8 @@ float:left;
 
 /*fourth row height in Marketing 20161212 ardjuna */
 #pos4 > .row > .col-md-6,
-#pos4 > .row >.col-md-3,
-#pos4 > .row >.col-md-3{
+#pos4 > .row > .col-md-3,
+#pos4 > .row > .col-md-3{
 	height: 150px;
 }
 
@@ -598,3 +604,37 @@ float:left;
 	margin-top: 30px;
 }
 
+/*design revision in Sales Push Compaignes 20161213 ardjuna*/
+.third-level>li>a {
+	margin: 9px 0 40px 0;
+}
+.third-level>li.active>a {
+	width: 202px;
+}
+/*design revision in Sales Push Compaignes 20161213 ardjuna*/
+#mainTab>.nav-tabs>li.active>a {
+	margin-left: 0;
+	background-color: #dfe2e5;
+	font-weight: bolder;
+}
+/*design revision in Sales Push Compaignes 20161213 ardjuna*/
+#mainTab>.nav-tabs>li>a {
+	margin-top: 30px;
+	margin-left: 0 !important;
+	font-weight: bolder;
+	height: 47px;
+	width: 220px;
+}
+/*design revision 20161213 ardjuna*/
+#staticPrice> .row> .col-md-9,
+#staticPrice> .row> .col-md-3,
+#staticPrice> .row> .col-md-8,
+#staticPrice> .row> .col-md-1,
+#staticPriceBrandPromo> .row> .col-md-9,
+#staticPriceBrandPromo> .row> .col-md-8,
+#staticPriceBrandPromo> .row> .col-md-3,
+#staticPriceBrandPromo> .row> .col-md-1,
+#staticPrice2> .row> .col-md-9,
+#staticPrice2> .row> .col-md-3 {
+	margin-top: 12px;
+ }

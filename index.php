@@ -34,17 +34,13 @@
                             var basePosition = $('#app-brand-promo').offset().top;
                             var startPosition = $('#staticPriceBrandPromo').offset().top;
                             var bottomPosition = $('#longBlueRowBottom').offset().top;
-                            //console.log("bottomPosition="+bottomPosition);
 
-                            var staticPositionPlusHeight = $('#staticPriceBrandPromo').offset().top +  410;
-							/* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
-							 console.log ($('#staticPrice').offset().top);
-							 console.log ($(window).scrollTop()); */
-                            //if position smaller then current top & currentPos + Height < than longBlueRowBottom
+
+                            var staticPositionPlusHeight = $('#staticPriceBrandPromo').offset().top + 410;
+
                             var currStaticIfNotMove = $('#staticPriceBrandPromo').offset().top - $(window).scrollTop();
                             if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
-                                //if ( currStaticIfNotMove < 100){
-                                //console.log('bzzz '+ currStaticIfNotMove);
+
                                 var forNewPos =  $(window).scrollTop() + 100;
                                 //console.log("forNewPos="+forNewPos);
                                 $('#staticPriceBrandPromo').offset({"top":forNewPos});
@@ -52,12 +48,12 @@
                             $('#staticPriceBrandPromo').offset().top
                             if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
                                 //console.log("left buttom position");
-                                var forNewPos =  $(window).scrollTop() + 100;
+                                var forNewPos =  $(window).scrollTop() + 200;
                                 //console.log("forNewPos="+forNewPos);
                                 $('#staticPriceBrandPromo').offset({"top":forNewPos});
                             }
                         } else {
-                            $('#staticPriceBrandPromo').css({"margin-top":"10px","top":"0px","height":"470px"});
+                            $('#staticPriceBrandPromo').css({"margin-top":"10px","top":"0px","height":"300px"});
                         }
                         //
                         //////////////
@@ -203,15 +199,15 @@
 
                     <div id="mainTab" class="tabbable tabbablefirst">
                     <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab10" data-toggle="tab">AGV</a></li>
                     <li><a href="#tab20" data-toggle="tab">AGV lab</a></li>
+                    <li class="active"><a href="#tab10" data-toggle="tab">AGV</a></li>
                     </ul>
                     <div class="tab-content">
                     <div class="tab-pane active" id="tab10">
                     <!-----------------------------------second tab START------------------------>
                     <div class="tabbable">
                     <ul class="nav nav-tabs second-level">
-                    <li><a href="#tab100" data-toggle="tab">Marketing</a></li>
+                    <li><a href="#tab100" data-toggle="tab">PR & content</a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li-->
                     <li><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li>
                     <li><a href="#tab300" data-toggle="tab">Direct Research</a></li>
@@ -228,8 +224,8 @@
                     <!--------------------------------third tab START-------------------->
                     <div class="tabbable">
                     <ul class="nav nav-tabs third-level">
-                    <!--li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li-->
                     <li class="active"><a href="#tab2000" data-toggle="tab">Самостоятельный расчет</a></li>
+                    <li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li>
                     </ul>
                     <div class="tab-content ">
                     <!--div class="tab-pane" id="tab1000">
