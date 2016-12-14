@@ -222,7 +222,7 @@
                     <div class="tabbable">
                     <ul class="nav nav-tabs third-level">
                     <li class="active"><a href="#tab2000" data-toggle="tab">Самостоятельный расчет</a></li>
-                    <li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li>
+                    <!--<li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li>-->
                     </ul>
                     <div class="tab-content ">
                     <!--div class="tab-pane" id="tab1000">
@@ -360,7 +360,7 @@
                             $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
                             $mess .= '<hr />'.$_POST['pricelist'];
                             // $to - кому отправляем
-                            $to = 'zdan@bk.ru';
+                            $to = 'zdan@bk.ru, s.bogdan@agv-aftermarket.com, v.efimenko@agv-aftermarket.com';
                             // $from - от кого
                             $from= "From: ".$_POST['email']."\r\n";
                             $from .= "Content-type: text/html\r\n";

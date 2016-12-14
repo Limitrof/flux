@@ -357,15 +357,16 @@ color: white;
 }
 .nav-tabs>li>a {
     margin-right: 2px;
-    line-height: 1.42857143;
-    border: 1px solid transparent;
-  /*   border-radius: 4px 4px 0 0; */
-    border-radius: 4px;
+	margin-left: 30px;
+	margin-top: 6px;
+	line-height: 1.42857143;
+	border: 1px solid transparent;
+	/*   border-radius: 4px 4px 0 0; */
+	border-radius: 4px;
 	background: white;
 	color: grey;
 	/*font-weight: bolder;*/
 	width: 200px;
-	margin-left: 30px;
 	text-align: center;
 }
 
@@ -650,13 +651,5 @@ float:left;
 @media (max-width: 1000px) {
 	.row > .col-md-9 > .hidden-print {
 		display: none;
-	}
-}
-
-@media (max-width: 1000px) {
-	.row .heigth100>.col-md-4,
-	.row .heigth100>.col-md-6,
-	.row .heigth100>.col-md-2 {
-		width:200px;
 	}
 }

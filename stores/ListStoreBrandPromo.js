@@ -363,25 +363,30 @@ addAndRecountAll: function(){
     let billPlatform = 0;
     let billDesign = 0;
     let billBonus = 0;
+    let checkBoxCounter = 0;
 
     items.map(function(currentRow,index) {
         if(currentRow.ischecked){
             switch (currentRow.category) {
                 case "Пакет “А” Optimal online (B2B), 3 месяца":
                     billDev += items[index].price*items[index].multinumber;
+                    checkBoxCounter +=1;
                     break
                 case "Пакет “B” Online + Offline (B2B), 3 месяца":
                         billPlatform += items[index].price*items[index].multinumber;
+                    checkBoxCounter +=1;
                     break
                 case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
                         billDesign += items[index].price*items[index].multinumber;
+                    checkBoxCounter +=1;
                     break
                 case "Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца":
                         billBonus += items[index].price*items[index].multinumber;
+                    checkBoxCounter +=1;
                     break
             }
         }
-    });
+    }); console.log("checkBoxCounter=" + checkBoxCounter)
     this.sum =  billDev + billPlatform + billDesign + billBonus;
     this.items = items;
     this.billDev = billDev;

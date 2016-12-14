@@ -412,7 +412,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:1600,
             formula: 'inputvalue',
             multinumber:1600,
-            additionaltitle:'123',needit: false, min:0,multinumber_source_unicname:'none'
+            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
         },
 
         {

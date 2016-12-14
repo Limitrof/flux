@@ -368,11 +368,11 @@ class AppBrandPromo extends React.Component {
 					</div>
 				<div className="col-md-3 text-center bggraycolinher">
 					<div className="fontblue">
-						Охват ЦА <br/><span className="size24">{listItem.name}</span>.
+						Охват ЦА <br/><span className="size24">{listItem.name}</span>
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>.
+						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
 					</div>
 				</div>
 			</div>);
@@ -390,7 +390,7 @@ class AppBrandPromo extends React.Component {
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
 								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span>online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right width120">
+							<div className="col-md-6 bggraycol border-right">
 								<ul className="ulnotbulleted">
 									<li>баннер* 785х120 рх в ротации 1/3</li>
 									<li>написание и размещение статей**</li>
@@ -398,7 +398,7 @@ class AppBrandPromo extends React.Component {
 									<li>репост статей в соц. сетях</li>
 								</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left width120">
+							<div className="col-md-2 bggraycol border-left">
 								<ul className="ulnotbulleted">
 									<li>1</li>
 									<li>6</li>
@@ -409,13 +409,13 @@ class AppBrandPromo extends React.Component {
 						</div>
 						<div className="row heigth100" >
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120"><img className="inheritcenterimg" src="img/autobusiness.png"/><span>offline</span></div>
-							<div className="col-md-6 bggraycol border-right width120">
+							<div className="col-md-6 bggraycol border-right">
 							<ul className="ulnotbulleted">
 								<li>макет А4, 2-я обложка</li>
 								<li>статья 1/1 полосы</li>
 							</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left width120">
+							<div className="col-md-2 bggraycol border-left">
 								<ul className="ulnotbulleted">
 									<li>1</li>
 									<li>1</li>
@@ -444,11 +444,11 @@ class AppBrandPromo extends React.Component {
 					</div>
 				<div className="col-md-3 text-center grbgaycolinher">
 					<div className="fontblue">
-						Охват ЦА <br/><span className="size24">{listItem.name}</span>.
+						Охват ЦА <br/><span className="size24">{listItem.name}</span>
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>.
+						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
 					</div>
 				</div>
 			</div>);
@@ -531,11 +531,11 @@ class AppBrandPromo extends React.Component {
 					</div>
 				<div className="col-md-3 text-center bggraycolinher">
 					<div className="fontblue">
-						Охват ЦА <br/><span className="size24">{listItem.name}</span>.
+						Охват ЦА <br/><span className="size24">{listItem.name}</span>
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>.
+						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
 					</div>
 				</div>
 			</div>);
@@ -653,11 +653,11 @@ class AppBrandPromo extends React.Component {
 					</div>
 				<div className="col-md-3 text-center bggraycolinher">
 					<div className="fontblue">
-						Охват ЦА <br/><span className="size24">{listItem.name}</span>.
+						Охват ЦА <br/><span className="size24">{listItem.name}</span>
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>.
+						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
 					</div>
 				</div>
 			</div>);
@@ -676,7 +676,7 @@ if(listItem.ischecked){
 					<div className="row bcwhite margintop10">
 						<div className="col-md-12 blueColor_pt5">
 							<h3>{listItem.category}</h3>
-							Охват ЦА {listItem.name}. Стоимость контакта {listItem.comment}.
+							Охват ЦА {listItem.name} Стоимость контакта {listItem.comment}
 						</div>
 					</div>
 
@@ -687,7 +687,7 @@ if(listItem.ischecked){
 
 				<div className="row grayinrow ">
 
-					<div className="col-md-3 tiny-text">* изготовление банера включено</div>
+					<div className="col-md-3 tiny-text">* изготовление баннера включено</div>
 					<div className="col-md-4 tiny-text">** авторство AGV/клиент - 50/50</div>
 					<div className="col-md-2 itogo">ИТОГО:</div>
 					<div className="col-md-3 itogo_sell hidden-print ">{listItem.price} €</div>
@@ -759,6 +759,20 @@ if(listItem.ischecked){
 					  <div className="col-md-1">
 						  <img onClick={_this.cleanCategory} data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца" src="/img/clear.png" />
 					  </div>
+				  </div>
+
+				  <hr/>
+				  <div className="row colorblue">
+					  <div className="col-md-9">Охват (количество участников)</div>
+					  <div className="col-md-3">{this.state.usersQuantity}</div>
+				  </div>
+				  <div className="row colorblue">
+					  <div className="col-md-9">Качество контакта</div>
+					  <div className="col-md-3">{this.state.qualityLevel}</div>
+				  </div>
+				  <div className="row colorblue">
+					  <div className="col-md-9">Среднее количество контактов за Программу</div>
+					  <div className="col-md-3">~ {this.state.contactsQuantity}</div>
 				  </div>
 
 				  <hr/>
