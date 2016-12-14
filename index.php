@@ -94,7 +94,7 @@
                         }
 
 
-                        if($('#staticPrice1').offset().left > 100)
+                    /*    if($('#staticPrice1').offset().left > 100)
                         {
                             $('#staticPrice1').css("height","300px");
                             var basePosition = $('#app-root1').offset().top;
@@ -103,9 +103,6 @@
                             //console.log("bottomPosition="+bottomPosition);
 
                             var staticPositionPlusHeight = $('#staticPrice1').offset().top +  410;
-							/* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
-							 console.log ($('#staticPrice').offset().top);
-							 console.log ($(window).scrollTop()); */
                             //if position smaller then current top & currentPos + Height < than longBlueRowBottom
                             var currStaticIfNotMove = $('#staticPrice1').offset().top - $(window).scrollTop();
                             if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
@@ -125,7 +122,7 @@
                         } else {
                             $('#staticPrice1').css({"margin-top":"10px","top":"0px","height":"470px"});
                         }
-
+*/
 
 
 
@@ -207,7 +204,7 @@
                     <!-----------------------------------second tab START------------------------>
                     <div class="tabbable">
                     <ul class="nav nav-tabs second-level">
-                    <li><a href="#tab100" data-toggle="tab">PR & content</a></li>
+                    <li><a href="#tab100" data-toggle="tab">PR & Content</a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li-->
                     <li><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li>
                     <li><a href="#tab300" data-toggle="tab">Direct Research</a></li>

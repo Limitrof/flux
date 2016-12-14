@@ -468,7 +468,7 @@ else {usersControlFormula.push(<div></div>);}
 
 							}
 //ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
-                      blockTitle.push(<div className="hideItForPrint"><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3></div></div></div>);
+					 blockTitle.push(<div className="hideItForPrint"><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3 id>{listItem.category}</h3><p>{listItem.additionaltitle}</p></div></div></div>);
 					
 				 } else if( (arrSize-1) == index){
 
@@ -543,7 +543,7 @@ else {usersControlFormula.push(<div></div>);}
       return (
 <div>
 	  <div className="row" key="mainform" id="reactroot">
-		  <div className="col-md-8" id="onebyone">-{itemHtml}-</div>
+		  <div className="col-md-8" id="onebyone">{itemHtml}</div>
 		  <div className="col-md-4">
 			  <div id="staticPrice">
 

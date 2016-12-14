@@ -381,7 +381,7 @@ class AppBrandPromo extends React.Component {
                 promopart.push(<div className="row grayinrow border-bottom">
 					<div className="col-md-9 grayinrow" >
 						<div className="row heigth40 text-center hidden-print">
-							<div className="col-md-4 bggraycol border-right ">Ресурс</div>
+							<div className="col-md-4 bggraycol border-right">Ресурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
 						</div>
@@ -390,7 +390,7 @@ class AppBrandPromo extends React.Component {
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
 								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span>online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right">
+							<div className="col-md-6 bggraycol border-right width120">
 								<ul className="ulnotbulleted">
 									<li>баннер* 785х120 рх в ротации 1/3</li>
 									<li>написание и размещение статей**</li>
@@ -398,7 +398,7 @@ class AppBrandPromo extends React.Component {
 									<li>репост статей в соц. сетях</li>
 								</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left">
+							<div className="col-md-2 bggraycol border-left width120">
 								<ul className="ulnotbulleted">
 									<li>1</li>
 									<li>6</li>
@@ -409,13 +409,13 @@ class AppBrandPromo extends React.Component {
 						</div>
 						<div className="row heigth100" >
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120"><img className="inheritcenterimg" src="img/autobusiness.png"/><span>offline</span></div>
-							<div className="col-md-6 bggraycol border-right ">
+							<div className="col-md-6 bggraycol border-right width120">
 							<ul className="ulnotbulleted">
 								<li>макет А4, 2-я обложка</li>
 								<li>статья 1/1 полосы</li>
 							</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left">
+							<div className="col-md-2 bggraycol border-left width120">
 								<ul className="ulnotbulleted">
 									<li>1</li>
 									<li>1</li>

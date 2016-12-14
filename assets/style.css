@@ -62,7 +62,7 @@
 	background-color:white;
 }
 .margintop10{
-	margin-top:10px;
+	margin-top:30px !important;
 }
 .border-right {
 
@@ -614,7 +614,7 @@ float:left;
 /*design revision in Sales Push Compaignes 20161213 ardjuna*/
 #mainTab>.nav-tabs>li.active>a {
 	margin-left: 0;
-	background-color: #dfe2e5;
+	background-color: #d0d3d8;
 	font-weight: bolder;
 }
 /*design revision in Sales Push Compaignes 20161213 ardjuna*/
@@ -637,4 +637,26 @@ float:left;
 #staticPrice2> .row> .col-md-9,
 #staticPrice2> .row> .col-md-3 {
 	margin-top: 12px;
- }
+ }0.044.
+
+	   .blueColor_h80_pt5>p {
+	color: #8f9fae;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+
+@media (max-width: 1000px) {
+	.row > .col-md-9 > .hidden-print {
+		display: none;
+	}
+}
+
+@media (max-width: 1000px) {
+	.row .heigth100>.col-md-4,
+	.row .heigth100>.col-md-6,
+	.row .heigth100>.col-md-2 {
+		width:200px;
+	}
+}
