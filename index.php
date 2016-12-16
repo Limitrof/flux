@@ -203,13 +203,15 @@
                     <div class="tab-pane active" id="tab10">
                     <!-----------------------------------second tab START------------------------>
                     <div class="tabbable">
-                    <ul class="nav nav-tabs second-level">
-                    <li><a href="#tab100" data-toggle="tab">PR & Content</a></li>
-                    <!-- li class="active"><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li-->
-                    <li><a href="#tab200" data-toggle="tab">Sales Push Campaignes</a></li>
-                    <li><a href="#tab300" data-toggle="tab">Direct Research</a></li>
-                    <li class="active"><a href="#tab400" data-toggle="tab">Brand Promotion</a></li>
-                    <li><a href="#tab500" data-toggle="tab">POS Products 2</a></li>
+                    <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#tab100" data-toggle="tab">PR AND CONTENT</a></li>
+                    <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li-->
+                    <li><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li>
+                    <li><a href="#tab400" data-toggle="tab">MYSTERY CALLING</a></li>
+                    <li class="active"><a href="#tab400" data-toggle="tab">BRAND PROMOION</a></li>
+                    <li><a href="#tab300" data-toggle="tab">POS MATERIALS</a></li>
+                    <li><a href="#tab500" data-toggle="tab">NEWS AND ADVERTISING ISSUES</a></li>
+                    <li><a href="#tab600" data-toggle="tab">DESIGN</a></li>
                     </ul>
                     <div class="tab-content">
                     <div class="tab-pane" id="tab100">
