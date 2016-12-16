@@ -33,7 +33,7 @@
                             $('#staticPriceBrandPromo').css("height","300px");
                             var basePosition = $('#app-brand-promo').offset().top;
                             var startPosition = $('#staticPriceBrandPromo').offset().top;
-                            var bottomPosition = $('#longBlueRowBottom').offset().top;
+                            var bottomPosition = $('#longBlueRowBottom').offset().top - 200;
 
 
                             var staticPositionPlusHeight = $('#staticPriceBrandPromo').offset().top + 410;
@@ -46,9 +46,9 @@
                                 $('#staticPriceBrandPromo').offset({"top":forNewPos});
                             }
                             $('#staticPriceBrandPromo').offset().top
-                            if ( ( $('#staticPrice').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                            if ( ( $('#staticPriceBrandPromo').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
                                 //console.log("left buttom position");
-                                var forNewPos =  $(window).scrollTop() + 200;
+                                var forNewPos =  $(window).scrollTop() + 100;
                                 //console.log("forNewPos="+forNewPos);
                                 $('#staticPriceBrandPromo').offset({"top":forNewPos});
                             }
@@ -66,7 +66,7 @@
                             $('#staticPrice').css("height","300px"); // присвоїти <div id="staticPrice"> висоту 300px
                             var basePosition = $('#app-root').offset().top; // створит змінну і їй присвоїти позицію top <div id="app-root">
                             var startPosition = $('#staticPrice').offset().top; // створит змінну і їй присвоїти позицію top <div id="staticPrice">
-                            var bottomPosition = $('#longBlueRowBottom').offset().top; // створит змінну і їй присвоїти позицію top <div id="longBlueRowBottom">
+                            var bottomPosition = $('#longBlueRowBottom').offset().top - 200; // створит змінну і їй присвоїти позицію top <div id="longBlueRowBottom">
                             //console.log("bottomPosition="+bottomPosition);
 
                             var staticPositionPlusHeight = $('#staticPrice').offset().top +  410; // створит змінну, їй присвоїти позицію top <div id="staticPrice">, і додати 410px
@@ -360,7 +360,7 @@
                             $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
                             $mess .= '<hr />'.$_POST['pricelist'];
                             // $to - кому отправляем
-                            $to = 'zdan@bk.ru, s.bogdan@agv-aftermarket.com, v.efimenko@agv-aftermarket.com';
+                            $to = 's.bogdan@agv-aftermarket.com, v.efimenko@agv-aftermarket.com';
                             // $from - от кого
                             $from= "From: ".$_POST['email']."\r\n";
                             $from .= "Content-type: text/html\r\n";

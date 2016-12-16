@@ -97,16 +97,16 @@
 	margin:0 auto;
 	display: block;
 }
-.heigth40{
+.height40{
 	padding:10px;
 	height:40px;
 
 }
-.heigth90{
+.height90{
 	padding:10px;
 	height:90px;
 }
-.heigth100{
+.height100{
 	padding:10px;
 	height:100px;
 }
@@ -426,12 +426,15 @@ float: left;
  margin-top: 0 !important;
 }
  #staticPriceBrandPromo {
-     margin-top: 10px !important;
+     margin-top: 30px !important;
 	 padding-right: 25px;
 }
 
 #staticPrice .col-md{
 	top:80px;
+}
+#staticPrice  {
+	margin-top: 30px !important;
 }
 .bcwhite{
 	background-color:white;
@@ -652,4 +655,13 @@ float:left;
 	.row > .col-md-9 > .hidden-print {
 		display: none;
 	}
+}
+
+.button {
+	width: 187px;
+    height: 50px;
+	background-color: #029de0;
+	color: white;
+	font-weight: bold;
+
 }
