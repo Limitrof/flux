@@ -665,3 +665,9 @@ float:left;
 	font-weight: bold;
 
 }
+
+@media (max-width: 768px) {
+	.nav-tabs>li>a{
+		text-align: left !important;
+	}
+}
