@@ -208,7 +208,7 @@
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li-->
                     <li><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li>
                     <li><a href="#tab400" data-toggle="tab">MYSTERY CALLING</a></li>
-                    <li class="active"><a href="#tab400" data-toggle="tab">BRAND PROMOION</a></li>
+                    <li class="active"><a href="#tab400" data-toggle="tab">BRAND PROMOTION</a></li>
                     <li><a href="#tab300" data-toggle="tab">POS MATERIALS</a></li>
                     <li><a href="#tab500" data-toggle="tab">NEWS AND ADVERTISING ISSUES</a></li>
                     <li><a href="#tab600" data-toggle="tab">DESIGN</a></li>

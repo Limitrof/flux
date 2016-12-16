@@ -27,6 +27,7 @@
 	height:inherit;
 	border-bottom:1px solid #b6b6bb;
 	padding:10px;
+	float: left;
 }
 .bggraycol img{
 	margin-top:10px;
@@ -48,6 +49,7 @@
 	height:inherit;
 	/*padding:10px;*/
 	border-bottom:1px solid #e8e9ee;
+	float: left;
 }
 .bggraycol-nobottom img{
 	 margin-top:5px;
@@ -642,7 +644,7 @@ float:left;
 #staticPrice2> .row> .col-md-3 {
 	margin-top: 12px;
  }
-
+/* 20161216 ardjuna*/
 .blueColor_h80_pt5>p {
 	color: #8f9fae;
 	font-size: 16px;
@@ -650,13 +652,13 @@ float:left;
 	margin-bottom: 5px;
 }
 
-
+/* 20161216 ardjuna*/
 @media (max-width: 1000px) {
 	.row > .col-md-9 > .hidden-print {
 		display: none;
 	}
 }
-
+/* 20161216 ardjuna*/
 .button {
 	width: 187px;
     height: 50px;
@@ -665,9 +667,43 @@ float:left;
 	font-weight: bold;
 
 }
-
+/* media nav-tabs 20161216 ardjuna*/
 @media (max-width: 768px) {
 	.nav-tabs>li>a{
 		text-align: left !important;
+	}
+}
+/* media in Brand Promotion 20161216 ardjuna*/
+@media (max-width: 992px) {
+.row>.col-md-3>.fontblue,
+.row>.col-md-3>.fontgreen,
+.row>.col-md-12>.width120-center {
+	text-align: left !important;
+        }
+}
+/* media in Brand Promotion 20161216 ardjuna*/
+@media (max-width: 992px) {
+.row>.col-md-12>.width120-center {
+   float: left;
+   }
+}
+/* media in Brand Promotion 20161216 ardjuna*/
+@media (max-width: 992px) {
+.mediawidth {
+	width: 100%;
+  }
+}
+/* media in Brand Promotion 20161216 ardjuna*/
+@media (max-width: 992px) {
+	.inheritcenterimg {
+		margin: 0;
+	}
+
+	.text-center {
+		text-align: left;
+	}
+
+	.bggraycol-nobottom {
+		border-bottom:1px solid #b6b6bb;
 	}
 }
