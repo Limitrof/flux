@@ -80,48 +80,125 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
       name: 'Item 2',
       id: 1
     }
-  ], */
+  ], 
 
 
+	
+		
+Футболка	500 шт.	2970	EUR
+Описание			
+Полиэтиленовый пакет-майка	____ шт.	____	EUR
+			
+Баннер с люверсами, 1х1,5 м	200 шт.	1250	EUR
+			
+Плакат А2 полноцветный	500 шт.	378	EUR
+			
+Каталог , формат А4	500 шт.	1750	EUR
+Хранение и доставка дистрибьюторам		цена по запросу	
+			
+Цены указаны с учетом нанесения логотипа 			
+
+  */
+  
+  
+  
    items: [
-       {
-       	id:1,
-           unicname:'price_for_callop',
-           indexid:33,
-           usehiddencheckbox:false,
-           ischecked:false,
-           category: 'PR',
-           showwordprefix:'',
-           showwordsuffix:'€',
-           comment:'Разработка легенды, скрипта оператора',
-           baseprice: 250,
-           price: 250,
-           stocked: true,
-           name: 'Разработка легенды, скрипта оператора',
-           arrOfVlue:1,
-           formula: 'none',
-           multinumber:1,
-           needit: false, min:0,multinumber_source_unicname:'none'
-       },
-       {
-           id:2,
-           unicname:'price_for_one',
-           indexid:33,
-           usehiddencheckbox:false,
-           ischecked:false,
-           category: 'PR',
-           showwordprefix:'',
-           showwordsuffix:'€',
-           comment:'Обзвон, предоставление отчёта (1 евро - 1 контакт)',
-           baseprice: 1,
-           price: 1,
-           stocked: true,
-           name: 'Обзвон, предоставление отчёта (1 евро - 1 контакт)',
-           arrOfVlue:1,
-           formula: 'inputvalue',
-           multinumber:100,
-           needit: false, min:0,multinumber_source_unicname:'none'
-       }
+      {
+            id:14,
+            unicname:'designweba',
+            indexid:31,
+            usehiddencheckbox:false,
+            ischecked:false,
+            category: 'Дизайн',
+            showwordprefix:'от',
+            showwordsuffix:'€',
+            comment:'Разработка логотипа',
+            baseprice: 0,
+            price: 450,
+            stocked: true,
+            name: 'Разработка логотипа',
+            arrOfVlue:'none',
+            formula: 'multi',
+            multinumber:1,
+            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+        },
+        {
+            id:15,
+            unicname:'designadvertb',
+            indexid:32,
+            usehiddencheckbox:false,
+            ischecked:false,
+            category: 'Дизайн',
+            showwordprefix:'от',
+            showwordsuffix:'€',
+            comment:'Разработка и дизайн брендбука',
+            baseprice: 0,
+            price: 2500,
+            stocked: true,
+            name: 'Разработка и дизайн брендбука',
+            arrOfVlue:'none',
+            formula: 'multi',
+            multinumber:1,
+            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+        },        
+		{
+            id:155,
+            unicname:'designadvertd',
+            indexid:325,
+            usehiddencheckbox:false,
+            ischecked:false,
+            category: 'Дизайн',
+            showwordprefix:'от',
+            showwordsuffix:'€',
+            comment:'Дизайн рекламных макетов',
+            baseprice: 0,
+            price: 250,
+            stocked: true,
+            name: 'Дизайн рекламных макетов',
+            arrOfVlue:'none',
+            formula: 'multi',
+            multinumber:1,
+            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+        },
+        {
+            id:16,
+            unicname:'price_for_banneranim',
+            indexid:33,
+            usehiddencheckbox:false,
+            ischecked:false,
+            category: 'Дизайн',
+            showwordprefix:'',
+            showwordsuffix:'€',
+            comment:'дизайн баннеров для дистрибьюторов',
+            baseprice: 180,
+            price: 180,
+            stocked: true,
+            name: 'Дизайн баннеров для дистрибьюторов',
+            arrOfVlue:'none',
+            formula: 'multi',
+            multinumber:1,
+            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+        },
+        {
+            id:17,
+            unicname:'count_for_banneranim',
+            indexid:34,
+            usehiddencheckbox:true,
+            ischecked:false,
+            category: 'Дизайн',
+            showwordprefix:'',
+            showwordsuffix:'',
+            comment:'количество баннеров',
+            baseprice: 0,
+            price: 0,
+            stocked: true,
+            name: 'Количество \nбаннеров',
+            arrOfVlue:1,
+            formula: 'inputvalue',
+            multinumber:1,
+            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+        }
+        
 
 
    ],
@@ -267,7 +344,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
                     if(currentRow.unicname == 'bonus_for_disr'){
                        // alert('distr items[index].multinumber='+items[index].multinumber);
                     }
-                    simpleSum  += items[index].price*items[index].multinumber;
+                    simpleSum  += parseInt(items[index].price*items[index].multinumber);
                 }
             }
 
@@ -335,14 +412,14 @@ addAndRecountAll: function(){
                 case "Платформа для Программы лояльности:":
                         billPlatform += items[index].price*items[index].multinumber;
                     break
-                case "PR":
-                    if(currentRow.unicname=='price_for_banner'){
-                        billDesign =  billDesign + items[index].price*items[index].multinumber + 30;
+                case "Дизайн":
+                   /* if(currentRow.unicname=='price_for_banner'){
+                         billDesign =  billDesign + items[index].price*items[index].multinumber + 30;
 
-                    }else{
+                    }else{ */
 
-                        billDesign += items[index].price*items[index].multinumber;
-                    }
+                        billDesign += parseInt(items[index].price*items[index].multinumber);
+                  /*   } */
                     break
                 case "Призовой фонд":
                 	if(currentRow.unicname=='bonus_create'){

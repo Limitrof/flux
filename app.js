@@ -4,7 +4,9 @@ import AppRoot from './components/AppRoot';
 import AppRoot2 from './components/AppRoot2';
 import AppRootMystery from './components/AppRootMystery';
 import AppRootStaff from './components/AppRootStaff';
+import AppRootAdvert from './components/AppRootAdvert';
 import AppBrandPromo from './components/AppBrandPromo';
+import AppRootDesign from './components/AppRootDesign';
 //var forPath=window.location.href;
 React.render(
   <AppRoot path="byone" />,
@@ -29,6 +31,14 @@ React.render(
 React.render(
     <AppRootStaff path="marketing" />,
     document.getElementById('app-staff')
+);
+React.render(
+    <AppRootAdvert path="marketing" />,
+    document.getElementById('app-advert')
+);
+React.render(
+    <AppRootDesign path="marketing" />,
+    document.getElementById('app-design')
 );
 /*
 React.render(

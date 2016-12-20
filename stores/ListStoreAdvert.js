@@ -80,48 +80,203 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
       name: 'Item 2',
       id: 1
     }
-  ], */
+  ], 
 
 
+	
+		
+Футболка	500 шт.	2970	EUR
+Описание			
+Полиэтиленовый пакет-майка	____ шт.	____	EUR
+			
+Баннер с люверсами, 1х1,5 м	200 шт.	1250	EUR
+			
+Плакат А2 полноцветный	500 шт.	378	EUR
+			
+Каталог , формат А4	500 шт.	1750	EUR
+Хранение и доставка дистрибьюторам		цена по запросу	
+			
+Цены указаны с учетом нанесения логотипа 			
+
+  */
+  
+  
+  
    items: [
        {
        	id:1,
-           unicname:'price_for_callop',
-           indexid:33,
+           unicname:'price_a4',
+           indexid:1,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'PR',
+           category: "Ad",
            showwordprefix:'',
            showwordsuffix:'€',
-           comment:'Разработка легенды, скрипта оператора',
-           baseprice: 250,
-           price: 250,
+           comment:'1. Полноцветный каталог А4, 32 стр., крепление на термобиндер. Разработка, дизайн, верстка',
+           baseprice: 680,
+           price: 680,
            stocked: true,
-           name: 'Разработка легенды, скрипта оператора',
-           arrOfVlue:1,
+           name: '1. Полноцветный каталог А4, 32 стр., крепление на термобиндер. Разработка, дизайн, верстка',
+           arrOfVlue:'',
            formula: 'none',
            multinumber:1,
            needit: false, min:0,multinumber_source_unicname:'none'
-       },
+       } ,
+	   {id:2,unicname:'plat',indexid:2,usehiddencheckbox:true,ischecked:false,category: 'Хранение и доставка дистрибьюторам',   showwordprefix:'Цена по запросу', showwordsuffix:'', comment:'',baseprice: '',price: '', stocked: false, name: 'Хранение и доставка дистрибьюторам', arrOfVlue:'none',formula: 'multi',multinumber:1, additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'},
        {
-           id:2,
-           unicname:'price_for_one',
-           indexid:33,
+           id:3,
+           unicname:'price_daidgest',
+           indexid:3,
            usehiddencheckbox:false,
            ischecked:false,
-           category: 'PR',
+           category: "Ad",
            showwordprefix:'',
            showwordsuffix:'€',
-           comment:'Обзвон, предоставление отчёта (1 евро - 1 контакт)',
-           baseprice: 1,
-           price: 1,
+           comment:'Новостной электронный дайджест (до 5 стр. А4).Написание, дизайн, верстка',
+           baseprice: 680,
+           price: 680,
            stocked: true,
-           name: 'Обзвон, предоставление отчёта (1 евро - 1 контакт)',
-           arrOfVlue:1,
-           formula: 'inputvalue',
-           multinumber:100,
+           name: '2. Новостной электронный дайджест (до 5 стр. А4).Написание, дизайн, верстка',
+           arrOfVlue:[{valOf:1,strInfo:'1'},{valOf:2,strInfo:'2'},{valOf:3,strInfo:'3'},{valOf:4,strInfo:'4'},{valOf:5,strInfo:'5'},{valOf:6,strInfo:'6'},{valOf:7,strInfo:'7'},{valOf:8,strInfo:'8'},{valOf:9,strInfo:'9'},{valOf:10,strInfo:'10'}],
+           formula: 'select',
+           multinumber:1,
            needit: false, min:0,multinumber_source_unicname:'none'
-       }
+       }/*,
+        {
+            id:3,
+            unicname:'distributorQuantiy',
+            indexid:3,
+            usehiddencheckbox:true,
+            ischecked:false,
+            category: 'Ad',
+            showwordprefix:'',
+            showwordsuffix:'',
+            comment:'Укажите количество выпусков дайджеста',
+            baseprice: 0,
+            price: 0,
+            stocked: false,
+            name: 'Укажите количество выпусков дайджеста',
+            arrOfVlue:[{valOf:'checked',strInfo:'3'},{valOf:1,strInfo:'1'},{valOf:2,strInfo:'2'},{valOf:3,strInfo:'3'},{valOf:4,strInfo:'4'},{valOf:5,strInfo:'5'},{valOf:6,strInfo:'6'},{valOf:7,strInfo:'7'},{valOf:8,strInfo:'8'},{valOf:9,strInfo:'9'},{valOf:10,strInfo:'10'}],
+            formula: 'select',
+            multinumber:1,
+            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+        },
+       {
+           id:3,
+           unicname:'price_gloves',
+           indexid:3,
+           usehiddencheckbox:false,
+           ischecked:false,
+           category: "POS-materails",
+           showwordprefix:'',
+           showwordsuffix:'€',
+           comment:'Перчатки для механика',
+           baseprice: 2.73,
+           price: 2.73,
+           stocked: true,
+           name: 'Перчатки для механика',
+           arrOfVlue:[{valOf:500,strInfo:'500 шт.'},{valOf:1000,strInfo:'1000 шт.'}],
+           formula: 'select',
+           multinumber:500,
+           needit: false, min:0,multinumber_source_unicname:'none'
+       },
+       {
+           id:4,
+           unicname:'price_tshirt',
+           indexid:4,
+           usehiddencheckbox:false,
+           ischecked:false,
+           category: "POS-materails",
+           showwordprefix:'',
+           showwordsuffix:'€',
+           comment:'Футболка',
+           baseprice: 5.94,
+           price: 5.94,
+           stocked: true,
+           name: 'Футболка',
+           arrOfVlue:[{valOf:500,strInfo:'500 шт.'},{valOf:1000,strInfo:'1000 шт.'}],
+           formula: 'select',
+           multinumber:500,
+           needit: false, min:0,multinumber_source_unicname:'none'
+       },
+       {
+           id:5,
+           unicname:'price_bag',
+           indexid:5,
+           usehiddencheckbox:false,
+           ischecked:false,
+           category: "POS-materails",
+           showwordprefix:'',
+           showwordsuffix:'€',
+           comment:'Полиэтиленовый пакет-майка 40х24 см',
+           baseprice: 0.03228,
+           price: 0.03228,
+           stocked: true,
+           name: 'Полиэтиленовый пакет-майка 40х24 см',
+           arrOfVlue:[{valOf:25000,strInfo:'25000 шт.'},{valOf:30000,strInfo:'30000 шт.'}],
+           formula: 'select',
+           multinumber:25000,
+           needit: false, min:0,multinumber_source_unicname:'none'
+       },
+       {
+           id:6,
+           unicname:'price_bannerlu',
+           indexid:6,
+           usehiddencheckbox:false,
+           ischecked:false,
+           category: "POS-materails",
+           showwordprefix:'',
+           showwordsuffix:'€',
+           comment:'Баннер с люверсами, 1х1,5 м',
+           baseprice: 6.25,
+           price: 6.25,
+           stocked: true,
+           name: 'Баннер с люверсами, 1х1,5 м',
+           arrOfVlue:[{valOf:200,strInfo:'200 шт.'},{valOf:300,strInfo:'300 шт.'}],
+           formula: 'select',
+           multinumber:200,
+           needit: false, min:0,multinumber_source_unicname:'none'
+       },
+       {
+           id:7,
+           unicname:'price_poster',
+           indexid:7,
+           usehiddencheckbox:false,
+           ischecked:false,
+           category: "POS-materails",
+           showwordprefix:'',
+           showwordsuffix:'€',
+           comment:'Плакат А2 полноцветный',
+           baseprice: 0.756,
+           price: 0.756,
+           stocked: true,
+           name: 'Плакат А2 полноцветный',
+           arrOfVlue:[{valOf:500,strInfo:'500 шт.'},{valOf:1000,strInfo:'1000 шт.'}],
+           formula: 'select',
+           multinumber:500,
+           needit: false, min:0,multinumber_source_unicname:'none'
+       },
+       {
+           id:8,
+           unicname:'price_catalog',
+           indexid:8,
+           usehiddencheckbox:false,
+           ischecked:false,
+           category: "POS-materails",
+           showwordprefix:'',
+           showwordsuffix:'€',
+           comment:'Каталог , формат А4',
+           baseprice: 3.5,
+           price: 3.5,
+           stocked: true,
+           name: 'Каталог , формат А4',
+           arrOfVlue:[{valOf:500,strInfo:'500 шт.'},{valOf:1000,strInfo:'1000 шт.'}],
+           formula: 'select',
+           multinumber:500,
+           needit: false, min:0,multinumber_source_unicname:'none'
+       },  
+	   {id:10,unicname:'plat',indexid:22,usehiddencheckbox:true,ischecked:false,category: 'Хранение и доставка дистрибьюторам',   showwordprefix:'Цена по запросу', showwordsuffix:'', comment:'',baseprice: '',price: '', stocked: false, name: 'Хранение и доставка дистрибьюторам', arrOfVlue:'none',formula: 'multi',multinumber:1, additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'}, */
+        
 
 
    ],
@@ -267,7 +422,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
                     if(currentRow.unicname == 'bonus_for_disr'){
                        // alert('distr items[index].multinumber='+items[index].multinumber);
                     }
-                    simpleSum  += items[index].price*items[index].multinumber;
+                    simpleSum  += parseInt(items[index].price*items[index].multinumber);
                 }
             }
 
@@ -335,13 +490,13 @@ addAndRecountAll: function(){
                 case "Платформа для Программы лояльности:":
                         billPlatform += items[index].price*items[index].multinumber;
                     break
-                case "PR":
+                case "Ad":
                     if(currentRow.unicname=='price_for_banner'){
                         billDesign =  billDesign + items[index].price*items[index].multinumber + 30;
 
                     }else{
 
-                        billDesign += items[index].price*items[index].multinumber;
+                        billDesign += parseInt(items[index].price*items[index].multinumber);
                     }
                     break
                 case "Призовой фонд":

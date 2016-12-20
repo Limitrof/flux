@@ -1,7 +1,7 @@
 // AppRoot.jsx
 import React from 'react';
-import ListStore from '../stores/ListStoreMystery';
-import AppDispatcher from '../dispatcher/AppDispatcherMystery';
+import ListStore from '../stores/ListStoreDesign';
+import AppDispatcher from '../dispatcher/AppDispatcherDesign';
 
 // Sub components
 import NewItemForm from './NewItemForm';
@@ -133,7 +133,7 @@ let getAllSum = () => {
 
 
 
-class AppRootMystery extends React.Component {
+class AppRootDesign extends React.Component {
   
   // Method to setState based upon Store changes
   _onChange() {
@@ -392,7 +392,7 @@ else {usersControlFormula.push(<div></div>);}
 		//учитываем минимальное значение
 				var sumWithMinValue = 0;
         if (listItem.unicname=='price_for_banner'){
-            sumWithMinValue = parseInt(listItem.baseprice*listItem.multinumber) + 30;
+            sumWithMinValue = parseInt(listItem.baseprice*listItem.multinumber);// + 30;
         }else if(listItem.min!=0 && (listItem.baseprice*listItem.multinumber)<listItem.min){
             sumWithMinValue = listItem.min;
         } else if (listItem.baseprice!=0 ){
@@ -401,7 +401,7 @@ else {usersControlFormula.push(<div></div>);}
             sumWithMinValue = parseInt(listItem.price*listItem.multinumber);
         }
 		
-		
+		if (sumWithMinValue== 0) sumWithMinValue='';
 		
 		
 				//check prefix and set if exist
@@ -498,8 +498,8 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-9">Mystery Calling</div>
-					  <div className="col-md-3">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="PR" src="/img/clear.png" /></div>
+					  <div className="col-md-8">News and advertising issues</div>
+					  <div className="col-md-4">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="PR" src="/img/clear.png" /></div>
 				  </div>
 
 
@@ -628,4 +628,4 @@ else {usersControlFormula.push(<div></div>);}
   
 }
 
-export default AppRootMystery;
+export default AppRootDesign;
