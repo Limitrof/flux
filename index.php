@@ -204,7 +204,7 @@
                     <!-----------------------------------second tab START------------------------>
                     <div class="tabbable">
                     <ul class="nav nav-tabs nav-justified">
-                    <li><a href="#tab100" data-toggle="tab">PR AND CONTENT</a></li>
+                    <li><a href="#tab100" data-toggle="tab">PR AND<br> CONTENT</a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li-->
                     <li><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li>
                     <li><a href="#tab250" data-toggle="tab">MYSTERY <br/>CALLING</a></li>

@@ -255,7 +255,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            multinumber:500,
            needit: false, min:0,multinumber_source_unicname:'none'
        },  
-	   {id:10,unicname:'plat',indexid:22,usehiddencheckbox:true,ischecked:false,category: 'Хранение и доставка дистрибьюторам',   showwordprefix:'Цена по запросу', showwordsuffix:'', comment:'',baseprice: 0,price: '', stocked: false, name: 'Хранение и доставка дистрибьюторам', arrOfVlue:'none',formula: 'multi',multinumber:1, additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'},
+	   {id:10,unicname:'plat',indexid:22,usehiddencheckbox:true,ischecked:false,category: 'Хранение и доставка дистрибьюторам',   showwordprefix:'Цена по запросу', showwordsuffix:'', comment:'',baseprice: '',price: '', stocked: false, name: 'Хранение и доставка дистрибьюторам', arrOfVlue:'none',formula: 'multi',multinumber:1, additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'},
         
 
 

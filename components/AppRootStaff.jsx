@@ -401,7 +401,7 @@ else {usersControlFormula.push(<div></div>);}
             sumWithMinValue = parseInt(listItem.price*listItem.multinumber);
         }
 		
-		
+		if (sumWithMinValue== 0) sumWithMinValue='';
 		
 		
 				//check prefix and set if exist
