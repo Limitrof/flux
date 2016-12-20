@@ -2,6 +2,8 @@ import React from 'react';
 import AppRoot from './components/AppRoot';
 //import AppRoot1 from './components/AppRoot1';
 import AppRoot2 from './components/AppRoot2';
+import AppRootMystery from './components/AppRootMystery';
+import AppRootStaff from './components/AppRootStaff';
 import AppBrandPromo from './components/AppBrandPromo';
 //var forPath=window.location.href;
 React.render(
@@ -19,6 +21,14 @@ React.render(
 React.render(
     <AppBrandPromo path="marketing" />,
     document.getElementById('app-brand-promo')
+);
+React.render(
+    <AppRootMystery path="marketing" />,
+    document.getElementById('app-mystery')
+);
+React.render(
+    <AppRootStaff path="marketing" />,
+    document.getElementById('app-staff')
 );
 /*
 React.render(
