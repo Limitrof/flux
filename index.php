@@ -195,24 +195,28 @@
 
 
                     <div id="mainTab" class="tabbable tabbablefirst">
-                    <ul class="nav nav-tabs">
+                    <div id="firstlevel">
+                    <ul class="nav nav-tabs ">
                     <li><a href="#tab20" data-toggle="tab">AGV lab</a></li>
                     <li class="active"><a href="#tab10" data-toggle="tab">AGV</a></li>
                     </ul>
+                    </div>
                     <div class="tab-content">
                     <div class="tab-pane active" id="tab10">
                     <!-----------------------------------second tab START------------------------>
                     <div class="tabbable">
+                    <div id="secondlevel">
                     <ul id="marginleft20" class="nav nav-tabs nav-justified">
-                    <li><a href="#tab100" data-toggle="tab">PR AND<br> CONTENT</a></li>
+                    <li><a href="#tab100" data-toggle="tab">PR AND CONTENT</a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li-->
-                    <li><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li>
-                    <li><a href="#tab250" data-toggle="tab">MYSTERY <br/>CALLING</a></li>
+                    <li><a href="#tab200" data-toggle="tab">SALES PUSH <p>CAMPAIGNES</p></a></li>
+                    <li><a href="#tab250" data-toggle="tab">MYSTERY CALLING</a></li>
                     <li class="active"><a href="#tab400" data-toggle="tab">BRAND <br/>PROMOTION</a></li>
-                    <li><a href="#tab300" data-toggle="tab">POS <br/>MATERIALS</a></li>
-                    <li><a href="#tab500" data-toggle="tab">NEWS AND ADVERTISING ISSUES</a></li>
-                    <li><a href="#tab600" data-toggle="tab">DESIGN<br/>&nbsp;&nbsp;&nbsp;</a></li>
+                    <li><a href="#tab300" data-toggle="tab">POS MATERIALS</a></li>
+                    <li><a href="#tab500" data-toggle="tab">NEWS AND <p>ADVERTISING ISSUES</p></a></li>
+                    <li><a href="#tab600" data-toggle="tab">DESIGN</a></li>
                     </ul>
+                    </div>
                     <div class="tab-content">
                     <div class="tab-pane" id="tab100">
                     <p style="margin-top:10px;"></p>
@@ -382,7 +386,7 @@
                             $to = 's.bogdan@agv-aftermarket.com, v.efimenko@agv-aftermarket.com';
                             // $from - от кого
                             $from= "From: ".$_POST['email']."\r\n";
-                            $from .= "Content-type: text/html\r\ncharset=UTF-8\r\nContent-Transfer-Encoding: 8bit";
+                            $from .= "Content-type: text/html;charset=UTF-8\r\nContent-Transfer-Encoding: 8bit";
                             // функция, которая отправляет наше письмо.
 
                          if(mail($to, $title, $mess, $from))	{

@@ -1,5 +1,8 @@
 #marginleft20{
-	margin-left:-32px;
+	margin-left:-60px;
+	background-color: #dfe2e5;
+	width: auto;
+	height: 110px;
 }
 
 /* by Serhio */
@@ -362,21 +365,36 @@ color: white;
     border: 1px solid #ddd;
 /*     border-bottom-color: transparent; */
 }
-.nav-tabs>li>a {
+#firstlevel .nav-tabs >li>a {
     margin-right: 2px;
-	/*margin-left: 30px;*/
-	margin-top: 6px;
+	margin-left: -32px;
+	margin-top: 10px;
 	line-height: 1.42857143;
 	border: 1px solid transparent;
 	/*   border-radius: 4px 4px 0 0; */
 	border-radius: 4px;
 	background: white;
 	color: grey;
-	/*font-weight: bolder;*/
-	/*width: 200px;*/
+	font-weight: bolder;
+	width: 220px;
 	text-align: center;
 }
+ .nav-justified>li>a {
+	 margin-top: 30px !important;
+	 margin-left: 18px;
+	 font-size: 11px;
+	 height: 47px;
+	 width: 150px;
+	 background: white;
+	 color: grey;
+}
+#secondlevel {
+	width: auto;
+}
 
+.nav-justified>li>a[href="#tab100"] {
+	margin-left: 28px !important;
+}
 .nav-tabs {
     /* border-bottom: 1px solid #ddd; */
 		 border-bottom:none;
@@ -620,7 +638,7 @@ float:left;
 }
 
 #app-staff #pos9> .row > .col-md-3 .price_sell {
-	font-size:10px;
+	font-size:14px;
 }
 #app-advert #pos2> .row > .col-md-3 .price_sell {
 	font-size:10px;
@@ -634,19 +652,13 @@ float:left;
 	width: 202px;
 }*/
 /*design revision in Sales Push Compaignes 20161213 ardjuna*/
-#mainTab>.nav-tabs>li.active>a {
+#firstlevel>.nav-tabs>li.active>a {
 	margin-left: 0;
 	background-color: #d0d3d8;
 	font-weight: bolder;
 }
 /*design revision in Sales Push Compaignes 20161213 ardjuna*/
-#mainTab>.nav-tabs>li>a {
-	margin-top: 30px;
-	margin-left: 0 !important;
-	font-weight: bolder;
-	height: 47px;
-	width: 220px;
-}
+
 /*design revision 20161213 ardjuna*/
 #staticPrice> .row> .col-md-9,
 #staticPrice> .row> .col-md-3,
@@ -734,7 +746,9 @@ float:left;
 	.button {
 		margin-top: 10px;
 	}
-
+	#app-brand-promo .row>.col-md-12> img {
+		float: left !important;
+	}
 	
 }
 /* green color "online" in Brand Promotion 20161219 ardjuna*/
@@ -755,3 +769,16 @@ float:left;
 #true {
 	margin: 5px 0 20px 0;
 }
+/*sticker in Brand PromotionPR 20161221 ardjuna*/
+#app-brand-promo .row>.col-md-12> img {
+	float:right;
+	display:block;
+	width:75px;
+}
+/*sticker in Brand PromotionPR 20161221 ardjuna*/
+#app-brand-promo .row>.col-md-12> h3 {
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+

@@ -112,7 +112,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            category: "POS-materails",
            showwordprefix:'',
            showwordsuffix:'€',
-           comment:'Полукомбинезон мехканика',
+           comment:'Полукомбинезон механика',
            baseprice: 24.55,
            price: 24.55,
            stocked: true,

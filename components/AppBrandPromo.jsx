@@ -676,7 +676,7 @@ if(listItem.ischecked){
 
 					<div className="row bcwhite margintop10">
 						<div className="col-md-12 blueColor_pt5">
-							<h3>{listItem.category}</h3>
+							<img src={listItem.sticker}/><h3>{listItem.category}</h3>
 							<span className="grayColor">Охват ЦА</span> {listItem.name} <span className="grayColor">Стоимость контакта</span> {listItem.comment} €
 						</div>
 					</div>

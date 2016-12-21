@@ -102,7 +102,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:1,
            formula: 'none',
            multinumber:1,
-           needit: false, min:0,multinumber_source_unicname:'none'
+           sticker:'img/PaketA.png', needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
            id:2,
@@ -121,7 +121,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:1,
            formula: 'none',
            multinumber:1,
-           needit: false, min:0,multinumber_source_unicname:'none'
+           sticker:'img/PaketB.png',needit: false, min:0,multinumber_source_unicname:'none'
        },
        {
            id:3,
@@ -140,7 +140,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:1,
            formula: 'none',
            multinumber:1,
-           needit: false, min:0,multinumber_source_unicname:'none'
+           sticker:'img/PaketC.png',needit: false, min:0,multinumber_source_unicname:'none'
        },  {
            id:26,
            unicname:'delivery',
@@ -158,7 +158,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            arrOfVlue:1,
            formula: 'none',
            multinumber:1,
-           needit: false, min:0,multinumber_source_unicname:'none'
+           sticker:'img/PaketCpl.png',needit: false, min:0,multinumber_source_unicname:'none'
        }
 
 
