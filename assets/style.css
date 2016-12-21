@@ -1,3 +1,7 @@
+#marginleft20{
+	margin-left:-32px;
+}
+
 /* by Serhio */
 /*.bggraycoltop {
 	background-color:#e8e9ee;
@@ -604,15 +608,22 @@ float:left;
 
 
 /*fourth row height in Marketing 20161212 ardjuna */
-#pos4 > .row > .col-md-6,
-#pos4 > .row > .col-md-3,
-#pos4 > .row > .col-md-3{
+#app-root2 #pos4 > .row > .col-md-6,
+#app-root2 #pos4 > .row > .col-md-3,
+#app-root2 #pos4 > .row > .col-md-3{
 	height: 150px;
 }
 
 /*checkbox in fourth row in Marketing 20161212 ardjuna */
-#pos4> .row > .col-md-6 input[type=checkbox] {
+#app-root2 #pos4> .row > .col-md-6 input[type=checkbox] {
 	margin-top: 30px;
+}
+
+#app-staff #pos9> .row > .col-md-3 .price_sell {
+	font-size:10px;
+}
+#app-advert #pos2> .row > .col-md-3 .price_sell {
+	font-size:10px;
 }
 
 /*design revision in Sales Push Compaignes 20161213 ardjuna*/

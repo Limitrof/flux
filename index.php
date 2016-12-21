@@ -203,15 +203,15 @@
                     <div class="tab-pane active" id="tab10">
                     <!-----------------------------------second tab START------------------------>
                     <div class="tabbable">
-                    <ul class="nav nav-tabs nav-justified">
-                    <li><a href="#tab100" data-toggle="tab">PR AND CONTENT</a></li>
+                    <ul id="marginleft20" class="nav nav-tabs nav-justified">
+                    <li><a href="#tab100" data-toggle="tab">PR AND<br> CONTENT</a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li-->
                     <li><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li>
-                    <li><a href="#tab400" data-toggle="tab">MYSTERY CALLING</a></li>
-                    <li class="active"><a href="#tab400" data-toggle="tab">BRAND PROMOTION</a></li>
-                    <li><a href="#tab300" data-toggle="tab">POS MATERIALS</a></li>
+                    <li><a href="#tab250" data-toggle="tab">MYSTERY <br/>CALLING</a></li>
+                    <li class="active"><a href="#tab400" data-toggle="tab">BRAND <br/>PROMOTION</a></li>
+                    <li><a href="#tab300" data-toggle="tab">POS <br/>MATERIALS</a></li>
                     <li><a href="#tab500" data-toggle="tab">NEWS AND ADVERTISING ISSUES</a></li>
-                    <li><a href="#tab600" data-toggle="tab">DESIGN</a></li>
+                    <li><a href="#tab600" data-toggle="tab">DESIGN<br/>&nbsp;&nbsp;&nbsp;</a></li>
                     </ul>
                     <div class="tab-content">
                     <div class="tab-pane" id="tab100">
@@ -223,7 +223,7 @@
                     <!--------------------------------third tab START-------------------->
                     <div class="tabbable">
                     <ul class="nav nav-tabs third-level">
-                    <li class="active"><a href="#tab2000" data-toggle="tab">Самостоятельный расчет</a></li>
+                    <li class="active"><!--a href="#tab2000" data-toggle="tab">Самостоятельный расчет</a--></li>
                     <!--<li><a href="#tab1000" data-toggle="tab">Расчет от бюджета</a></li>-->
                     </ul>
                     <div class="tab-content ">
@@ -242,15 +242,32 @@
                     </div>
                     <!--------------------------------third tab FINISH-------------------->
                     </div>
+					
+                    <div class="tab-pane" id="tab250">
+                    <!--MYSTERY CALLING--><br>
+						<div id="app-mystery">
+						</div>
+                    </div>
+
                     <div class="tab-pane" id="tab300">
-                    Direct Research
+                    <!--Direct Research--><br>
+						<div id="app-staff">
+						</div>
                     </div>
                     <div class="tab-pane active" id="tab400">
 
                     <div id="app-brand-promo"></div>
                     </div>
                     <div class="tab-pane" id="tab500">
-                    POS Products 2
+						<br/>
+						<div id="app-advert">
+						</div>
+                    </div>                    
+					
+					<div class="tab-pane" id="tab600">
+						<br/>
+						<div id="app-design">
+						</div>
                     </div>
                     </div>
                     </div>
