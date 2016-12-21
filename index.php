@@ -382,7 +382,7 @@
                             $to = 's.bogdan@agv-aftermarket.com, v.efimenko@agv-aftermarket.com';
                             // $from - от кого
                             $from= "From: ".$_POST['email']."\r\n";
-                            $from .= "Content-type: text/html\r\n";
+                            $from .= "Content-type: text/html\r\ncharset=UTF-8\r\nContent-Transfer-Encoding: 8bit";
                             // функция, которая отправляет наше письмо.
 
                          if(mail($to, $title, $mess, $from))	{
