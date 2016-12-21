@@ -263,10 +263,10 @@
                     </div>
                     </div>
                     </div>
-                    <div style="width:30%;margin:10px auto;">
-                    <button class="btn btn-primary hipstr" type="button" onclick="window.print()" />Распечатать</button>
-                    <a href="#defaultModal"data-toggle="modal">
-                    <button class="btn btn-primary hipstr" type="button"  onclick="moveInfoInMail()" />Отправить заявку</button>
+                    <div style="width:35%;margin:10px auto;">
+                    <button class="button btn hipstr" type="button" onclick="window.print()" style="margin-right: 15px;"/>РАСПЕЧАТАТЬ</button>
+                    <a href="#defaultModal" data-toggle="modal">
+                    <button class="button btn hipstr" type="button"  onclick="moveInfoInMail()" />ОФОРМИТЬ ЗАЯВКУ</button>
                     </a>
                     </div>
 

@@ -294,14 +294,14 @@ class AppBrandPromo extends React.Component {
 				<div className="row grayinrow border-bottom  ">
 					<div className="col-md-9 grayinrow" >
 						<div className="row height40 text-center hidden-print" >
-							<div className="col-md-4 bggraycol border-right">Ресурс</div>
+							<div className="col-md-4 bggraycol border-right width120">Ресурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
 						</div>
 						<div className="row height100" >
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth">
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
-								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span>online</span></p>
+								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 							</div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 								<ul className="ulnotbulleted">
@@ -322,7 +322,7 @@ class AppBrandPromo extends React.Component {
 						</div>
 						<div className="row height100" >
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth">
-								<img className="inheritcenterimg" src="img/kuzov.png"/>	<a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span>online</span></p></div>
+								<img className="inheritcenterimg" src="img/kuzov.png"/>	<a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 								<ul className="ulnotbulleted">
 									<li>баннер 217 х 358 рх на главной</li>
@@ -337,7 +337,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 							<ul className="ulnotbulleted">
 								<li>баннер 1052 х 90 рх на главной</li>
@@ -352,7 +352,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol-nobottom border-right mediawidth">
 								<ul className="ulnotbulleted widthprint">
 									<li>баннер сквозной 280х190 рх</li>
@@ -373,7 +373,7 @@ class AppBrandPromo extends React.Component {
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
+						Стоимость контакта<br/><span className="size24">{listItem.comment} евро</span>
 					</div>
 				</div>
 			</div>);
@@ -382,14 +382,14 @@ class AppBrandPromo extends React.Component {
                 promopart.push(<div className="row grayinrow border-bottom">
 					<div className="col-md-9 grayinrow" >
 						<div className="row height40 text-center hidden-print">
-							<div className="col-md-4 bggraycol border-right">Ресурс</div>
+							<div className="col-md-4 bggraycol border-right width120">Ресурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
 						</div>
 						<div className="row height100" >
 							<div className="col-md-4 text bggraycol border-right imgpadding text-center width120 mediawidth">
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
-								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span>online</span></p>
+								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 							</div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 								<ul className="ulnotbulleted">
@@ -409,7 +409,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100">
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autobusiness.png"/><span>offline</span></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autobusiness.png"/><p className="bluecol"><span>offline</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 							<ul className="ulnotbulleted">
 								<li>макет А4, 2-я обложка</li>
@@ -425,7 +425,7 @@ class AppBrandPromo extends React.Component {
 						</div>
 						<div className="row height100" >
 
-							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/kuzov.png"/><span>offline</span></div>
+							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/kuzov.png"/><p className="bluecol"><span>offline</span></p></div>
 							<div className="col-md-6 bggraycol-nobottom border-right mediawidth">
 
 								<ul className="ulnotbulleted">
@@ -449,7 +449,7 @@ class AppBrandPromo extends React.Component {
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
+						Стоимость контакта<br/><span className="size24">{listItem.comment} евро</span>
 					</div>
 				</div>
 			</div>);
@@ -458,14 +458,14 @@ class AppBrandPromo extends React.Component {
                 promopart.push(<div className="row grayinrow border-bottom">
 					<div className="col-md-9 grayinrow " >
 						<div className="row height40 text-center hidden-print">
-							<div className="col-md-4 bggraycol border-right">Ресурс</div>
+							<div className="col-md-4 bggraycol border-right width120">Ресурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol border-left">Кол-во</div>
 						</div>
 						<div className="row height100" >
 							<div className="col-md-4 text bggraycol border-right imgpadding text-center width120 mediawidth">
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
-								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span>online</span></p>
+								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 							</div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 								<ul className="ulnotbulleted">
@@ -485,7 +485,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><span>offline</span></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><p className="bluecol"><span>offline</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 							<ul className="ulnotbulleted">
 								<li>макет, 2-я обложка 215х275 мм <p className="colorblue">+бонус (статья/макет)</p></li>
@@ -500,7 +500,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/kuzov.png"/><span>offline</span></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/kuzov.png"/><span className="bluecol">offline</span></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 								<ul className="ulnotbulleted">
 									<li>статья 1/2 полосы</li>
@@ -515,7 +515,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autonews.png"/><span>offline</span></div>
+							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autonews.png"/><p className="bluecol"><span>offline</span></p></div>
 							<div className="col-md-6 bggraycol-nobottom border-right mediawidth">
 								<ul className="ulnotbulleted">
 									<li>статья 1/1 полосы</li>
@@ -536,7 +536,7 @@ class AppBrandPromo extends React.Component {
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
+						Стоимость контакта<br/><span className="size24">{listItem.comment} евро</span>
 					</div>
 				</div>
 			</div>);
@@ -545,14 +545,14 @@ class AppBrandPromo extends React.Component {
                 promopart.push(<div className="row grayinrow border-bottom">
 					<div className="col-md-9 grayinrow " >
 						<div className="row height40 text-center hidden-print">
-							<div className="col-md-4 bggraycol border-right ">Ресурс</div>
+							<div className="col-md-4 bggraycol border-right width120">Ресурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
 						</div>
 						<div className="row height100" >
 							<div className="col-md-4 text bggraycol border-right imgpadding text-center width120 mediawidth">
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
-							<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span>online</span></p>
+							<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 							</div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 								<ul className="ulnotbulleted">
@@ -572,7 +572,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/kuzov.png"/><a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/kuzov.png"/><a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 								<ul className="ulnotbulleted">
 									<li>баннер 217 х 358 рх на главной</li>
@@ -587,7 +587,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 							<ul className="ulnotbulleted">
 								<li>баннер 1052 х 90 рх на главной</li>
@@ -603,7 +603,7 @@ class AppBrandPromo extends React.Component {
 						</div>
 						<div className="row height100" >
 
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span>online</span></p></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 
 								<ul className="ulnotbulleted">
@@ -622,7 +622,7 @@ class AppBrandPromo extends React.Component {
 						</div>
 						<div className="row height100" >
 
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autodoc.png"/><a href="http://www.autodoc.ru">www.autodoc.ru</a><p><span>online, B2C</span></p></div>
+							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autodoc.png"/><a href="http://www.autodoc.ru">www.autodoc.ru</a><p><span className="greencol">online, B2C</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 
 								<ul className="ulnotbulleted">
@@ -637,7 +637,7 @@ class AppBrandPromo extends React.Component {
 							</div>
 						</div>
 						<div className="row height100" >
-							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg"/><a href="http://www.zr.ru/">www.zr.ru/</a><p><span>online, B2C</span></p></div>
+							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg"/><a href="http://www.zr.ru/">www.zr.ru/</a><p><span className="greencol">online, B2C</span></p></div>
 							<div className="col-md-6 bggraycol-nobottom border-right mediawidth">
 								<ul className="ulnotbulleted">
 									<li>баннер 240х 400 рх в сайдбаре</li>
@@ -658,7 +658,7 @@ class AppBrandPromo extends React.Component {
 					</div>
 					<br/>
 					<div className="fontgreen">
-						Стоимость<br/>контакта<br/><span className="size24">{listItem.comment}</span>
+						Стоимость контакта<br/><span className="size24">{listItem.comment} евро</span>
 					</div>
 				</div>
 			</div>);
@@ -677,7 +677,7 @@ if(listItem.ischecked){
 					<div className="row bcwhite margintop10">
 						<div className="col-md-12 blueColor_pt5">
 							<h3>{listItem.category}</h3>
-							Охват ЦА {listItem.name} Стоимость контакта {listItem.comment}
+							<span className="grayColor">Охват ЦА</span> {listItem.name} <span className="grayColor">Стоимость контакта</span> {listItem.comment} €
 						</div>
 					</div>
 
@@ -690,7 +690,7 @@ if(listItem.ischecked){
 
 					<div className="col-md-3 tiny-text">* изготовление баннера включено</div>
 					<div className="col-md-4 tiny-text">** авторство AGV/клиент - 50/50</div>
-					<div className="col-md-2 itogo">ИТОГО:</div>
+					<div className="col-md-2 itogo">ИТОГО</div>
 					<div className="col-md-3 itogo_sell hidden-print ">{listItem.price} €</div>
 				</div>
 
@@ -779,7 +779,7 @@ if(listItem.ischecked){
 
 				  <hr/>
 				  <div className="row colorblue">
-					  <div className="col-md-9"><span className="textalignright ">Итого:</span></div>
+					  <div className="col-md-9"><span className="textalignright ">Итого</span></div>
 					  <div className="col-md-3">{this.state.allAmount} €</div>
 				  </div>
 

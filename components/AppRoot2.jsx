@@ -432,7 +432,7 @@ else {usersControlFormula.push(<div></div>);}
 				 if( (arrSize-1) == index){
 
                      blockItogo.push(<div className="row">
-						 <div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billDesign} €</div>
+						 <div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО</div><div className="col-md-3 itogo_sell">{billDesign} €</div>
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
         lastCategory = listItem.category;
@@ -506,7 +506,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <hr/>
 				  <div className="row colorblue">
-					  <div className="col-md-9"><span className="textalignright">Итого:</span></div>
+					  <div className="col-md-9"><span className="textalignright">Итого</span></div>
 					  <div className="col-md-3">{this.state.allAmount} €</div>
 				  </div>
 
