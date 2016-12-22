@@ -488,7 +488,7 @@ class AppBrandPromo extends React.Component {
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><p className="bluecol"><span>offline</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 							<ul className="ulnotbulleted">
-								<li>макет, 2-я обложка 215х275 мм <p className="colorblue">+бонус (статья/макет)</p></li>
+								<li>макет, 2-я обложка 215х275 мм <span className="colorblue">+бонус (статья/макет)</span></li>
 								<li>статья 1/2 полосы</li>
 							</ul>
 							</div>
@@ -676,7 +676,7 @@ if(listItem.ischecked){
 
 					<div className="row bcwhite margintop10">
 						<div className="col-md-12 blueColor_pt5">
-							<img src={listItem.sticker}/><h3>{listItem.category}</h3>
+							<img src={listItem.sticker}/><h4>{listItem.category}</h4>
 							<span className="grayColor">Охват ЦА</span> {listItem.name} <span className="grayColor">Стоимость контакта</span> {listItem.comment} €
 						</div>
 					</div>
@@ -690,7 +690,7 @@ if(listItem.ischecked){
 
 					<div className="col-md-3 tiny-text">* изготовление баннера включено</div>
 					<div className="col-md-4 tiny-text">** авторство AGV/клиент - 50/50</div>
-					<div className="col-md-2 itogo">ИТОГО</div>
+					<div className="col-md-2 itogo">СТОИМОСТЬ ПАКЕТА</div>
 					<div className="col-md-3 itogo_sell hidden-print ">{listItem.price} €</div>
 				</div>
 

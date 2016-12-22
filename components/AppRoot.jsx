@@ -473,8 +473,8 @@ else {usersControlFormula.push(<div></div>);}
 				 } else if( (arrSize-1) == index){
 
                      blockItogo.push(<div className="row hideItForPrint">
-				<div className="col-md-7">*Призовой фонд
-					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billBonus} €</div>
+				<div className="col-md-12 grayColor">*Призовой фонд
+					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div><div className="row hideItForPrint"><div className="col-md-9 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell" id="bottomitogo">{billBonus} €</div></div>
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
         lastCategory = listItem.category;
