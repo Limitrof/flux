@@ -533,7 +533,7 @@ text-align: center;
 	margin: 0 auto;
 }
 .blueColor_h80_pt5{
-color:#438bd5;
+color:#029de0;
 height:80px;
 padding-top: 5px;
 }
@@ -767,7 +767,8 @@ float:left;
 }
 /*table header in PR 20161219 ardjuna*/
 #true {
-	margin: 5px 0 20px 0;
+	margin-bottom: 4px;
+	font-weight: bold;
 }
 /*sticker in Brand PromotionPR 20161221 ardjuna*/
 #app-brand-promo .row>.col-md-12> img {
@@ -806,4 +807,12 @@ label[for="delivery2"]{
 }
 #bottomitogo {
 	margin-left: 8px;
+}
+
+#app-brand-promo .row>.col-md-2.imgleft {
+	padding-left: 0 !important;
+}
+
+#app-brand-promo .row>.col-md-2.margintop10 {
+	margin-top: 10px !important;
 }
