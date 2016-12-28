@@ -726,7 +726,7 @@ if(listItem.ischecked){
 
 				  <div className="row">
 					  <div className="col-md-9 colorblue">Результаты</div>
-				
+
 				  </div>
 
 
@@ -734,7 +734,7 @@ if(listItem.ischecked){
 				  <div className="row">
 					  <div className="col-md-8 grayColor">Пакет “А” Optimal online (B2B)</div>
 					  <div className="col-md-2 margintop10 grayColor">{this.state.billDev} €  </div>
-					  <div className="col-md-2 margintop10 imgleft">
+					  <div className="col-md-2 margintop10">
 						  <img onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
@@ -742,7 +742,7 @@ if(listItem.ischecked){
 				  <div className="row">
 					  <div className="col-md-8 grayColor">Пакет “B” Online + Offline (B2B)</div>
 					  <div className="col-md-2 margintop10 grayColor">{this.state.billPlatform} €    </div>
-					  <div className="col-md-2 margintop10 imgleft">
+					  <div className="col-md-2 margintop10">
 						  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
@@ -750,7 +750,7 @@ if(listItem.ischecked){
 				  <div className="row">
 					  <div className="col-md-8 grayColor">Пакет “С” Online + Offline VIP (B2B)</div>
 					  <div className="col-md-2 margintop10 grayColor">{this.state.billDesign} €      </div>
-					  <div className="col-md-2 margintop10 imgleft">
+					  <div className="col-md-2 margintop10">
 						  <img onClick={_this.cleanCategory} data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
@@ -758,7 +758,7 @@ if(listItem.ischecked){
 				  <div className="row">
 					  <div className="col-md-8 grayColor">Пакет ”С+” Online (B2B) <p>MAX EFFECT (B2B+B2C)</p></div>
 					  <div className="col-md-2 margintop10 grayColor">{this.state.billBonus} €    </div>
-					  <div className="col-md-2 margintop10 imgleft">
+					  <div className="col-md-2 margintop10">
 						  <img onClick={_this.cleanCategory} data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>

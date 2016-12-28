@@ -463,6 +463,9 @@ margin-left: 12px !important;
 	.hidden-xs-down {
 		display: none;
 	}
+	#app-brand-promo .row>.col-md-2.imgleft {
+		padding-left: 0 !important;
+	}
 }
 
 
@@ -783,6 +786,9 @@ float:left;
 .row>.col-md-12>.width120-center {
    float: left;
    }
+	  .row>.col-md-12>.width120-center>.checkboxforprice {
+		  margin-left: 0 !important;
+	  }
 }
 /* media in Brand Promotion 20161216 ardjuna*/
  @media (max-width: 992px) {
@@ -878,7 +884,7 @@ label[for="delivery2"]{
 }
 
 #app-brand-promo .row>.col-md-2.imgleft {
-	padding-left: 0 !important;
+	padding-left: 0;
 }
 
 #app-brand-promo .row>.col-md-2.margintop10 {
