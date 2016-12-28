@@ -425,9 +425,9 @@ else {usersControlFormula.push(<div></div>);}
 				}		
 				//show or hide price
 				var hidepriceonphone = "col-md-3 bcgray";
-				if (listItem.price == '') {
+				/*if (listItem.price == '') {
 					hidepriceonphone = "col-md-3 bcgray hidden-sm hidden-xs";
-				}
+				}*/
 				
 				 if( (arrSize-1) == index){
 

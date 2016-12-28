@@ -206,15 +206,15 @@
                     <!-----------------------------------second tab START------------------------>
                     <div class="tabbable">
                     <div id="secondlevel">
-                    <ul id="marginleft20" class="nav nav-tabs nav-justified">
-                    <li><a href="#tab100" data-toggle="tab">PR AND CONTENT</a></li>
+                    <ul id="marginleft20" class="nav nav-tabs">
+                    <li class="col-xs-12 col-md-2"><a href="#tab100" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:10px;">PR AND CONTENT</div></div></a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li-->
-                    <li><a href="#tab200" data-toggle="tab">SALES PUSH <p>CAMPAIGNES</p></a></li>
-                    <li><a href="#tab250" data-toggle="tab">MYSTERY CALLING</a></li>
-                    <li class="active"><a href="#tab400" data-toggle="tab">BRAND <br/>PROMOTION</a></li>
-                    <li><a href="#tab300" data-toggle="tab">POS MATERIALS</a></li>
-                    <li><a href="#tab500" data-toggle="tab">NEWS AND <p>ADVERTISING ISSUES</p></a></li>
-                    <li><a href="#tab600" data-toggle="tab">DESIGN</a></li>
+                    <li class="col-xs-12 col-md-2" style="margin-left:-2px;"><a href="#tab200" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:27px;">SALES PUSH <p>CAMPAIGNES</p></div></div></a></li>
+                    <li class="col-xs-12 col-md-2" style="margin-left:-20px;"><a href="#tab250" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px; left:10px;">MYSTERY CALLING</div></div></a></li>
+                    <li class="active col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab400" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:25px; text-align:center;">BRAND <br/>PROMOTION</div></div></a></li>
+                    <li class="col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab300" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:10px;">POS MATERIALS</div></div></a></li>
+                    <li class="col-xs-12 col-md-1" style="margin-left:-22px;"><a href="#tab500" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; text-align:center;">NEWS AND <p>ADVERTISING ISSUES</p></div></div></a></li>
+                    <li class="col-xs-12 col-md-1" style="margin-left:90px;"><a href="#tab600" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:35px;">DESIGN</div></div></a></li>
                     </ul>
                     </div>
                     <div class="tab-content">

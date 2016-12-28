@@ -726,7 +726,7 @@ if(listItem.ischecked){
 
 				  <div className="row">
 					  <div className="col-md-9 colorblue">Результаты</div>
-
+				
 				  </div>
 
 
@@ -792,8 +792,8 @@ if(listItem.ischecked){
  // block of my functions
 
     cleanCategory(e){
-        //addSumItem
-        let category = e.target.dataset.id;
+		/*window.print();*///addSumItem
+     let category = e.target.dataset.id;
         AppDispatcher.dispatch({
             action: 'clean-category',
             category: category

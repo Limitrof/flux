@@ -443,7 +443,7 @@ else {usersControlFormula.push(<div></div>);}
 		
 				//show or hide select or input
 				var hideinputonphone = "col-md-4 bcgray";
-				if (listItem.formula == 'none') {
+				if (listItem.formula == 'multi') {
 					hideinputonphone = "col-md-4 bcgray hidden-sm hidden-xs";
 				}		
 				//show or hide price
