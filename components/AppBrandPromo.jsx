@@ -697,7 +697,9 @@ if(listItem.ischecked){
 				<div className="row grayinrow">
 					<div className="col-md-12">
 						<div className="width120-center">
+							<a href="#paketA" data-toggle="modal1" className="accordion-toggle">
 							<button className='checkboxforprice button btn'  onClick={ _this.addToSum } data-id={ listItem.id } id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} disabled={listItem.ischecked}>ДОБАВИТЬ В КОРЗИНУ</button>
+						    </a> 
 						</div>
 					</div>
 				</div>
@@ -717,12 +719,12 @@ if(listItem.ischecked){
       </div>
     );*/
 
-      return (
+	  return (
 
 	  <div className="row" key="mainform" id="reactroot">
 		  <div className="col-md-8">{itemHtml}</div>
 		  <div className="col-md-4">
-              <div id="staticPriceBrandPromo">
+			  <div id="staticPriceBrandPromo">
 
 				  <div className="row">
 					  <div className="col-md-9 colorblue">Результаты</div>
@@ -731,41 +733,39 @@ if(listItem.ischecked){
 
 
 
-				  <div className="row">
-					  <div className="col-md-8 grayColor">Пакет “А” Optimal online (B2B)</div>
-					  <div className="col-md-2 margintop10 grayColor">{this.state.billDev} €  </div>
-					  <div className="col-md-2 margintop10">
+				  <div className="row modal1" id="paketA">
+					  <div className="col-md-7 grayColor margintop5">Пакет “А” Optimal online (B2B)</div>
+					  <div className="col-md-3 grayColor margintop1">{this.state.billDev} €  </div>
+					  <div className="col-md-2 margintop5">
 						  <img onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-8 grayColor">Пакет “B” Online + Offline (B2B)</div>
-					  <div className="col-md-2 margintop10 grayColor">{this.state.billPlatform} €    </div>
-					  <div className="col-md-2 margintop10">
+					  <div className="col-md-7 grayColor margintop5">Пакет “B” Online + Offline (B2B)</div>
+					  <div className="col-md-3 grayColor margintop1">{this.state.billPlatform} €    </div>
+					  <div className="col-md-2 margintop1">
 						  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-8 grayColor">Пакет “С” Online + Offline VIP (B2B)</div>
-					  <div className="col-md-2 margintop10 grayColor">{this.state.billDesign} €      </div>
-					  <div className="col-md-2 margintop10">
+					  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
+					  <div className="col-md-3 grayColor margintop1">{this.state.billDesign} €      </div>
+					  <div className="col-md-2 margintop1">
 						  <img onClick={_this.cleanCategory} data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-8 grayColor">Пакет ”С+” Online (B2B) <p>MAX EFFECT (B2B+B2C)</p></div>
-					  <div className="col-md-2 margintop10 grayColor">{this.state.billBonus} €    </div>
-					  <div className="col-md-2 margintop10">
+					  <div className="col-md-7 grayColor margintop5">Пакет ”С+” Online (B2B) <p>MAX EFFECT (B2B+B2C)</p></div>
+					  <div className="col-md-3 margintop1 grayColor">{this.state.billBonus} €    </div>
+					  <div className="col-md-2 margintop1">
 						  <img onClick={_this.cleanCategory} data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
-
-				  <hr/>
 				  <div className="row colorblue">
-					  <div className="col-md-9">Охват (количество участников)</div>
+					  <div className="col-md-9">Охват ЦА</div>
 					  <div className="col-md-3">{this.state.usersQuantity}</div>
 				  </div>
 				  <div className="row colorblue">
@@ -773,18 +773,21 @@ if(listItem.ischecked){
 					  <div className="col-md-3">{this.state.qualityLevel}</div>
 				  </div>
 				  <div className="row colorblue">
-					  <div className="col-md-9">Среднее количество контактов за Программу</div>
+					  <div className="col-md-9">Средняя стоимость контакта</div>
 					  <div className="col-md-3">~ {this.state.contactsQuantity}</div>
 				  </div>
-
-				  <hr/>
 				  <div className="row colorblue">
 					  <div className="col-md-9"><span className="textalignright ">Итого</span></div>
 					  <div className="col-md-3">{this.state.allAmount} €</div>
 				  </div>
-
-			  </div>
+				  <div className="row">
+					<div className="col-md-6"><button className="buttonRes btn hipstr" type="button" onClick={_this.windowPrint}>РАСПЕЧАТАТЬ</button></div>
+					  <a href="#defaultModal" data-toggle="modal">
+					  <div className="col-md-6"><button className="buttonRes btn hipstr" type="button">ОФОРМИТЬ ЗАЯВКУ</button></div>
+					 </a>
+					   </div>
 		  </div>
+	  </div>
 
 	  </div>);
   }
@@ -799,6 +802,27 @@ if(listItem.ischecked){
             category: category
         });
     }
+
+	windowPrint(e) {
+		window.print();
+	}
+
+	/*moveInfoInMail(e) {
+		var forSendAsText='';
+
+		if(($('.nav-tabs .active').text()).indexOf('staticPriceBrandPromo') >= 0 ){
+			forSendAsText=jQuery("#staticPrice").html();
+			console.log($('.nav-tabs .active').text());
+		} else if(($('.nav-tabs .active').text()).indexOf('AGVSales Push CampaignesСамостоятельный расчет') >= 0 ){
+			forSendAsText=jQuery("#staticPrice").html();
+			console.log($('.nav-tabs .active').text());
+		} else {
+			forSendAsText=jQuery("#staticPrice2").html();
+			console.log($('.nav-tabs .active').text());
+		}
+
+		jQuery("#forPrice").val(forSendAsText);
+	}*/
 
  handleClickCheckbox(someval,indexinarray) {
 		//alert(this.state.resultPrices[indexinarray].needit == false);

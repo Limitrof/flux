@@ -248,6 +248,26 @@ class AppRootDesign extends React.Component {
         });
     }
 
+	windowPrint(e) {
+		window.print();
+	}
+
+	/*moveInfoInMail(e) {
+		var forSendAsText='';
+
+		if(($('.nav-tabs .active').text()).indexOf('staticPriceBrandPromo') >= 0 ){
+			forSendAsText=jQuery("#staticPrice").html();
+			console.log($('.nav-tabs .active').text());
+		} else if(($('.nav-tabs .active').text()).indexOf('AGVSales Push CampaignesСамостоятельный расчет') >= 0 ){
+			forSendAsText=jQuery("#staticPrice").html();
+			console.log($('.nav-tabs .active').text());
+		} else {
+			forSendAsText=jQuery("#staticPrice2").html();
+			console.log($('.nav-tabs .active').text());
+		}
+
+		jQuery("#forPrice").val(forSendAsText);
+	}*/
   addToSum(e){
 	 //addSumItem
 	  let id = e.target.dataset.id;
@@ -498,8 +518,8 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-8">News and advertising issues</div>
-					  <div className="col-md-4">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="PR" src="/img/clear.png" /></div>
+					  <div className="col-md-8">Design</div>
+					  <div className="col-md-4">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="Дизайн" src="/img/clear.png" /></div>
 				  </div>
 
 
@@ -508,6 +528,12 @@ else {usersControlFormula.push(<div></div>);}
 				  <div className="row colorblue">
 					  <div className="col-md-9"><span className="textalignright">Итого:</span></div>
 					  <div className="col-md-3">{this.state.allAmount} €</div>
+				  </div>
+				  <div className="row">
+					  <div className="col-md-6"><button className="buttonRes btn hipstr" type="button" onClick={_this.windowPrint}>РАСПЕЧАТАТЬ</button></div>
+					  <a href="#defaultModal" data-toggle="modal">
+					  <div className="col-md-6"><button className="buttonRes btn hipstr" type="button">ОФОРМИТЬ ЗАЯВКУ</button></div>
+				      </a>
 				  </div>
 
 			  </div>

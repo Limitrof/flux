@@ -284,12 +284,12 @@
                     </div>
                     </div>
                     </div>
-                    <div style="width:35%;margin:10px auto;">
+                     <!-- <div style="width:35%;margin:10px auto;">
                     <button class="button btn hipstr" type="button" onclick="window.print()" style="margin-right: 15px;"/>РАСПЕЧАТАТЬ</button>
                     <a href="#defaultModal" data-toggle="modal">
                     <button class="button btn hipstr" type="button"  onclick="moveInfoInMail()" />ОФОРМИТЬ ЗАЯВКУ</button>
                     </a>
-                    </div>
+                    </div> -->
 
 
                     <div id="defaultModal" class="modal">
