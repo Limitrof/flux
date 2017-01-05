@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<title>agv-aftermarket</title>
+		<title>Automotive Marketing Calculator | AGV Aftermarket Global Vision</title>
 		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -179,8 +179,8 @@
                     <div id="longBlueRow" class="row">
                     <div class="col-md-12">
                     <img id="logoImg" src="img/logo.png"/>
-                    <div id="link1">
-                    <a href="http://agv-aftermarket.com/">AGV Aftermarket</a>
+                    <div id="link1">Automotive Marketing Calculator
+                    <a href="http://agv-aftermarket.com/">by AGV Aftermarket</a>
                     </div>
                     </div>
                     </div>
@@ -197,7 +197,7 @@
                     <div id="mainTab" class="tabbable tabbablefirst">
                     <div id="firstlevel">
                     <ul class="nav nav-tabs ">
-                    <li><a href="#tab20" data-toggle="tab">AGV lab</a></li>
+                    <li><a href="#tab20" data-toggle="tab">AGV Lab</a></li>
                     <li class="active"><a href="#tab10" data-toggle="tab">AGV</a></li>
                     </ul>
                     </div>
@@ -208,8 +208,8 @@
                     <div id="secondlevel">
                     <ul id="marginleft20" class="nav nav-tabs">
                     <li class="col-xs-12 col-md-2"><a href="#tab100" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:10px;">PR AND CONTENT</div></div></a></li>
-                    <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNES</a></li-->
-                    <li class="col-xs-12 col-md-2" style="margin-left:-2px;"><a href="#tab200" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:27px;">SALES PUSH <p>CAMPAIGNES</p></div></div></a></li>
+                    <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNS</a></li-->
+                    <li class="col-xs-12 col-md-2" style="margin-left:-2px;"><a href="#tab200" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:27px;">SALES PUSH <p>CAMPAIGNS</p></div></div></a></li>
                     <li class="col-xs-12 col-md-2" style="margin-left:-20px;"><a href="#tab250" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px; left:10px;">MYSTERY CALLING</div></div></a></li>
                     <li class="active col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab400" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:25px; text-align:center;">BRAND <br/>PROMOTION</div></div></a></li>
                     <li class="col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab300" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:15px;">POS MATERIALS</div></div></a></li>
@@ -279,7 +279,7 @@
                     </div>
                     <div class="tab-pane" id="tab20">
                     <!--AGV lab START-->
-                    <p>AGV lab...</p>
+                    <img id="commingSoon" src="img/comming-soon-600x277.jpg" alt="Page under Construction" title="Page under Construction" width="600" heigh
                     <!--AGV lab FINISH-->
                     </div>
                     </div>

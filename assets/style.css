@@ -650,7 +650,7 @@ margin:0 auto;
     margin: 20px 0 0 140px;
     font-size: 18px;
 }
-#link1 a,#linkBottom a{
+#link1,#link1 a,#linkBottom a{
     color: white;
 }
 #linkBottom{
@@ -675,7 +675,11 @@ margin-right:-100px;
 .floatLeft{
 float:left;
 }
-
+/*AGV Lab Tab*/
+#commingSoon {
+	display: block;
+	margin: 20px auto;
+}
 /* ul-list without marker in Brand Promotion 20161206 ardjuna */
 .ulnotbulleted {
 	list-style-type:none;
@@ -907,6 +911,3 @@ label[for="delivery2"]{
 	margin-bottom: 10px;
 }
 
-#app-brand-promo#target {
-	display: none !important;
-}

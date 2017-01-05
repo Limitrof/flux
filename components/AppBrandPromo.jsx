@@ -697,9 +697,7 @@ if(listItem.ischecked){
 				<div className="row grayinrow">
 					<div className="col-md-12">
 						<div className="width120-center">
-							<a href="#paketA" data-toggle="modal1" className="accordion-toggle">
 							<button className='checkboxforprice button btn'  onClick={ _this.addToSum } data-id={ listItem.id } id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} disabled={listItem.ischecked}>ДОБАВИТЬ В КОРЗИНУ</button>
-						    </a> 
 						</div>
 					</div>
 				</div>
@@ -733,7 +731,7 @@ if(listItem.ischecked){
 
 
 
-				  <div className="row modal1" id="paketA">
+				  <div className="row modal1">
 					  <div className="col-md-7 grayColor margintop5">Пакет “А” Optimal online (B2B)</div>
 					  <div className="col-md-3 grayColor margintop1">{this.state.billDev} €  </div>
 					  <div className="col-md-2 margintop5">
