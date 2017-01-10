@@ -754,7 +754,6 @@ if(listItem.ischecked){
 						  <img onClick={_this.cleanCategory} data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца" src="/img/clear.png" />
 					  </div>
 				  </div>
-
 				  <div className="row">
 					  <div className="col-md-7 grayColor margintop5">Пакет ”С+” Online (B2B) <p>MAX EFFECT (B2B+B2C)</p></div>
 					  <div className="col-md-3 margintop1 grayColor">{this.state.billBonus} €    </div>
