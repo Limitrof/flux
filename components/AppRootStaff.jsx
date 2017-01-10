@@ -510,7 +510,7 @@ else {usersControlFormula.push(<div></div>);}
 	  <div  className="row" key="mainform" id="reactroot">
 		  <div className="col-md-8">{itemHtml}</div>
 		  <div className="col-md-4 hidden-print">
-			  <div id="staticPrice2">
+			  <div id="staticPriceStaff">
 
 				  <div className="row">
 					  <div className="col-md-9">Результаты</div>
@@ -531,7 +531,12 @@ else {usersControlFormula.push(<div></div>);}
 					  <div className="col-md-3">{this.state.allAmount} €</div>
 				  </div>
 
-				
+				  <div className="row">
+					  <div className="col-md-6"><button className="buttonRes btn hipstr" type="button" onClick={_this.windowPrint}>РАСПЕЧАТАТЬ</button></div>
+					  <a href="#defaultModal" data-toggle="modal">
+					  <div className="col-md-6"><button className="buttonRes btn hipstr" type="button">ОФОРМИТЬ ЗАЯВКУ</button></div>
+				      </a>
+				  </div>
 
 			  </div>
 

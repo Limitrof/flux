@@ -284,12 +284,12 @@
                     </div>
                     </div>
                     </div>
-                     <div style="width:35%;margin:10px auto;">
+                     <!--<div style="width:35%;margin:10px auto;">
                     <button class="button btn hipstr" type="button" onclick="window.print()" style="margin-right: 15px;"/>РАСПЕЧАТАТЬ</button>
                     <a href="#defaultModal" data-toggle="modal">
                     <button class="button btn hipstr" type="button"  onclick="moveInfoInMail()" />ОФОРМИТЬ ЗАЯВКУ</button>
                     </a>
-                    </div>
+                    </div>-->
 
 
                     <div id="defaultModal" class="modal">
@@ -357,19 +357,32 @@
 
                         var forSendAsText='';
 
-							 if(($('.nav-tabs .active').text()).indexOf('staticPriceBrandPromo') >= 0 ){
-								forSendAsText=jQuery("#staticPrice").html();
-                        console.log($('.nav-tabs .active').text());
-							} else if(($('.nav-tabs .active').text()).indexOf('AGVSales Push CampaignesСамостоятельный расчет') >= 0 ){
-								forSendAsText=jQuery("#staticPrice").html();
-                        console.log($('.nav-tabs .active').text());
-							} else {
-                        	forSendAsText=jQuery("#staticPrice2").html();
-                        console.log($('.nav-tabs .active').text());
-							}
+							 if(($('.nav-tabs .active').text()).indexOf('BRAND') >= 0 ){
+							    forSendAsText=jQuery("#staticPriceBrandPromo").html();
+                                 console.log($('.nav-tabs .active').text());
+                             } else if(($('.nav-tabs .active').text()).indexOf('SALES PUSH') >= 0 ){
+                            	forSendAsText=jQuery("#staticPrice").html();
+                                 console.log($('.nav-tabs .active').text());
+                            } else if(($('.nav-tabs .active').text()).indexOf('MYSTERY CALLING') >= 0 ){
+                            	forSendAsText=jQuery("#staticPriceMystery").html();
+                                 console.log($('.nav-tabs .active').text());
+                            } else if(($('.nav-tabs .active').text()).indexOf('POS MATERIALS') >= 0 ){
+                            	forSendAsText=jQuery("#staticPriceStaff").html();
+                                 console.log($('.nav-tabs .active').text());
+                            } else if(($('.nav-tabs .active').text()).indexOf('ADVERTISING ISSUES') >= 0 ){
+                                forSendAsText=jQuery("#staticPriceAdvert").html();
+                                 console.log($('.nav-tabs .active').text());
+                            } else if(($('.nav-tabs .active').text()).indexOf('DESIGN') >= 0 ){
+                            	forSendAsText=jQuery("#staticPriceDesign").html();
+                                 console.log($('.nav-tabs .active').text());
+                            }
+                              else {
+                               forSendAsText=jQuery("#staticPrice2").html();
+                                console.log($('.nav-tabs .active').text());
+                            							}
 
-                        jQuery("#forPrice").val(forSendAsText);
-                    }
+                            jQuery("#forPrice").val(forSendAsText);
+                              }
 
                     </script>
 

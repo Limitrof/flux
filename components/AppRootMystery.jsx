@@ -508,7 +508,7 @@ else {usersControlFormula.push(<div></div>);}
 	  <div  className="row" key="mainform" id="reactroot">
 		  <div className="col-md-8">{itemHtml}</div>
 		  <div className="col-md-4 hidden-print">
-			  <div id="staticPrice2">
+			  <div id="staticPriceMystery">
 
 				  <div className="row">
 					  <div className="col-md-9">Результаты</div>
