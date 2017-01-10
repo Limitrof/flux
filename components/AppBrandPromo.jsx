@@ -763,18 +763,6 @@ if(listItem.ischecked){
 					  </div>
 				  </div>
 				  <div className="row colorblue">
-					  <div className="col-md-9">Охват ЦА</div>
-					  <div className="col-md-3">{this.state.usersQuantity}</div>
-				  </div>
-				  <div className="row colorblue">
-					  <div className="col-md-9">Качество контакта</div>
-					  <div className="col-md-3">{this.state.qualityLevel}</div>
-				  </div>
-				  <div className="row colorblue">
-					  <div className="col-md-9">Средняя стоимость контакта</div>
-					  <div className="col-md-3">~ {this.state.contactsQuantity}</div>
-				  </div>
-				  <div className="row colorblue">
 					  <div className="col-md-9"><span className="textalignright ">Итого</span></div>
 					  <div className="col-md-3">{this.state.allAmount} €</div>
 				  </div>
