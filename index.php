@@ -161,8 +161,37 @@
 
 
 
+                          if($('#staticPriceStaff').offset().left > 100)
+                            {
+                            $('#staticPriceStaff').css("height","300px");
+                            var basePosition = $('#app-staff').offset().top;
+                            var startPosition = $('#staticPriceStaff').offset().top;
+                            var bottomPosition = $('#longBlueRowBottom').offset().top;
+                            //console.log("bottomPosition="+bottomPosition);
 
-
+                            var staticPositionPlusHeight = $('#staticPriceStaff').offset().top +  410;
+                            /* console.log("bottomPositionPlusHeight="+staticPositionPlusHeight);
+                            console.log ($('#staticPriceStaff').offset().top);
+                            console.log ($(window).scrollTop()); */
+                            //if position smaller then current top & currentPos + Height < than longBlueRowBottom
+                            var currStaticIfNotMove = $('#staticPriceStaff').offset().top - $(window).scrollTop();
+                            if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
+                            //if ( currStaticIfNotMove < 100){
+                            //console.log('bzzz '+ currStaticIfNotMove);
+                            var forNewPos =  $(window).scrollTop() + 100;
+                            //console.log("forNewPos="+forNewPos);
+                            $('#staticPriceStaff').offset({"top":forNewPos});
+                             }
+                           $('#staticPriceStaff').offset().top
+                           if ( ( $('#staticPriceStaff').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                           //console.log("left buttom position");
+                           var forNewPos =  $(window).scrollTop() + 100;
+                           //console.log("forNewPos="+forNewPos);
+                           $('#staticPriceStaff').offset({"top":forNewPos});
+                           }
+                           } else {
+                           $('#staticPriceStaff').css({"margin-top":"10px","top":"0px","height":"470px"});
+                           }
                     }
                     $( window ).resize(moveBillContainer);
                     $( window ).scroll(moveBillContainer);
