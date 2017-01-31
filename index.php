@@ -308,8 +308,10 @@
                     </div>
                     <div class="tab-pane" id="tab20">
                     <!--AGV lab START-->
-                    <img id="commingSoon" src="img/comming-soon-600x277.jpg" alt="Page under Construction" title="Page under Construction" width="600" heigh
+                    <!--<img id="commingSoon" src="img/comming-soon-600x277.jpg" alt="Page under Construction" title="Page under Construction" width="600" heigh-->
                     <!--AGV lab FINISH-->
+                    <div id="app-shop">
+                    </div>
                     </div>
                     </div>
                     </div>
@@ -387,24 +389,31 @@
                      var forSendAsText='';
                        if(($('.nav-tabs .active').text()).indexOf('BRAND') >= 0 ){
                        forSendAsText=jQuery("#staticPriceBrandPromo").html();
+                       forSendAsText=forSendAsText.replace(/<img\s[^>]*?src\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/ig,'');
                          console.log($('.nav-tabs .active').text());
                      } else if(($('.nav-tabs .active').text()).indexOf('SALES PUSH') >= 0 ){
                        forSendAsText=jQuery("#staticPrice").html();
+                       forSendAsText=forSendAsText.replace(/<img\s[^>]*?src\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/ig,'');
                          console.log($('.nav-tabs .active').text());
                      } else if(($('.nav-tabs .active').text()).indexOf('MYSTERY CALLING') >= 0 ){
                        forSendAsText=jQuery("#staticPriceMystery").html();
+                       forSendAsText=forSendAsText.replace(/<img\s[^>]*?src\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/ig,'');
                          console.log($('.nav-tabs .active').text());
                      } else if(($('.nav-tabs .active').text()).indexOf('POS MATERIALS') >= 0 ){
                        forSendAsText=jQuery("#staticPriceStaff").html();
+                       forSendAsText=forSendAsText.replace(/<img\s[^>]*?src\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/ig,'');
                          console.log($('.nav-tabs .active').text());
                      } else if(($('.nav-tabs .active').text()).indexOf('ADVERTISING ISSUES') >= 0 ){
                        forSendAsText=jQuery("#staticPriceAdvert").html();
+                       forSendAsText=forSendAsText.replace(/<img\s[^>]*?src\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/ig,'');
                          console.log($('.nav-tabs .active').text());
                      } else if(($('.nav-tabs .active').text()).indexOf('DESIGN') >= 0 ){
                        forSendAsText=jQuery("#staticPriceDesign").html();
+                       forSendAsText=forSendAsText.replace(/<img\s[^>]*?src\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/ig,'');
                          console.log($('.nav-tabs .active').text());
                      } else {
                        forSendAsText=jQuery("#staticPrice2").html();
+                       forSendAsText=forSendAsText.replace(/<img\s[^>]*?src\s*=\s*['\"]([^'\"]*?)['\"][^>]*?>/ig,'');
                          console.log($('.nav-tabs .active').text());
                      }
 
@@ -424,7 +433,7 @@
                             $mess =  substr(htmlspecialchars(trim($_POST['msg'])), 0, 1000000);
                             $mess .= '<hr />'.$_POST['pricelist'];
                             // $to - кому отправляем
-                            $to = 's.bogdan@agv-aftermarket.com, v.efimenko@agv-aftermarket.com';
+                            $to = 's.bogdan@agv-aftermarket.com,  v.efimenko@agv-aftermarket.com';
                             // $from - от кого
                             $from= "From: ".$_POST['email']."\r\n";
                             $from .= "Content-type: text/html;charset=UTF-8\r\nContent-Transfer-Encoding: 8bit";

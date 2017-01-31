@@ -7,6 +7,7 @@ import AppRootStaff from './components/AppRootStaff';
 import AppRootAdvert from './components/AppRootAdvert';
 import AppBrandPromo from './components/AppBrandPromo';
 import AppRootDesign from './components/AppRootDesign';
+import AppRootShop from './components/AppRootShop';
 //var forPath=window.location.href;
 React.render(
   <AppRoot path="byone" />,
@@ -39,6 +40,10 @@ React.render(
 React.render(
     <AppRootDesign path="marketing" />,
     document.getElementById('app-design')
+);
+React.render(
+    <AppRootShop path="marketing" />,
+    document.getElementById('app-shop')
 );
 /*
 React.render(
