@@ -192,7 +192,38 @@
                            } else {
                            $('#staticPriceStaff').css({"margin-top":"10px","top":"0px","height":"470px"});
                            }
-                    }
+
+
+
+                     if($('#staticPriceShop').offset().left > 100)
+                      {
+
+                       $('#staticPriceShop').css("height","300px");
+                       var basePosition = $('#app-shop').offset().top;
+                       var startPosition = $('#staticPriceShop').offset().top;
+                       var bottomPosition = $('#longBlueRowBottom').offset().top - 20;
+
+
+                       var staticPositionPlusHeight = $('#staticPriceShop').offset().top + 410;
+
+                       var currStaticIfNotMove = $('#staticPriceShop').offset().top - $(window).scrollTop();
+                       if ( currStaticIfNotMove < 100 && staticPositionPlusHeight < bottomPosition){
+
+                       var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                       $('#staticPriceShop').offset({"top":forNewPos});
+                        }
+                       $('#staticPriceShop').offset().top
+                       if ( ( $('#staticPriceShop').offset().top >(basePosition +100) ) && currStaticIfNotMove > 100 ){
+                       //console.log("left buttom position");
+                       var forNewPos =  $(window).scrollTop() + 100;
+                        //console.log("forNewPos="+forNewPos);
+                        $('#staticPriceShop').offset({"top":forNewPos});
+                        }
+                        } else {
+                        $('#staticPriceShop').css({"margin-top":"10px","top":"0px","height":"300px"});
+                            }
+                       }
                     $( window ).resize(moveBillContainer);
                     $( window ).scroll(moveBillContainer);
 
@@ -275,7 +306,7 @@
                     </div>
                     <!--------------------------------third tab FINISH-------------------->
                     </div>
-					
+
                     <div class="tab-pane" id="tab250">
                     <!--MYSTERY CALLING--><br>
 						<div id="app-mystery">
@@ -295,8 +326,8 @@
 						<br/>
 						<div id="app-advert">
 						</div>
-                    </div>                    
-					
+                    </div>
+
 					<div class="tab-pane" id="tab600">
 						<br/>
 						<div id="app-design">

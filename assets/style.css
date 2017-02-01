@@ -518,7 +518,8 @@ float: left;
 #staticPriceMystery,
 #staticPriceStaff,
 #staticPriceAdvert,
-#staticPriceDesign{
+#staticPriceDesign,
+#staticPriceShop{
 	width:100%;
 	height:100% !important;
 	margin-top:80px;
@@ -536,7 +537,8 @@ float: left;
  #staticPriceMystery,
  #staticPriceStaff,
  #staticPriceAdvert,
- #staticPriceDesign{
+ #staticPriceDesign,
+ #staticPriceShop{
  margin-top: 0 !important;
 }
  #staticPriceBrandPromo {
