@@ -630,6 +630,10 @@ color:#029de0;
 height:80px;
 padding-top: 5px;
 }
+
+#app-shop > .col-md-12 .blueColor_h80_pt5>h3{
+	margin-top: 0 !important;
+}
 .blueColor_pt5{
 	color:#029de0;
 	height:80px;
@@ -932,5 +936,8 @@ label[for="delivery2"]{
 #app-advert .row>.col-md-3.itogo_sell,
 #app-design .row>.col-md-3.itogo_sell{
 	margin-bottom: 10px;
+}
+#app-shop .row>.col-md-12> h3 {
+	margin-top: 4px;
 }
 

@@ -455,7 +455,19 @@ else {usersControlFormula.push(<div></div>);}
 						 <div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billDesign} €</div>
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
-        lastCategory = listItem.category;
+		if (listItem.category !== lastCategory) {
+
+//ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
+			blockTitle.push(<div className="hideItForPrint"><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3><p>{listItem.additionaltitle}</p><p>{listItem.additionaltitle2}</p></div></div></div>);
+
+		} else if( (arrSize-1) == index){
+
+			blockItogo.push(<div className="row hideItForPrint">
+				<div className="col-md-12 grayColor">*Призовой фонд
+					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div>
+			</div>);
+		} //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
+		lastCategory = listItem.category;
 
         if(listItem.unicname == 'budget') {
             if(currentLocation != -1){
