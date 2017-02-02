@@ -41,7 +41,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
     },
 
 //Разработка сайта Интернет-магазина. key visual
-    billDesign:0,
+    billDesign:840,
     inStore_getBillDesign: function(){
         return this.billDesign;
     },
@@ -65,7 +65,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
     },
 
 //Общая сумма
-    sum: 0,
+    sum: 840,
     getSum: function(){
         return this.sum;
     },
@@ -120,7 +120,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'Выберите необходимые услуги/компоненты.',additionaltitle2:'Обратите внимание, существует набор обязательных полей.',needit: false, min:0,multinumber_source_unicname:'none'
+            disabledcheck:'',additionaltitle:'Выберите необходимые услуги/компоненты.',additionaltitle2:'Обратите внимание, существует набор обязательных полей.',needit: false, min:0,multinumber_source_unicname:'none'
         },
         {
             id:15,
@@ -139,7 +139,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
         },
         {
             id:155,
@@ -158,44 +158,44 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
         },
         {
             id:16,
             unicname:'control_system',
             indexid:33,
             usehiddencheckbox:false,
-            ischecked:false,
+            ischecked:true,
             category: 'Разработка сайта Интернет-магазина.',
             showwordprefix:'от',
             showwordsuffix:'€',
-            comment:'Система управления',
+            comment:'Система управления (обязательное поле)',
             baseprice: 0,
             price: 750,
             stocked: true,
-            name: 'Система управления',
+            name: 'Система управления (обязательное поле)',
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'disabled', additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:17,
             unicname:'basket',
             usehiddencheckbox:false,
-            ischecked:false,
+            ischecked:true,
             category: 'Разработка сайта Интернет-магазина.',
             showwordprefix:'от',
             showwordsuffix:'€',
-            comment:'Корзина',
+            comment:'Корзина (обязательное поле)',
             baseprice: 0,
             price: 90,
             stocked: true,
-            name: 'Корзина',
+            name: 'Корзина (обязательное поле)',
             arrOfVlue:1,
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
+            disabledcheck:'disabled', additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
         },
         {
             id:18,
@@ -214,7 +214,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:19,
@@ -233,7 +233,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:20,
@@ -252,7 +252,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:21,
@@ -271,7 +271,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:22,
@@ -290,7 +290,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:23,
@@ -309,7 +309,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:24,
@@ -328,7 +328,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:25,
@@ -347,7 +347,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:26,
@@ -366,7 +366,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:27,
@@ -385,7 +385,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:28,
@@ -404,7 +404,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:29,
@@ -423,7 +423,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:30,
@@ -442,7 +442,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:31,
@@ -461,7 +461,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:32,
@@ -480,7 +480,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:33,
@@ -499,7 +499,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:34,
@@ -518,7 +518,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:35,
@@ -537,7 +537,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:36,
@@ -556,7 +556,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:37,
@@ -575,7 +575,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:38,
@@ -594,7 +594,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:39,
@@ -613,7 +613,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:40,
@@ -632,7 +632,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:41,
@@ -651,7 +651,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:42,
@@ -670,7 +670,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:43,
@@ -689,7 +689,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:44,
@@ -708,7 +708,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:45,
@@ -727,7 +727,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:46,
@@ -746,7 +746,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:47,
@@ -765,7 +765,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:48,
@@ -784,7 +784,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:49,
@@ -803,7 +803,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:50,
@@ -822,7 +822,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:51,
@@ -841,7 +841,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:52,
@@ -860,7 +860,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:53,
@@ -879,7 +879,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:54,
@@ -898,7 +898,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:55,
@@ -917,7 +917,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:56,
@@ -936,7 +936,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:57,
@@ -955,7 +955,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:58,
@@ -974,7 +974,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         }
 
 
@@ -1196,7 +1196,8 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
 
                          }else{ */
 
-                        billDesign += parseInt(items[index].price*items[index].multinumber);
+                        billDesign +=parseInt(items[index].price*items[index].multinumber);
+
                         /*   } */
                         break
                     case "Призовой фонд":
@@ -1235,7 +1236,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
     clearCategory: function(categoryName){
         let items = this.items;
         items.map(function(currentRow,index) {
-            if (items[index].category == categoryName){
+            if (items[index].category == categoryName && items[index].disabledcheck ==''){
                 items[index].ischecked = false;
             }
         });

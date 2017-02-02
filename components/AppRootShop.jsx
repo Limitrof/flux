@@ -402,10 +402,10 @@ else {usersControlFormula.push(<div></div>);}
 				//USE OR NOT checkbox
 				var useOrNotCheckbox = [];
 				if (listItem.usehiddencheckbox) {
-					useOrNotCheckbox.push(<input className='checkboxforprice hiddencheckbox' type='checkbox' id={listItem.unicname}   value={listItem.price} checked/>);
+					useOrNotCheckbox.push(<input className='checkboxforprice hiddencheckbox' type='checkbox' id={listItem.unicname}   value={listItem.price} disabled={listItem.disabledcheck} checked/>);
 				} else {
 					//useOrNotCheckbox.push(<input className='checkboxforprice' onChange={this.handleClickCheckbox.bind(null, listItem.price,index)} type='checkbox' id={listItem.unicname}  value={listItem.price} checked={this.ischecked} />);
-					useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} />);
+					useOrNotCheckbox.push(<input className='checkboxforprice'  onClick={ _this.addToSum } data-id={ listItem.id } type='checkbox' id={listItem.unicname}  value={listItem.price} checked={listItem.ischecked} disabled={listItem.disabledcheck}/>);
 				}
 		
 		
@@ -452,21 +452,17 @@ else {usersControlFormula.push(<div></div>);}
 				 if( (arrSize-1) == index){
 
                      blockItogo.push(<div className="row">
-						 <div className="col-md-7"></div><div className="col-md-2 itogo">ИТОГО:</div><div className="col-md-3 itogo_sell">{billDesign} €</div>
+						 <div className="col-md-8 grayColor hideItForPrint">Стоимость наполнения и техподдержки сайта зависит от объема контента, пожеланий клиента и оговаривается индивидуально</div>
+
+						 <div className="col-md-1 itogo">ИТОГО:</div><div className="col-md-4 itogo_sell">{billDesign} €</div>
 			</div>);
         } //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
 		if (listItem.category !== lastCategory) {
 
 //ВЫВОДИМ ТАЙТЛ для условия вышерасположенного if(a)   if (listItem.category !== lastCategory) {...
-			blockTitle.push(<div className="hideItForPrint"><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3>{listItem.category}</h3><p>{listItem.additionaltitle}</p><p>{listItem.additionaltitle2}</p></div></div></div>);
+			blockTitle.push(<div className="hideItForPrint"><div className="row bcwhite margintop10"><div className="col-md-12 blueColor_h80_pt5"><h3 id="appshoptitle">{listItem.category}</h3><p>{listItem.additionaltitle}</p><p>{listItem.additionaltitle2}</p></div></div></div>);
 
-		} else if( (arrSize-1) == index){
-
-			blockItogo.push(<div className="row hideItForPrint">
-				<div className="col-md-12 grayColor">*Призовой фонд
-					(включая налоги (для РФ при условии, что фактическая стоимость поощрения не превышает 3500 руб.), комиссию агентства, юридическое и бухгалтерское сопровождение)</div>
-			</div>);
-		} //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
+		}  //СРАЗУ ПОСЛЕ ПРОВЕРКИ МЕНЯЕМ ЗНАЧЕНИЕ ТЕКУЩЕЙ КАТЕГОРИИ
 		lastCategory = listItem.category;
 
         if(listItem.unicname == 'budget') {
@@ -531,7 +527,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <div className="row">
 					  <div className="col-md-8">Cost</div>
-					  <div className="col-md-4">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="Shop" src="/img/clear.png" /></div>
+					  <div className="col-md-4" id="appShopCost">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="Разработка сайта Интернет-магазина." src="/img/clear.png" /></div>
 				  </div>
 
 

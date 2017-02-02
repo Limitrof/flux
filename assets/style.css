@@ -631,9 +631,6 @@ height:80px;
 padding-top: 5px;
 }
 
-#app-shop > .col-md-12 .blueColor_h80_pt5>h3{
-	margin-top: 0 !important;
-}
 .blueColor_pt5{
 	color:#029de0;
 	height:80px;
@@ -846,6 +843,9 @@ float:left;
 	#app-brand-promo .row>.col-md-12> img {
 		float: left !important;
 	}
+	 #appShopCost {
+		 padding-left: 15px !important;
+	 }
 	
 }
 /* green color "online" in Brand Promotion 20161219 ardjuna*/
@@ -938,6 +938,24 @@ label[for="delivery2"]{
 	margin-bottom: 10px;
 }
 #app-shop .row>.col-md-12> h3 {
+	font-weight: 500;
 	margin-top: 4px;
+	margin-bottom: 0;
+
 }
 
+#app-shop .row>.col-md-12> p {
+	margin-bottom: 0!important;
+}
+
+#appshoptitle {
+	font-weight: bold !important;
+}
+
+#app-shop .bcwhite {
+	margin-top: 10px !important;
+}
+
+#appShopCost {
+	padding-left: 30px;
+}
