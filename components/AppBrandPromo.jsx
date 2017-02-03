@@ -265,6 +265,7 @@ class AppBrandPromo extends React.Component {
 
     let _this = this;
     let classNameShow = '';
+	  let classNameShowStaticPrice = '';
 	let lastCategory = '';
     let items = ListStore.getItems();
     //ОПРЕДЕЛЯЕМ нужен ли самостоятельный рассчет
@@ -665,11 +666,15 @@ class AppBrandPromo extends React.Component {
                 break
         }
 
+
+
 if(listItem.ischecked){
     classNameShow = "showItForPrint";
 } else {
     classNameShow = "hideItForPrint";
+
 }
+
 
 
             return <div className={classNameShow}>
@@ -716,8 +721,65 @@ if(listItem.ischecked){
         <NewItemForm />
       </div>
     );*/
+	  let itemResult = items.map(( listItem,index ) => {
+		  if (listItem.ischecked) {
+			  var promoResult = [];
+			  switch (listItem.category) {
+				  case "Пакет “А” Optimal online (B2B), 3 месяца":
+					  promoResult.push(
+						  <div className="row modal1 ">
+							  <div className="col-md-7 grayColor margintop5">Пакет “А” Optimal online (B2B), 3 месяца
+							  </div>
+							  <div className="col-md-3 grayColor margintop1">{this.state.billDev} €</div>
+							  <div className="col-md-2 margintop5">
+								  <img onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца"
+									   src="/img/clear.png"/>
+							  </div>
+						  </div>);
+					  break
+				  case "Пакет “B” Online + Offline (B2B), 3 месяца":
+					  promoResult.push(<div className="row">
+						  <div className="col-md-7 grayColor margintop5">Пакет “B” Online + Offline (B2B)</div>
+						  <div className="col-md-3 grayColor margintop1">{this.state.billPlatform} €</div>
+						  <div className="col-md-2 margintop1">
+							  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца"
+								   src="/img/clear.png"/>
+						  </div>
+					  </div>);
+					  break
+				  case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
+					  promoResult.push(<div className="row">
+						  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
+						  <div className="col-md-3 grayColor margintop1">{this.state.billDesign} €</div>
+						  <div className="col-md-2 margintop1">
+							  <img onClick={_this.cleanCategory}
+								   data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца"
+								   src="/img/clear.png"/>
+						  </div>
+					  </div>);
+					  break
+				  case "Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца":
+					  promoResult.push(<div className="row">
+						  <div className="col-md-7 grayColor margintop5">Пакет ”С+” Online (B2B) <p>MAX EFFECT
+							  (B2B+B2C)</p></div>
+						  <div className="col-md-3 margintop1 grayColor">{this.state.billBonus} €</div>
+						  <div className="col-md-2 margintop1">
+							  <img onClick={_this.cleanCategory}
+								   data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца"
+								   src="/img/clear.png"/>
+						  </div>
+					  </div>);
+					  break
+			  }
+		  }
 
-	  return (
+		  return {promoResult}
+
+	  });
+
+	
+
+	      return (
 
 	  <div className="row" key="mainform" id="reactroot">
 		  <div className="col-md-8">{itemHtml}</div>
@@ -729,38 +791,8 @@ if(listItem.ischecked){
 
 				  </div>
 
+				  {itemResult}
 
-
-				  <div className="row modal1">
-					  <div className="col-md-7 grayColor margintop5">Пакет “А” Optimal online (B2B)</div>
-					  <div className="col-md-3 grayColor margintop1">{this.state.billDev} €  </div>
-					  <div className="col-md-2 margintop5">
-						  <img onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца" src="/img/clear.png" />
-					  </div>
-				  </div>
-
-				  <div className="row">
-					  <div className="col-md-7 grayColor margintop5">Пакет “B” Online + Offline (B2B)</div>
-					  <div className="col-md-3 grayColor margintop1">{this.state.billPlatform} €    </div>
-					  <div className="col-md-2 margintop1">
-						  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца" src="/img/clear.png" />
-					  </div>
-				  </div>
-
-				  <div className="row">
-					  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
-					  <div className="col-md-3 grayColor margintop1">{this.state.billDesign} €      </div>
-					  <div className="col-md-2 margintop1">
-						  <img onClick={_this.cleanCategory} data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца" src="/img/clear.png" />
-					  </div>
-				  </div>
-				  <div className="row">
-					  <div className="col-md-7 grayColor margintop5">Пакет ”С+” Online (B2B) <p>MAX EFFECT (B2B+B2C)</p></div>
-					  <div className="col-md-3 margintop1 grayColor">{this.state.billBonus} €    </div>
-					  <div className="col-md-2 margintop1">
-						  <img onClick={_this.cleanCategory} data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца" src="/img/clear.png" />
-					  </div>
-				  </div>
 				  <div className="row colorblue">
 					  <div className="col-md-9"><span className="textalignright ">Итого</span></div>
 					  <div className="col-md-3">{this.state.allAmount} €</div>
