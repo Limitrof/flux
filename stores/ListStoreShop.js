@@ -120,7 +120,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            disabledcheck:'disabled', additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
+            disabledcheck:'disabled', additionaltitle:'Выберите необходимые услуги/компоненты.',additionaltitle2:'Обратите внимание, существует набор обязательных полей.',needit: false, min:0,multinumber_source_unicname:'count_for_banneranim'
         },
         {
             id:17,
@@ -157,7 +157,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             arrOfVlue:'none',
             formula: 'multi',
             multinumber:1,
-            disabledcheck:'',additionaltitle:'Выберите необходимые услуги/компоненты.',additionaltitle2:'Обратите внимание, существует набор обязательных полей.',needit: false, min:0,multinumber_source_unicname:'none'
+            disabledcheck:'',additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
         },
         {
             id:15,

@@ -355,25 +355,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
             multinumber:5,
             additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
         },
-        {
-            id:18,
-            unicname:'gesignmaket',
-            indexid:35,
-            usehiddencheckbox:false,
-            ischecked:false,
-            category: 'Дизайн key visual:',
-            showwordprefix:'',
-            showwordsuffix:'€',
-            comment:'дизайн рекламного макета Программы',
-            baseprice: 0,
-            price: 1500,
-            stocked: true,
-            name: 'Дизайн рекламного макета Программы',
-            arrOfVlue:'none',
-            formula: 'multi',
-            multinumber:1,
-            additionaltitle:'',needit: false, min:0,multinumber_source_unicname:'none'
-        },
+        
         {
 
             id:19,

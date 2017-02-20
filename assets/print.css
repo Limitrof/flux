@@ -163,3 +163,17 @@ input[type="checkbox"]{
 #pos4>.row>.col-md-6 {
     width: 400px;
 }
+
+.margintop5  {
+    float: left !important;
+}
+
+.marginForPrint60{
+    margin-left: 62px;
+}
+.marginForPrint25 {
+    margin-left: 27px;
+}
+.marginForPrint90 {
+    margin-left: 93px;
+}

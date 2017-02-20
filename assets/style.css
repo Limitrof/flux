@@ -434,6 +434,12 @@ margin-left: 12px !important;
 		height: 3.5em;
 		margin-left: 0 !important;
 	}
+	#firstlevel .nav-tabs >li>a {
+		font-size: 2em !important;
+		width: 15em !important;
+		height: 3em;
+		padding-top: 0.8em;
+	}
 	.nav-tabs>li>a[href="#tab100"] {
 		margin-left: 0 !important;
 	}
@@ -469,6 +475,9 @@ margin-left: 12px !important;
 	}
 	#app-brand-promo .row>.col-md-2.imgleft {
 		padding-left: 0 !important;
+	}
+	#app-brand-promo .bcwhite {
+		margin-top: 30px;
 	}
 }
 

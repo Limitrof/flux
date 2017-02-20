@@ -292,14 +292,14 @@ class AppBrandPromo extends React.Component {
         switch (listItem.category) {
             case "Пакет “А” Optimal online (B2B), 3 месяца":
                 promopart.push(
-				<div className="row grayinrow border-bottom  ">
-					<div className="col-md-9 grayinrow" >
+				<div className="row grayinrow border-bottom ">
+					<div className="col-md-9 grayinrow " >
 						<div className="row height40 text-center hidden-print" >
-							<div className="col-md-4 bggraycol border-right width120">Ресурс</div>
+							<div className="col-md-4 bggraycol border-right width120">РЕСУРСЫ!!</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
 						</div>
-						<div className="row height100" >
+						<div className="row height100 " >
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth">
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
 								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
@@ -321,7 +321,7 @@ class AppBrandPromo extends React.Component {
 								</ul>
 							</div>
 						</div>
-						<div className="row height100" >
+						<div className="row height100 " >
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth">
 								<img className="inheritcenterimg" src="img/kuzov.png"/>	<a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
@@ -337,7 +337,7 @@ class AppBrandPromo extends React.Component {
 								</ul>
 							</div>
 						</div>
-						<div className="row height100" >
+						<div className="row height100 " >
 							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/autokomp.png"/><a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol border-right mediawidth">
 							<ul className="ulnotbulleted">
@@ -352,7 +352,7 @@ class AppBrandPromo extends React.Component {
 								</ul>
 							</div>
 						</div>
-						<div className="row height100" >
+						<div className="row height100 " >
 							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth"><img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span className="greencol">online</span></p></div>
 							<div className="col-md-6 bggraycol-nobottom border-right mediawidth">
 								<ul className="ulnotbulleted widthprint">
@@ -677,7 +677,7 @@ if(listItem.ischecked){
 
 
 
-            return <div className={classNameShow}>
+            return <div className="hideItForPrint">
 
 					<div className="row bcwhite margintop10">
 						<div className="col-md-12 blueColor_pt5">
@@ -740,7 +740,7 @@ if(listItem.ischecked){
 				  case "Пакет “B” Online + Offline (B2B), 3 месяца":
 					  promoResult.push(<div className="row">
 						  <div className="col-md-7 grayColor margintop5">Пакет “B” Online + Offline (B2B)</div>
-						  <div className="col-md-3 grayColor margintop1">{this.state.billPlatform} €</div>
+						  <div className="col-md-3 grayColor margintop1 marginForPrint60">{this.state.billPlatform} €</div>
 						  <div className="col-md-2 margintop1">
 							  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца"
 								   src="/img/clear.png"/>
@@ -750,7 +750,7 @@ if(listItem.ischecked){
 				  case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
 					  promoResult.push(<div className="row">
 						  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
-						  <div className="col-md-3 grayColor margintop1">{this.state.billDesign} €</div>
+						  <div className="col-md-3 grayColor margintop1 marginForPrint25">{this.state.billDesign} €</div>
 						  <div className="col-md-2 margintop1">
 							  <img onClick={_this.cleanCategory}
 								   data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца"
@@ -762,7 +762,7 @@ if(listItem.ischecked){
 					  promoResult.push(<div className="row">
 						  <div className="col-md-7 grayColor margintop5">Пакет ”С+” Online (B2B) <p>MAX EFFECT
 							  (B2B+B2C)</p></div>
-						  <div className="col-md-3 margintop1 grayColor">{this.state.billBonus} €</div>
+						  <div className="col-md-3 margintop1 grayColor marginForPrint90">{this.state.billBonus} €</div>
 						  <div className="col-md-2 margintop1">
 							  <img onClick={_this.cleanCategory}
 								   data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца"
