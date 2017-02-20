@@ -295,7 +295,7 @@ class AppBrandPromo extends React.Component {
 				<div className="row grayinrow border-bottom ">
 					<div className="col-md-9 grayinrow " >
 						<div className="row height40 text-center hidden-print" >
-							<div className="col-md-4 bggraycol border-right width120">РЕСУРСЫ!!</div>
+							<div className="col-md-4 bggraycol border-right width120">Рecурс</div>
 							<div className="col-md-6 bggraycol border-right">Формат</div>
 						   <div className="col-md-2 bggraycol  border-left">Кол-во</div>
 						</div>
