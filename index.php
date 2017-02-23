@@ -230,6 +230,35 @@
 
                 });
                     </script>
+                    <script>
+                    navigator.browserSpecs = (function(){
+                        var ua= navigator.userAgent, tem,
+                        M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+                        if(/trident/i.test(M[1])){
+                            tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+                            return {name:'IE',version:(tem[1] || '')};
+                        }
+                        if(M[1]=== 'Chrome'){
+                            tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+                            if(tem!= null) return {name:tem[1].replace('OPR', 'Opera'),version:tem[2]};
+                        }
+                        M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+                        if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+                        return {name:M[0],version:M[1]};
+                    })();
+
+                    	//console.log(navigator.browserSpecs);
+                    		if (navigator.browserSpecs.name == 'Chrome' && navigator.browserSpecs.version < 56) {
+                    				alert ('К сожалению, в Вашей версии браузера преложение не может работать. Обновите, пожалуйста, Ваш браузер');
+                    		} else if (navigator.browserSpecs.name == 'Opera' && navigator.browserSpecs.version < 42) {
+                    				alert ('К сожалению, в Вашей версии браузера преложение не может работать. Обновите, пожалуйста, Ваш браузер');
+                    		} else if (navigator.browserSpecs.name == 'Firefox' && navigator.browserSpecs.version < 50) {
+                    				alert ('К сожалению, в Вашей версии браузера преложение не может работать. Обновите, пожалуйста, Ваш браузер');
+                    		} else if (navigator.browserSpecs.name != 'Chrome' && navigator.browserSpecs.name != 'Opera' && navigator.browserSpecs.name != 'Firefox') {
+                    				alert ("К сожалению, в Вашем браузере приложение не работает. Откройте, пожалуйста, приложение в другом браузере")
+                    		}
+
+                    </script>
                     </head>
                     <body>
                     <!-- only for printer title -->

@@ -14,6 +14,7 @@ margin:0 auto;
 .fontblue{
 color: #029de0;
 margin-top:100px;
+	margin-bottom: 15px;
 font-weight: bolder;
 }
 .fontgreen{
@@ -105,7 +106,6 @@ margin:0 auto;
 display: block;
 }
 .height40{
-padding: 0 10px 10px 0;
 height:40px;
 
 }
@@ -114,7 +114,6 @@ padding:10px;
 height:90px;
 }
 .height100{
-padding:0 10px 10px 0;
 height:100px;
 }
 .height560{
@@ -478,6 +477,7 @@ margin-left: 12px !important;
 	}
 	#app-brand-promo .bcwhite {
 		margin-top: 30px;
+		height: 100px;
 	}
 }
 
@@ -696,7 +696,7 @@ margin-left:70px;
 margin-right:-100px;
 }
 .floatLeft{
-float:left;
+float:left !important;
 }
 /*AGV Lab Tab*/
 #commingSoon {
@@ -804,53 +804,114 @@ float:left;
 }
 /* media in Brand Promotion 20161216 ardjuna*/
   @media (max-width: 992px) {
-.row>.col-md-3>.fontblue,
+/*.row>.col-md-3>.fontblue,
 .row>.col-md-3>.fontgreen,
 .row>.col-md-12>.width120-center {
 	text-align: left !important;
-        }
+        }*/
 }
 /* media in Brand Promotion 20161216 ardjuna*/
   @media (max-width: 992px) {
-.row>.col-md-12>.width120-center {
+	  #app-brand-prom .row>.col-md-12>.width120-center {
    float: left;
    }
-	  .row>.col-md-12>.width120-center>.checkboxforprice {
-		  margin-left: 0 !important;
+	  #app-brand-promo .row>.col-md-12>.width120-center {
+		  margin-left: 40% !important;
 	  }
 }
 /* media in Brand Promotion 20161216 ardjuna*/
  @media (max-width: 992px) {
-.mediawidth {
+	 .mediawidth {
+	width: 50%;
+  }
+	 #app-brand-promo .mediaheight200 {
+	height: 200px;
+  }
+	 #app-brand-promo .mediawidth2 {
 	width: 100%;
   }
+	 #app-brand-promo .row> .displayblockmedia {
+		 text-align: center;
+		 font-size: 30px;
+	 }
+
+	 #app-brand-promo .paddingleft {
+		 font-size: 30px;
+	 }
+	 #app-brand-promo .col-md-2> .paddingleft {
+		 padding-left: 260px;
+		 font-size: 30px;
+	 }
+
+	 #app-brand-promo .ulnotbulleted {
+		 line-height: 40px !important;
+	 }
+	 #app-brand-promo .height40 {
+		 height: 70px !important;
+	 }
+	 #app-brand-promo .row> .blueColor_pt5 {
+		 padding-left: 18%;
+		 font-size: 26px;
+	 }
+	 #app-brand-promo .row>.col-md-12> h4 {
+		 font-size: 28px;
+	 }
+	 #app-brand-promo .fontblue {
+		 margin-top: 5px;
+		 float: left;
+		 margin-right: 90px;
+		 margin-left: 34%;
+		 font-size: 20px;
+	 }
+	 #app-brand-promo .fontgreen {
+		 float: left;
+		 margin-top: 5px;
+		 font-size: 20px;
+	 }
+	 #app-brand-promo .size24 {
+		 font-size: 34px;
+	 }
+	 #app-brand-promo .tiny-text {
+		 font-size: 15px;
+	 }
+
 }
 /* media in Brand Promotion 20161216 ardjuna*/
  @media (max-width: 992px) {
-	.inheritcenterimg {
-		margin: 0;
-	}
-
-	.text-center {
-		text-align: left;
-	}
-
 	.bggraycol-nobottom {
 		border-bottom:1px solid #b6b6bb;
 	}
 
-	.itogo {
-		text-align: left;
+	 #app-brand-promo .itogo {
+		text-align: center;
+		font-size: 30px !important;
 	}
-	.itogo_sell {
-		margin-top: 10px
+	 #app-brand-promo .itogo_sell {
+		margin: 10px auto;
+		font-size: 30px;
+		height: 50px !important;
+		 width: 175px;
 	
 	}
 	.button {
 		margin-top: 10px;
 	}
+
+	 #app-brand-promo .button {
+		 font-size: 25px;
+		 width: 315px;
+		 height: 70px;
+	}
+
+	 .hipstr {
+		 margin-left: 55%;
+		 font-size: 25px;
+		 width: 280px;
+		 height: 80px;
+	 }
 	#app-brand-promo .row>.col-md-12> img {
 		float: left !important;
+		margin-right: 15px;
 	}
 	 #appShopCost {
 		 padding-left: 15px !important;
@@ -976,3 +1037,22 @@ label[for="delivery2"]{
 .hideInStaticPrice {
 	display: none;
 }
+/*hide table titles in Brand Promotion 20170222 ardjuna*/
+.displaynone {
+	display: none;
+}
+/*show table titles in Brand Promotion 20170222 ardjuna*/
+@media (max-width: 992px) {
+	#app-brand-promo .displayblockmedia {
+		display: block;
+	}
+
+	#app-brand-promo .displaynonemedia {
+		display: none;
+	}
+
+	#app-brand-promo .ulnotbulleted>li>p{
+		padding-left: 20px;
+	}
+}
+
