@@ -916,7 +916,17 @@ float:left !important;
 	 #appShopCost {
 		 padding-left: 15px !important;
 	 }
-	
+
+	  #staticPriceBrandPromo .colorblue {
+		  font-size: 25px;
+	  }
+
+	  .fontsize20 {
+		  font-size: 25px;
+	  }
+	  img[src="/img/clear.png"] {
+		  width: 20px;
+	  }
 }
 /* green color "online" in Brand Promotion 20161219 ardjuna*/
 .greencol {

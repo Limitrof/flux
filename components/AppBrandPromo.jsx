@@ -961,7 +961,7 @@ if(listItem.ischecked){
 			  switch (listItem.category) {
 				  case "Пакет “А” Optimal online (B2B), 3 месяца":
 					  promoResult.push(
-						  <div className="row modal1 ">
+						  <div className="row modal1 fontsize20">
 							  <div className="col-md-7 grayColor margintop5">Пакет “А” Optimal online (B2B), 3 месяца
 							  </div>
 							  <div className="col-md-3 grayColor margintop1">{this.state.billDev} €</div>
@@ -972,7 +972,7 @@ if(listItem.ischecked){
 						  </div>);
 					  break
 				  case "Пакет “B” Online + Offline (B2B), 3 месяца":
-					  promoResult.push(<div className="row">
+					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет “B” Online + Offline (B2B)</div>
 						  <div className="col-md-3 grayColor margintop1 marginForPrint60">{this.state.billPlatform} €</div>
 						  <div className="col-md-2 margintop1">
@@ -982,7 +982,7 @@ if(listItem.ischecked){
 					  </div>);
 					  break
 				  case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
-					  promoResult.push(<div className="row">
+					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
 						  <div className="col-md-3 grayColor margintop1 marginForPrint25">{this.state.billDesign} €</div>
 						  <div className="col-md-2 margintop1">
@@ -993,7 +993,7 @@ if(listItem.ischecked){
 					  </div>);
 					  break
 				  case "Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца":
-					  promoResult.push(<div className="row">
+					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет ”С+” Online (B2B) <p>MAX EFFECT
 							  (B2B+B2C)</p></div>
 						  <div className="col-md-3 margintop1 grayColor marginForPrint90">{this.state.billBonus} €</div>
