@@ -916,7 +916,7 @@ if(listItem.ischecked){
 					<div className="row bcwhite margintop10">
 						<div className="col-md-12 blueColor_pt5">
 							<img src={listItem.sticker}/><h4>{listItem.category}</h4>
-							<span className="grayColor">Охват ЦА</span> {listItem.name} <span className="grayColor">Стоимость контакта</span> {listItem.comment} €
+							<span className="grayColor">Охват ЦА</span> {listItem.name} <span className="grayColor">Стоимость контакта</span> {listItem.comment} € 
 						</div>
 					</div>
 
@@ -966,8 +966,9 @@ if(listItem.ischecked){
 							  </div>
 							  <div className="col-md-3 grayColor margintop1">{this.state.billDev} €</div>
 							  <div className="col-md-2 margintop5">
-								  <img onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца"
+								  <img className="margintop160" onClick={_this.cleanCategory} data-id="Пакет “А” Optimal online (B2B), 3 месяца"
 									   src="/img/clear.png"/>
+								  <div className="borderbottom"></div>
 							  </div>
 						  </div>);
 					  break
@@ -975,9 +976,10 @@ if(listItem.ischecked){
 					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет “B” Online + Offline (B2B)</div>
 						  <div className="col-md-3 grayColor margintop1 marginForPrint60">{this.state.billPlatform} €</div>
-						  <div className="col-md-2 margintop1">
+						  <div className="col-md-2 margintop5">
 							  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца"
 								   src="/img/clear.png"/>
+							  <div className="borderbottom"></div>
 						  </div>
 					  </div>);
 					  break
@@ -985,10 +987,11 @@ if(listItem.ischecked){
 					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
 						  <div className="col-md-3 grayColor margintop1 marginForPrint25">{this.state.billDesign} €</div>
-						  <div className="col-md-2 margintop1">
-							  <img onClick={_this.cleanCategory}
+						  <div className="col-md-2 margintop5">
+							  <img  onClick={_this.cleanCategory}
 								   data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца"
 								   src="/img/clear.png"/>
+							  <div className="borderbottom"></div>
 						  </div>
 					  </div>);
 					  break
@@ -996,13 +999,16 @@ if(listItem.ischecked){
 					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет ”С+” Online (B2B) <p>MAX EFFECT
 							  (B2B+B2C)</p></div>
-						  <div className="col-md-3 margintop1 grayColor marginForPrint90">{this.state.billBonus} €</div>
-						  <div className="col-md-2 margintop1">
-							  <img onClick={_this.cleanCategory}
+						  <div className="col-md-3 margintop1 grayColor">{this.state.billBonus} €</div>
+						  <div className="col-md-2 margintop5">
+							  <img className="margintop160" onClick={_this.cleanCategory}
 								   data-id="Пакет ”С+” Online (B2B) MAX EFFECT (B2B+B2C), 3 месяца"
 								   src="/img/clear.png"/>
+							  <div className="borderbottom"></div>
 						  </div>
-					  </div>);
+						  
+					  </div>
+					  );
 					  break
 			  }
 		  }

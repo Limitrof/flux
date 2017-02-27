@@ -33,6 +33,7 @@ border-bottom:1px solid #b6b6bb;
 padding:10px;
 float: left;
 }
+
 .bggraycol img{
 margin-top:10px;
 }
@@ -475,10 +476,7 @@ margin-left: 12px !important;
 	#app-brand-promo .row>.col-md-2.imgleft {
 		padding-left: 0 !important;
 	}
-	#app-brand-promo .bcwhite {
-		margin-top: 30px;
-		height: 100px;
-	}
+
 }
 
 
@@ -813,22 +811,22 @@ float:left !important;
 /* media in Brand Promotion 20161216 ardjuna*/
   @media (max-width: 992px) {
 	  #app-brand-prom .row>.col-md-12>.width120-center {
-   float: left;
+  			 float: left;
    }
 	  #app-brand-promo .row>.col-md-12>.width120-center {
-		  margin-left: 40% !important;
+		  margin-left: 24% !important;
 	  }
 }
 /* media in Brand Promotion 20161216 ardjuna*/
  @media (max-width: 992px) {
 	 .mediawidth {
-	width: 50%;
+		width: 50%;
   }
 	 #app-brand-promo .mediaheight200 {
-	height: 200px;
+		height: 200px;
   }
 	 #app-brand-promo .mediawidth2 {
-	width: 100%;
+		width: 100%;
   }
 	 #app-brand-promo .row> .displayblockmedia {
 		 text-align: center;
@@ -850,30 +848,52 @@ float:left !important;
 		 height: 70px !important;
 	 }
 	 #app-brand-promo .row> .blueColor_pt5 {
-		 padding-left: 18%;
-		 font-size: 26px;
+		 text-align: center;
+		 font-size: 47px;
+	 }
+
+	 #app-brand-promo .bcwhite {
+		 margin-top: 30px;
+		 height: 220px;
 	 }
 	 #app-brand-promo .row>.col-md-12> h4 {
-		 font-size: 28px;
+		 font-size: 50px;
+		 text-align: center;
 	 }
 	 #app-brand-promo .fontblue {
 		 margin-top: 5px;
 		 float: left;
 		 margin-right: 90px;
-		 margin-left: 34%;
-		 font-size: 20px;
+		 margin-left: 30%;
+		 font-size: 35px;
 	 }
 	 #app-brand-promo .fontgreen {
 		 float: left;
 		 margin-top: 5px;
-		 font-size: 20px;
+		 font-size: 35px;
 	 }
 	 #app-brand-promo .size24 {
-		 font-size: 34px;
+		 font-size: 45px;
 	 }
 	 #app-brand-promo .tiny-text {
-		 font-size: 15px;
+		 font-size: 30px;
 	 }
+
+	 #app-brand-promo .height100 {
+		 height: 270px;
+	 }
+	 #app-brand-promo .inheritcenterimg {
+		 width: 30%;
+	 }
+	 img[src="img/autokomp.png"] {
+		 height: 40% !important;
+	 }
+
+	 #app-brand-promo .row> .mediawidth2  {
+		 font-size: 40px !important;
+	 }
+
+
 
 }
 /* media in Brand Promotion 20161216 ardjuna*/
@@ -884,13 +904,13 @@ float:left !important;
 
 	 #app-brand-promo .itogo {
 		text-align: center;
-		font-size: 30px !important;
+		font-size: 40px !important;
 	}
 	 #app-brand-promo .itogo_sell {
 		margin: 10px auto;
-		font-size: 30px;
-		height: 50px !important;
-		 width: 175px;
+		font-size: 60px;
+		height: 90px !important;
+		 width: 250px;
 	
 	}
 	.button {
@@ -898,36 +918,55 @@ float:left !important;
 	}
 
 	 #app-brand-promo .button {
-		 font-size: 25px;
-		 width: 315px;
-		 height: 70px;
+		 font-size: 50px;
+		 width: 700px;
+		 height: 170px;
 	}
 
 	 .hipstr {
-		 margin-left: 55%;
-		 font-size: 25px;
-		 width: 280px;
-		 height: 80px;
+		 margin-left: -9%;
+		 font-size: 50px;
+		 width: 700px;
+		 height: 150px;
 	 }
 	#app-brand-promo .row>.col-md-12> img {
 		float: left !important;
-		margin-right: 15px;
+		width: 145px !important;
+		margin-top: 20px;
 	}
 	 #appShopCost {
 		 padding-left: 15px !important;
 	 }
 
 	  #staticPriceBrandPromo .colorblue {
-		  font-size: 25px;
+		  font-size: 50px;
 	  }
 
 	  .fontsize20 {
-		  font-size: 25px;
+		  font-size: 50px;
 	  }
 	  img[src="/img/clear.png"] {
-		  width: 20px;
+		  width: 70px;
+		  margin-left: 45px;
+		  margin-bottom: 15px;
+		  float: right;
+		  margin-top: -130px;
 	  }
-}
+	 .margintop160 {
+		 margin-top: -160px !important;
+	 }
+
+	 #app-brand-promo .margintop1 {
+		 float: left;
+	 }
+	 .borderbottom {
+		 border-bottom: 5px solid #b6b6bb;
+		 width: 100%;
+		 margin-top: 100px;
+	 }
+
+
+ }
 /* green color "online" in Brand Promotion 20161219 ardjuna*/
 .greencol {
 	color: #47be71;
@@ -1065,4 +1104,19 @@ label[for="delivery2"]{
 		padding-left: 20px;
 	}
 }
+
+@media print {
+	#app-brand-promo .row> .blueColor_pt5 {
+		font-size: 40px;
+		text-align: left;
+	}
+
+	#app-brand-promo .row>.col-md-12> h4 {
+		font-size: 40px;
+		text-align: left;
+	}
+}
+
+
+
 
