@@ -503,6 +503,7 @@ height:80px;
 }
 #app-root2{
 	margin-bottom:10px;
+	margin-top: 20px;
 }
 #app-root select{
 	height: 50px;
@@ -767,7 +768,11 @@ float:left !important;
 #staticPriceBrandPromo> .row> .col-md-3,
 #staticPriceBrandPromo> .row> .col-md-1,
 #staticPrice2> .row> .col-md-9,
-#staticPrice2> .row> .col-md-3 {
+#staticPrice2> .row> .col-md-3,
+#staticPriceMystery> .row> .col-md-9,
+#staticPriceStaff> .row> .col-md-9,
+#staticPriceDesign> .row> .col-md-9,
+#staticPriceAdvert> .row> .col-md-9 {
 	margin-top: 12px;
  }
 /* 20161216 ardjuna*/
@@ -816,6 +821,10 @@ float:left !important;
 	  #app-brand-promo .row>.col-md-12>.width120-center {
 		  margin-left: 24% !important;
 	  }
+
+	  #secondlevel>.nav-tabs>li>a[href="#tab600"] {
+		  margin-bottom: 35px;
+	  }
 }
 /* media in Brand Promotion 20161216 ardjuna*/
  @media (max-width: 992px) {
@@ -853,7 +862,7 @@ float:left !important;
 	 }
 
 	 #app-brand-promo .bcwhite {
-		 margin-top: 30px;
+		 margin-top: 100px;
 		 height: 220px;
 	 }
 	 #app-brand-promo .row>.col-md-12> h4 {
@@ -921,6 +930,8 @@ float:left !important;
 		 font-size: 50px;
 		 width: 700px;
 		 height: 170px;
+		 margin-top: 50px;
+		 margin-bottom: 150px;
 	}
 
 	 .hipstr {
@@ -1116,6 +1127,33 @@ label[for="delivery2"]{
 		text-align: left;
 	}
 }
+
+#app-staff img[src="/img/clear.png"],
+#app-advert img[src="/img/clear.png"],
+#app-design img[src="/img/clear.png"],
+#app-root2 img[src="/img/clear.png"],
+#app-mystery img[src="/img/clear.png"] {
+	margin-left: 10px;
+}
+
+#app-brand-promo .colorblue>.col-md-3 {
+	margin-left: -10px;
+}
+
+#app-staff .colorblue>.col-md-3,
+#app-mystery .colorblue>.col-md-3,
+#app-advert .colorblue>.col-md-3,
+#app-design .colorblue>.col-md-3 {
+	margin-top: 15px;
+}
+
+#app-root2 .colorblue>.col-md-3 {
+	margin-top: 15px;
+}
+#app-brand-promo .hideItForPrint {
+	padding-bottom: 50px;
+}
+
 
 
 

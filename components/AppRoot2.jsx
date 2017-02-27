@@ -519,8 +519,8 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-9">PR</div>
-					  <div className="col-md-3">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="PR" src="/img/clear.png" /></div>
+					  <div className="col-md-8">PR</div>
+					  <div className="col-md-4">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="PR" src="/img/clear.png" /></div>
 				  </div>
 
 

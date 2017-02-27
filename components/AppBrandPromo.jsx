@@ -975,7 +975,7 @@ if(listItem.ischecked){
 				  case "Пакет “B” Online + Offline (B2B), 3 месяца":
 					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет “B” Online + Offline (B2B)</div>
-						  <div className="col-md-3 grayColor margintop1 marginForPrint60">{this.state.billPlatform} €</div>
+						  <div className="col-md-3 grayColor margintop1">{this.state.billPlatform} €</div>
 						  <div className="col-md-2 margintop5">
 							  <img onClick={_this.cleanCategory} data-id="Пакет “B” Online + Offline (B2B), 3 месяца"
 								   src="/img/clear.png"/>
@@ -986,7 +986,7 @@ if(listItem.ischecked){
 				  case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
 					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
-						  <div className="col-md-3 grayColor margintop1 marginForPrint25">{this.state.billDesign} €</div>
+						  <div className="col-md-3 grayColor margintop1">{this.state.billDesign} €</div>
 						  <div className="col-md-2 margintop5">
 							  <img  onClick={_this.cleanCategory}
 								   data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца"
