@@ -1174,6 +1174,10 @@ label[for="delivery2"]{
 	margin-left: 10px;
 }
 
+img[src="/img/clear.png"] {
+	width: 20px;
+}
+
 #app-brand-promo .colorblue>.col-md-3 {
 	margin-left: -10px;
 }

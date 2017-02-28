@@ -416,8 +416,8 @@ class AppBrandPromo extends React.Component {
 							<div className="col-md-6 bggraycol-nobottom border-right mediawidth70 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>баннер сквозной 280х190 рх</li>
-									<li className="displaynonemedia">статья в топ-ротации <p>с баннером на главной</p></li>
-									<li className="displayblockmedia displaynone">статья в топ-ротации с баннером на <p>главной</p></li>
+									<li>статья в топ-ротации <p>с баннером на главной</p></li>
+									
 								</ul>
 							</div>
 							<div className="col-md-2 bggraycol-nobottom border-left mediawidth30 height100 mediaheight200">
