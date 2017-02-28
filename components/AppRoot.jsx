@@ -576,7 +576,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <div className="row">
 					  <div className="col-md-8">Разработка программы</div>
-					  <div className="col-md-3">{this.state.billDev} € </div>
+					  <div className="col-md-3 paddingleft47">{this.state.billDev} € </div>
 					  <div className="col-md-1">
 						  <img onClick={_this.cleanCategory} data-id="Разработка программы" src="/img/clear.png" />
 					  </div>
@@ -584,7 +584,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <div className="row">
 					  <div className="col-md-8">Платформа для Программы лояльности</div>
-					  <div className="col-md-3">{this.state.billPlatform} € </div>
+					  <div className="col-md-3 paddingleft47">{this.state.billPlatform} € </div>
 					  <div className="col-md-1">
 						  <img onClick={_this.cleanCategory} data-id="Платформа для Программы лояльности:" src="/img/clear.png" />
 					  </div>
@@ -592,7 +592,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <div className="row">
 					  <div className="col-md-8">Дизайн key visual</div>
-					  <div className="col-md-3">{this.state.billDesign} € </div>
+					  <div className="col-md-3 paddingleft47">{this.state.billDesign} € </div>
 					  <div className="col-md-1">
 						  <img onClick={_this.cleanCategory} data-id="Дизайн key visual:" src="/img/clear.png" />
 					  </div>
@@ -600,7 +600,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <div className="row">
 					  <div className="col-md-8">Призовой фонд*</div>
-					  <div className="col-md-3">{this.state.billBonus} € </div>
+					  <div className="col-md-3 paddingleft47">{this.state.billBonus} € </div>
 					  <div className="col-md-1">
 						  <img onClick={_this.cleanCategory} data-id="Призовой фонд" src="/img/clear.png" />
 					  </div>

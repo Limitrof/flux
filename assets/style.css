@@ -35,7 +35,7 @@ float: left;
 }
 
 .bggraycol img{
-margin-top:10px;
+margin-top: 10px;
 }
 .bggraycol ul{
 /* margin-left:10px; */
@@ -57,7 +57,7 @@ border-bottom:1px solid #e8e9ee;
 float: left;
 }
 .bggraycol-nobottom img{
-margin-top:5px;
+margin-top: 10px;
 }
 .bggraycol-nobottom ul{
 /* margin-left:5px; */
@@ -775,6 +775,10 @@ float:left !important;
 #staticPriceAdvert> .row> .col-md-9 {
 	margin-top: 12px;
  }
+
+ #staticPrice> .row> .paddingleft47 {
+	padding-left: 47px;
+}
 /* 20161216 ardjuna*/
 .blueColor_h80_pt5>p {
 	color: #8f9fae;
@@ -828,9 +832,12 @@ float:left !important;
 }
 /* media in Brand Promotion 20161216 ardjuna*/
  @media (max-width: 992px) {
-	 .mediawidth {
-		width: 50%;
+	 .mediawidth70 {
+		width: 70%;
   }
+	 .mediawidth30 {
+		 width: 30%;
+	 }
 	 #app-brand-promo .mediaheight200 {
 		height: 200px;
   }
@@ -839,26 +846,26 @@ float:left !important;
   }
 	 #app-brand-promo .row> .displayblockmedia {
 		 text-align: center;
-		 font-size: 30px;
+		 font-size: 40px;
 	 }
 
 	 #app-brand-promo .paddingleft {
-		 font-size: 30px;
+		 font-size: 45px;
 	 }
 	 #app-brand-promo .col-md-2> .paddingleft {
-		 padding-left: 260px;
-		 font-size: 30px;
+		 padding-left: 130px;
+		 font-size: 45px;
 	 }
 
 	 #app-brand-promo .ulnotbulleted {
-		 line-height: 40px !important;
+		 line-height: 85px !important;
 	 }
 	 #app-brand-promo .height40 {
-		 height: 70px !important;
+		 height: 80px !important;
 	 }
 	 #app-brand-promo .row> .blueColor_pt5 {
-		 text-align: center;
-		 font-size: 47px;
+		/* text-align: center;*/
+		 font-size: 44px;
 	 }
 
 	 #app-brand-promo .bcwhite {
@@ -867,7 +874,8 @@ float:left !important;
 	 }
 	 #app-brand-promo .row>.col-md-12> h4 {
 		 font-size: 50px;
-		 text-align: center;
+		 /*text-align: center;*/
+		 padding-top: 20px;
 	 }
 	 #app-brand-promo .fontblue {
 		 margin-top: 5px;
@@ -889,20 +897,46 @@ float:left !important;
 	 }
 
 	 #app-brand-promo .height100 {
-		 height: 270px;
+		 height: 350px;
 	 }
 	 #app-brand-promo .inheritcenterimg {
 		 width: 30%;
 	 }
 	 img[src="img/autokomp.png"] {
-		 height: 40% !important;
+		 height: 35% !important;
 	 }
 
 	 #app-brand-promo .row> .mediawidth2  {
 		 font-size: 40px !important;
 	 }
+	 .bggraycol {
+		 border-bottom: 5px solid #b6b6bb !important;
+	 }
+	 .border-right {
+		 border-right: 5px solid #b6b6bb !important;
+		 border-left: 5px solid #b6b6bb !important;
 
+	 }
+	 .border-bottom {
+		 border-bottom: 5px solid #b6b6bb !important;
+	 }
+	 .border-left {
+		 border-right: 5px solid #b6b6bb !important;
+	 }
+	 .bggraycol-nobottom {
+		 border-bottom: 5px solid #b6b6bb !important;
+	 }
+	 .col-md-4 .border-right {
+		 border-right: none !important; ;
+	 }
 
+	 .bggraycol img {
+		 margin-top: 70px;
+	 }
+
+	 .bggraycol-nobottom img {
+		 margin-top: 70px;
+	 }
 
 }
 /* media in Brand Promotion 20161216 ardjuna*/
@@ -943,7 +977,8 @@ float:left !important;
 	#app-brand-promo .row>.col-md-12> img {
 		float: left !important;
 		width: 145px !important;
-		margin-top: 20px;
+		margin-top: 35px;
+		margin-right: 25px;
 	}
 	 #appShopCost {
 		 padding-left: 15px !important;
@@ -956,7 +991,7 @@ float:left !important;
 	  .fontsize20 {
 		  font-size: 50px;
 	  }
-	  img[src="/img/clear.png"] {
+	 #app-brand-promo img[src="/img/clear.png"] {
 		  width: 70px;
 		  margin-left: 45px;
 		  margin-bottom: 15px;
@@ -976,6 +1011,9 @@ float:left !important;
 		 margin-top: 100px;
 	 }
 
+	 #app-brand-promo .colorblue>.col-md-3 {
+		 margin-left: 0 !important;
+	 }
 
  }
 /* green color "online" in Brand Promotion 20161219 ardjuna*/

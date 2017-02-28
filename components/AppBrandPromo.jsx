@@ -306,10 +306,10 @@ class AppBrandPromo extends React.Component {
 								<img className="inheritcenterimg" src="img/infoparts.png"/>
 								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 								Формат
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 								Количество
 							</div>
 
@@ -319,7 +319,7 @@ class AppBrandPromo extends React.Component {
 								<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 							</div>
 
-							<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+							<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>баннер* 785х120 рх в ротации 1/3</li>
 									<li>написание и размещение статей**</li>
@@ -327,7 +327,7 @@ class AppBrandPromo extends React.Component {
 									<li>репост статей в соц. сетях</li>
 								</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+							<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>1</li>
 									<li>6</li>
@@ -343,23 +343,23 @@ class AppBrandPromo extends React.Component {
 								<img className="inheritcenterimg" src="img/kuzov.png"/>
 								<a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span className="greencol">online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 								Формат
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 								Количество
 							</div>
 							<div className="col-md-4 displaynone">
 								<img className="inheritcenterimg" src="NONE"/>
 								<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+							<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>баннер 217 х 358 рх на главной</li>
 									<li>размещение статьи</li>
 								</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+							<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>1</li>
 									<li>3</li>
@@ -373,23 +373,23 @@ class AppBrandPromo extends React.Component {
 								<img className="inheritcenterimg" src="img/autokomp.png"/>
 								<a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span className="greencol">online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 								Формат
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 								Количество
 							</div>
 							<div className="col-md-4 displaynone">
 								<img className="inheritcenterimg" src="NONE"/>
 								<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+							<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>баннер 1052 х 90 рх на главной</li>
 									<li>размещение статьи</li>
 								</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+							<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>1</li>
 									<li>3</li>
@@ -400,27 +400,27 @@ class AppBrandPromo extends React.Component {
 
 
 						<div className="row" >
-							<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth2 height100">
+							<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth2 height100">
 								<img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span className="greencol">online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 								Формат
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+							<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 								Количество
 							</div>
 							<div className="col-md-4 displaynone">
 								<img className="inheritcenterimg" src="NONE"/>
 								<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 							</div>
-							<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+							<div className="col-md-6 bggraycol-nobottom border-right mediawidth70 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>баннер сквозной 280х190 рх</li>
 									<li className="displaynonemedia">статья в топ-ротации <p>с баннером на главной</p></li>
 									<li className="displayblockmedia displaynone">статья в топ-ротации с баннером на <p>главной</p></li>
 								</ul>
 							</div>
-							<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+							<div className="col-md-2 bggraycol-nobottom border-left mediawidth30 height100 mediaheight200">
 								<ul className="ulnotbulleted paddingleft">
 									<li>1</li>
 									<li>3</li>
@@ -458,17 +458,17 @@ class AppBrandPromo extends React.Component {
 									<img className="inheritcenterimg" src="img/infoparts.png"/>
 									<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="img/infoparts.png"/>
 									<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер* 785х120 рх в ротации 1/3</li>
 										<li>написание и размещение статей**</li>
@@ -476,7 +476,7 @@ class AppBrandPromo extends React.Component {
 										<li>репост статей в соц. сетях</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>6</li>
@@ -490,23 +490,23 @@ class AppBrandPromo extends React.Component {
 								<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth2 height100">
 									<img className="inheritcenterimg" src="img/autobusiness.png"/><p className="bluecol"><span>offline</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>макет А4, 2-я обложка</li>
 										<li>статья 1/1 полосы</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>1</li>
@@ -515,27 +515,27 @@ class AppBrandPromo extends React.Component {
 							</div>
 
 							<div className="row" >
-								<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth2 height100">
+								<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth2 height100">
 									<img className="inheritcenterimg" src="img/kuzov.png"/>
 									<p><span className="bluecol">offline</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol-nobottom border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>статья 1/2 полосы</li>
 										<li>макет, 3-я обложка</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol-nobottom border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>2</li>
 										<li>1</li>
@@ -572,17 +572,17 @@ class AppBrandPromo extends React.Component {
 									<img className="inheritcenterimg" src="img/infoparts.png"/>
 									<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="img/infoparts.png"/>
 									<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер* 785х120 рх в ротации 1/3</li>
 										<li>написание и размещение статей**</li>
@@ -590,7 +590,7 @@ class AppBrandPromo extends React.Component {
 										<li>репост статей в соц. сетях</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>6</li>
@@ -605,23 +605,23 @@ class AppBrandPromo extends React.Component {
 									<img className="inheritcenterimg" src="img/autokomp.png"/>
 									<p><span className="bluecol">offline</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>макет, 2-я обложка 215х275 мм <span className="colorblue">+бонус (статья/макет)</span></li>
 										<li>статья 1/2 полосы</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>3</li>
@@ -634,23 +634,23 @@ class AppBrandPromo extends React.Component {
 									<img className="inheritcenterimg" src="img/kuzov.png"/>
 									<p><span className="bluecol">offline</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>статья 1/2 полосы</li>
 										<li>макет, 3-я обложка</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>2</li>
 										<li>1</li>
@@ -661,26 +661,26 @@ class AppBrandPromo extends React.Component {
 
 
 							<div className="row" >
-								<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth2 height100">
+								<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth2 height100">
 									<img className="inheritcenterimg" src="img/autonews.png"/><p className="bluecol"><span>offline</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol-nobottom border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>статья 1/1 полосы</li>
 										<li>макет, 3-я обложка</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol-nobottom border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>2</li>
 										<li>1</li>
@@ -716,10 +716,10 @@ class AppBrandPromo extends React.Component {
 									<img className="inheritcenterimg" src="img/infoparts.png"/>
 									<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 
@@ -728,7 +728,7 @@ class AppBrandPromo extends React.Component {
 									<a href="http://www.info-parts.ru">www.info-parts.ru</a><p><span className="greencol">online</span></p>
 								</div>
 
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер* 785х120 рх в ротации 1/3</li>
 										<li>написание и размещение статей**</li>
@@ -736,7 +736,7 @@ class AppBrandPromo extends React.Component {
 										<li>репост статей в соц. сетях</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>6</li>
@@ -751,23 +751,23 @@ class AppBrandPromo extends React.Component {
 									<img className="inheritcenterimg" src="img/kuzov.png"/>
 									<a href="http://www.kuzov-media.ru">www.kuzov-media.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер 217 х 358 рх на главной</li>
 										<li>размещение статьи</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>3</li>
@@ -780,23 +780,23 @@ class AppBrandPromo extends React.Component {
 									<img className="inheritcenterimg" src="img/autokomp.png"/>
 									<a href="http://www.a-kt.ru">www.a-kt.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер 1052 х 90 рх на главной</li>
 										<li>размещение статьи</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>3</li>
@@ -808,24 +808,24 @@ class AppBrandPromo extends React.Component {
 								<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth2 height100">
 									<img className="inheritcenterimg" src="img/abs.png"/><a href="http://www.abs-magazine.ru">www.abs-magazine.ru</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер сквозной 280х190 рх</li>
 										<li className="displaynonemedia">статья в топ-ротации <p>с баннером на главной</p></li>
 										<li className="displayblockmedia displaynone">статья в топ-ротации с баннером на <p>главной</p></li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 										<li>3</li>
@@ -838,22 +838,22 @@ class AppBrandPromo extends React.Component {
 								<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth2 height100">
 									<img className="inheritcenterimg" src="img/autodoc.png"/><a href="http://www.autodoc.ru">www.autodoc.ru</a><p><span className="greencol">online, B2C</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер 158х200 рх на главной</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 									</ul>
@@ -862,25 +862,25 @@ class AppBrandPromo extends React.Component {
 
 
 							<div className="row" >
-								<div className="col-md-4 bggraycol border-right imgpadding text-center width120 mediawidth2 height100">
+								<div className="col-md-4 bggraycol-nobottom border-right imgpadding text-center width120 mediawidth2 height100">
 									<img className="inheritcenterimg"/><a href="http://www.zr.ru/">www.zr.ru/</a><p><span className="greencol">online, B2C</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-6 bggraycol border-right mediawidth70 displayblockmedia displaynone height40">
 									Формат
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth displayblockmedia displaynone height40">
+								<div className="col-md-2 bggraycol border-left mediawidth30 displayblockmedia displaynone height40">
 									Количество
 								</div>
 								<div className="col-md-4 displaynone">
 									<img className="inheritcenterimg" src="NONE"/>
 									<a href="http://www.info-parts.ru">DISPLAYNONE</a><p><span className="greencol">online</span></p>
 								</div>
-								<div className="col-md-6 bggraycol border-right mediawidth height100 mediaheight200">
+								<div className="col-md-6 bggraycol-nobottom border-right mediawidth70 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>баннер 240х 400 рх в сайдбаре</li>
 									</ul>
 								</div>
-								<div className="col-md-2 bggraycol border-left mediawidth height100 mediaheight200">
+								<div className="col-md-2 bggraycol-nobottom border-left mediawidth30 height100 mediaheight200">
 									<ul className="ulnotbulleted paddingleft">
 										<li>1</li>
 									</ul>
@@ -986,7 +986,7 @@ if(listItem.ischecked){
 				  case "Пакет “С” Online + Offline VIP (B2B), 3 месяца":
 					  promoResult.push(<div className="row fontsize20">
 						  <div className="col-md-7 grayColor margintop5">Пакет “С” Online + Offline VIP (B2B)</div>
-						  <div className="col-md-3 grayColor margintop1">{this.state.billDesign} €</div>
+						  <div className="col-md-3 grayColor margintop1 ">{this.state.billDesign} €</div>
 						  <div className="col-md-2 margintop5">
 							  <img  onClick={_this.cleanCategory}
 								   data-id="Пакет “С” Online + Offline VIP (B2B), 3 месяца"

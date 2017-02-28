@@ -527,7 +527,7 @@ else {usersControlFormula.push(<div></div>);}
 
 				  <hr/>
 				  <div className="row colorblue">
-					  <div className="col-md-9"><span className="textalignright">Итого</span></div>
+					  <div className="col-md-9"><span className="textalignright">Итого:</span></div>
 					  <div className="col-md-3">{this.state.allAmount} €</div>
 				  </div>
 				  
