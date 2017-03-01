@@ -500,6 +500,10 @@ margin-left: 12px !important;
 	#longBlueRow {
 		height: 100px !important;
 	}
+
+	#app-root .topm10 {
+		margin-left: 25px;
+	}
 }
 
 

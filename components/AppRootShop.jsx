@@ -439,16 +439,16 @@ else {usersControlFormula.push(<div></div>);}
 				}
 		
 				//show or hide select or input
-				var hideinputonphone = "col-md-3 bcgray";
+				var hideinputonphone = "col-xs-3 bcgray";
 				if (listItem.formula == 'multi') {
-					hideinputonphone = "col-md-3 bcgray hidden-sm hidden-xs";
-				}		
-				//show or hide price
-				var hidepriceonphone = "col-md-3 bcgray";
-				if (listItem.price == '') {
-					hidepriceonphone = "col-md-3 bcgray hidden-sm hidden-xs";
+					hideinputonphone = "col-xs-3 bcgray";
 				}
-				
+				//show or hide price
+				var hidepriceonphone = "col-xs-3 bcgray";
+				if (listItem.price == '') {
+					hidepriceonphone = "col-xs-3 bcgray";
+				}
+
 				 if( (arrSize-1) == index){
 
                      blockItogo.push(<div className="row">
@@ -469,7 +469,7 @@ else {usersControlFormula.push(<div></div>);}
             if(currentLocation != -1){
                 return <div>{blockTitle}
 					<div className="row" key={ listItem.id } title={listItem.comment}>
-						<div className="col-md-6 bcgray">
+						<div className="col-xs-6 bcgray">
                             {useOrNotCheckbox}
 							<label htmlFor={listItem.unicname}>{listItem.name}</label>
 						</div>
@@ -488,7 +488,7 @@ else {usersControlFormula.push(<div></div>);}
         }else {
             return <div id={currRowPos}>{blockTitle}
 				<div className="row hideItForPrint showItForPrint" key={ listItem.id } title={listItem.comment}>
-					<div className="col-md-6 bcgray">
+					<div className="col-xs-6 bcgray">
                         {useOrNotCheckbox}
 						<label htmlFor={listItem.unicname}>{listItem.name}</label>
 					</div>
