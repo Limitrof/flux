@@ -417,7 +417,6 @@ class AppBrandPromo extends React.Component {
 								<ul className="ulnotbulleted paddingleft">
 									<li>баннер сквозной 280х190 рх</li>
 									<li>статья в топ-ротации <p>с баннером на главной</p></li>
-									
 								</ul>
 							</div>
 							<div className="col-md-2 bggraycol-nobottom border-left mediawidth30 height100 mediaheight200">

@@ -254,7 +254,7 @@
                     				alert ('К сожалению, в Вашей версии браузера преложение не может работать. Обновите, пожалуйста, Ваш браузер');
                     		} else if (navigator.browserSpecs.name == 'Firefox' && navigator.browserSpecs.version < 50) {
                     				alert ('К сожалению, в Вашей версии браузера преложение не может работать. Обновите, пожалуйста, Ваш браузер');
-                    		} else if (navigator.browserSpecs.name != 'Chrome' && navigator.browserSpecs.name != 'Opera' && navigator.browserSpecs.name != 'Firefox') {
+                    		} else if (navigator.browserSpecs.name != 'Chrome' && navigator.browserSpecs.name != 'Opera' && navigator.browserSpecs.name != 'Firefox' && navigator.browserSpecs.name != 'Safari') {
                     				alert ("К сожалению, в Вашем браузере приложение не работает. Откройте, пожалуйста, приложение в другом браузере")
                     		}
 

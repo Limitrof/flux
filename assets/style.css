@@ -429,16 +429,22 @@ margin-left: 12px !important;
 
 @media(min-width:730px) and (max-width:991px){
 	#secondlevel>.nav-tabs>li>a {
-		font-size: 2em !important;
+		font-size: 3em !important;
 		width: auto !important;
-		height: 3.5em;
+		height: 4em;
 		margin-left: 0 !important;
 	}
 	#firstlevel .nav-tabs >li>a {
-		font-size: 2em !important;
+		font-size: 2.5em !important;
 		width: 15em !important;
 		height: 3em;
 		padding-top: 0.8em;
+		margin-right: 0;
+		margin-left: 30px;
+	}
+
+	#firstlevel .nav-tabs >li.active>a {
+		margin-right: 0;
 	}
 	.nav-tabs>li>a[href="#tab100"] {
 		margin-left: 0 !important;
@@ -448,23 +454,28 @@ margin-left: 12px !important;
 	}
 
 	#secondlevel >.nav-tabs>li>a[href="#tab100"]>div>div,
-	#secondlevel >.nav-tabs>li>a[href="#tab250"]>div>div,
+	#secondlevel >.nav-tabs>li>a[href="#tab250"]>div>div
+	 {
+		top: 45px !important;
+		left: 38% !important;
+	}
 	#secondlevel >.nav-tabs>li>a[href="#tab300"]>div>div {
-		top: 25px !important;
-		left: 43% !important;
+		top: 45px !important;
+		left: 40% !important;
 	}
 
 	#secondlevel >.nav-tabs>li>a[href="#tab200"]>div>div,
 	#secondlevel >.nav-tabs>li>a[href="#tab400"]>div>div{
-		left: 45% !important;
+		left: 43% !important;
 		white-space: nowrap !important;
+		top:15px;
 	}
 	#secondlevel >.nav-tabs>li>a[href="#tab500"]>div>div{
-		left: 40% !important;
-		text-align: auto !important;
+		left: 35% !important;
+		top: 15px;
 	}
 	#secondlevel >.nav-tabs>li>a[href="#tab600"]>div>div {
-		top: 25px !important;
+		top: 45px !important;
 		left: 47% !important;
 	}
 	.hidden-md-down {
@@ -477,6 +488,15 @@ margin-left: 12px !important;
 		padding-left: 0 !important;
 	}
 
+	#link1 {
+		margin: 9px 0 0 140px !important;
+		font-size: 35px !important;
+	}
+
+	#logoImg {
+		margin: 15px 0 0 60px !important;
+		width: 60px !important;
+	}
 }
 
 
@@ -759,10 +779,11 @@ float:left !important;
 /*design revision in Sales Push Compaignes 20161213 ardjuna*/
 
 /*design revision 20161213 ardjuna*/
-#staticPrice> .row> .col-md-9,
-#staticPrice> .row> .col-md-3,
 #staticPrice> .row> .col-md-8,
-#staticPrice> .row> .col-md-1,
+#staticPrice> .row> .col-md-4,
+#staticPrice> .row> .col-md-3,
+#staticPrice> .row> .col-md-7,
+#staticPrice> .row> .col-md-2,
 #staticPriceBrandPromo> .row> .col-md-9,
 #staticPriceBrandPromo> .row> .col-md-8,
 #staticPriceBrandPromo> .row> .col-md-3,
@@ -772,13 +793,21 @@ float:left !important;
 #staticPriceMystery> .row> .col-md-9,
 #staticPriceStaff> .row> .col-md-9,
 #staticPriceDesign> .row> .col-md-9,
-#staticPriceAdvert> .row> .col-md-9 {
+#staticPriceShop> .row> .col-md-9 {
 	margin-top: 12px;
  }
-
- #staticPrice> .row> .paddingleft47 {
-	padding-left: 47px;
+/*20170228 ardjuna padding in Sales Push*/
+ .paddingleft20 {
+	padding-left: 20px;
+	 text-align: right;
 }
+/*20170228 ardjuna padding in Sales Push*/
+ .paddingright25 {
+	padding-right: 25px;
+	 text-align: right;
+}
+
+
 /* 20161216 ardjuna*/
 .blueColor_h80_pt5>p {
 	color: #8f9fae;
@@ -1124,9 +1153,6 @@ label[for="delivery2"]{
 	margin-top: 10px !important;
 }
 
-#appShopCost {
-	padding-left: 30px;
-}
 
 .showInStaticPrice {
 	display: block;
@@ -1170,16 +1196,13 @@ label[for="delivery2"]{
 #app-advert img[src="/img/clear.png"],
 #app-design img[src="/img/clear.png"],
 #app-root2 img[src="/img/clear.png"],
-#app-mystery img[src="/img/clear.png"] {
+#app-mystery img[src="/img/clear.png"],
+#app-shop img[src="/img/clear.png"] {
 	margin-left: 10px;
 }
 
 img[src="/img/clear.png"] {
 	width: 20px;
-}
-
-#app-brand-promo .colorblue>.col-md-3 {
-	margin-left: -10px;
 }
 
 #app-staff .colorblue>.col-md-3,
@@ -1196,7 +1219,15 @@ img[src="/img/clear.png"] {
 	padding-bottom: 50px;
 }
 
+.textAlignRight {
+	text-align: right;
+}
 
+@media (max-width: 992px) {
+	.textAlignRight {
+		text-align: left;
+	}
+}
 
 
 

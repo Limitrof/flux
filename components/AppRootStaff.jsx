@@ -513,14 +513,14 @@ else {usersControlFormula.push(<div></div>);}
 			  <div id="staticPriceStaff">
 
 				  <div className="row">
-					  <div className="col-md-9">Результаты</div>
+					  <div className="col-md-9 colorblue">Результаты</div>
 
 				  </div>
 
 
 				  <div className="row">
-					  <div className="col-md-8">POS-materails</div>
-					  <div className="col-md-4">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="POS-materails" src="/img/clear.png" /></div>
+					  <div className="col-md-8 grayColor">POS-materails</div>
+					  <div className="col-md-4 textAlignRight grayColor">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="POS-materails" src="/img/clear.png" /></div>
 				  </div>
 
 
@@ -528,7 +528,7 @@ else {usersControlFormula.push(<div></div>);}
 				  <hr/>
 				  <div className="row colorblue">
 					  <div className="col-md-9"><span className="textalignright">Итого:</span></div>
-					  <div className="col-md-3">{this.state.allAmount} €</div>
+					  <div className="col-md-3 textAlignRight">{this.state.allAmount} €</div>
 				  </div>
 			  </div>
 

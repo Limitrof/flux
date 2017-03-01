@@ -575,51 +575,51 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-8">Разработка программы</div>
-					  <div className="col-md-3 paddingleft47">{this.state.billDev} € </div>
-					  <div className="col-md-1">
+					  <div className="col-md-7 grayColor ">Разработка программы</div>
+					  <div className="col-md-3 paddingleft20 grayColor ">{this.state.billDev} € </div>
+					  <div className="col-md-2">
 						  <img onClick={_this.cleanCategory} data-id="Разработка программы" src="/img/clear.png" />
 					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-8">Платформа для Программы лояльности</div>
-					  <div className="col-md-3 paddingleft47">{this.state.billPlatform} € </div>
-					  <div className="col-md-1">
+					  <div className="col-md-7 grayColor ">Платформа для Программы лояльности</div>
+					  <div className="col-md-3 paddingleft20 grayColor">{this.state.billPlatform} € </div>
+					  <div className="col-md-2">
 						  <img onClick={_this.cleanCategory} data-id="Платформа для Программы лояльности:" src="/img/clear.png" />
 					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-8">Дизайн key visual</div>
-					  <div className="col-md-3 paddingleft47">{this.state.billDesign} € </div>
-					  <div className="col-md-1">
+					  <div className="col-md-7 grayColor ">Дизайн key visual</div>
+					  <div className="col-md-3 paddingleft20 grayColor ">{this.state.billDesign} € </div>
+					  <div className="col-md-2">
 						  <img onClick={_this.cleanCategory} data-id="Дизайн key visual:" src="/img/clear.png" />
 					  </div>
 				  </div>
 
 				  <div className="row">
-					  <div className="col-md-8">Призовой фонд*</div>
-					  <div className="col-md-3 paddingleft47">{this.state.billBonus} € </div>
-					  <div className="col-md-1">
+					  <div className="col-md-7 grayColor ">Призовой фонд*</div>
+					  <div className="col-md-3 paddingleft20 grayColor">{this.state.billBonus} € </div>
+					  <div className="col-md-2">
 						  <img onClick={_this.cleanCategory} data-id="Призовой фонд" src="/img/clear.png" />
 					  </div>
 				  </div>
 				  <div className="row colorblue">
-					  <div className="col-md-9">Охват (количество участников)</div>
-					  <div className="col-md-3">{this.state.usersQuantity}</div>
+					  <div className="col-md-8">Охват (количество участников)</div>
+					  <div className="col-md-4 paddingright25">{this.state.usersQuantity}</div>
 				  </div>
 				  <div className="row colorblue">
-					  <div className="col-md-9">Качество контакта</div>
-					  <div className="col-md-3">{this.state.qualityLevel}</div>
+					  <div className="col-md-8">Качество контакта</div>
+					  <div className="col-md-4 paddingright25">{this.state.qualityLevel}</div>
 				  </div>
 				  <div className="row colorblue">
-					  <div className="col-md-9">Среднее количество контактов за Программу</div>
-					  <div className="col-md-3">~ {this.state.contactsQuantity}</div>
+					  <div className="col-md-8">Среднее количество контактов за Программу</div>
+					  <div className="col-md-4 paddingright25">~ {this.state.contactsQuantity}</div>
 				  </div>
 				  <div className="row colorblue">
-					  <div className="col-md-9"><span className="textalignright">Итого:</span></div>
-					  <div className="col-md-3">{this.state.allAmount} €</div>
+					  <div className="col-md-8"><span className="textalignright">Итого:</span></div>
+					  <div className="col-md-4 paddingright25">{this.state.allAmount} €</div>
 				  </div>
 				  
 			  </div>
