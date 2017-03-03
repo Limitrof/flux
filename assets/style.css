@@ -60,8 +60,7 @@ float: left;
 margin-top: 10px;
 }
 .bggraycol-nobottom ul{
-/* margin-left:5px; */
-margin-left:25px; /* 20161206 ardjuna */
+margin-left: 31px; /* 20161206 ardjuna */
 color:black;
 }
 
@@ -1051,6 +1050,9 @@ float:left !important;
 		 margin-left: 0 !important;
 	 }
 
+	 img[src="img/autobusiness.png"] {
+		 height: 80px;
+	 }
  }
 /* green color "online" in Brand Promotion 20161219 ardjuna*/
 .greencol {
@@ -1088,7 +1090,8 @@ float:left !important;
 	margin-left: -33px;
 }
 /*img in Brand Promotion 20161222 ardjuna*/
-img[src="img/autokomp.png"] {
+img[src="img/autokomp.png"],
+img[src="img/autobusiness.png"]{
 	width: 130px;
 	height: 30px;
 }
