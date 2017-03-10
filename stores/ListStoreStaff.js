@@ -116,7 +116,7 @@ let ListStore = _.extend({}, EventEmitter.prototype, {
            baseprice: 24.55,
            price: 24.55,
            stocked: true,
-           name: 'Полукомбинезон мехканика',
+           name: 'Полукомбинезон механика',
            arrOfVlue:[{valOf:200,strInfo:'200 шт.'},{valOf:300,strInfo:'300 шт.'},{valOf:400,strInfo:'400 шт.'}],
            formula: 'select',
            multinumber:200,

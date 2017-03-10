@@ -1239,5 +1239,9 @@ img[src="/img/clear.png"] {
 	}
 }
 
+#staticPriceBrandPromo {
+	z-index: 10;
+}
+
 
 
