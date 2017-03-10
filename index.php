@@ -258,6 +258,11 @@
                     				alert ("К сожалению, в Вашем браузере приложение не работает. Откройте, пожалуйста, приложение в другом браузере")
                     		}
 
+
+                    		function showMessage() {
+                            		alert("Спасибо за заказ! С Вами свяжутся наши специалисты!");
+                            	}
+
                     </script>
                     </head>
                     <body>
@@ -275,11 +280,11 @@
                     </div>
                     <div id="longImg"></div>
                     <!-- mail success block -->
-                    <div class="alert alert-success" id="success-alert">
+                    <!--<div class="alert alert-success" id="success-alert">
                     <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong>Спасибо!</strong>
                     Ваше письмо отправлено.st.
-                    </div>
+                    </div>-->
                     <!---->
 
 
@@ -296,14 +301,14 @@
                     <div class="tabbable">
                     <div id="secondlevel">
                     <ul id="marginleft20" class="nav nav-tabs">
-                    <li class="col-xs-12 col-md-2"><a href="#tab100" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:10px;">PR AND CONTENT</div></div></a></li>
+                    <li class="col-xs-12 col-md-2"><a href="#tab100" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; white-space:nowrap; text-align:center;">PR СОПРОВОЖДЕНИЕ<p>РАБОТА С КОНТЕНТОМ</p></div></div></a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNS</a></li-->
-                    <li class="col-xs-12 col-md-2" style="margin-left:-2px;"><a href="#tab200" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:27px;">SALES PUSH <p>CAMPAIGNS</p></div></div></a></li>
-                    <li class="col-xs-12 col-md-2" style="margin-left:-20px;"><a href="#tab250" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px; left:10px;">MYSTERY CALLING</div></div></a></li>
-                    <li class="active col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab400" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:25px; text-align:center;">BRAND <br/>PROMOTION</div></div></a></li>
-                    <li class="col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab300" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:15px;">POS MATERIALS</div></div></a></li>
-                    <li class="col-xs-12 col-md-1" style="margin-left:-22px;"><a href="#tab500" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; text-align:center;">NEWS AND <p>ADVERTISING ISSUES</p></div></div></a></li>
-                    <li class="col-xs-12 col-md-1" style="margin-left:90px;"><a href="#tab600" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:35px;">DESIGN</div></div></a></li>
+                    <li class="col-xs-12 col-md-2" style="margin-left:-2px;"><a href="#tab200" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:27px; text-align:center;">ПРОГРАММА ЛОЯЛЬНОСТИ</p></div></div></a></li>
+                    <li class="col-xs-12 col-md-2" style="margin-left:-20px;"><a href="#tab250" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px; left:10px;">ТАЙНЫЙ ОБЗВОН</div></div></a></li>
+                    <li class="active col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab400" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:7px; text-align:center;">ПРОДВИЖЕНИЕ БРЕНДА</div></div></a></li>
+                    <li class="col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab300" data-toggle="tab"><div style="position:relative;"><div style="position:absolute;left:-7px; white-space:nowrap;text-align:center;">РЕКЛАМНО-СУВЕНИРНАЯ <p>ПРОДУКЦИЯ</p></div></div></a></li>
+                    <li class="col-xs-12 col-md-1" style="margin-left:-22px;"><a href="#tab500" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; text-align:center; white-space:nowrap; left:-2px;">НОВОСТИ <p>РЕКЛАМНЫЕ ИЗДАНИЯ</p></div></div></a></li>
+                    <li class="col-xs-12 col-md-1" style="margin-left:90px;"><a href="#tab600" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px;left:35px;">ДИЗАЙН</div></div></a></li>
                     </ul>
                     </div>
                     <div class="tab-content">
@@ -398,7 +403,7 @@
                     <input type='text' name='company' placeholder='Компания*' required/><br><br>
                     <input type='hidden' name='pricelist' id='forPrice' value='not else'/>
                     <textarea name='msg' placeholder='Комментарий' style='width:300px;height:200px;'></textarea><br><br>
-                    <input type="submit" value="Отправить" name="submit"></div>
+                    <input type="submit" value="Отправить" name="submit" onclick="showMessage()"></div>
                     </form>
                     </div>
                     <div class="modal-footer">

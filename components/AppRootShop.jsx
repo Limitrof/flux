@@ -526,7 +526,7 @@ else {usersControlFormula.push(<div></div>);}
 
 
 				  <div className="row">
-					  <div className="col-md-8 grayColor ">Cost</div>
+					  <div className="col-md-8 grayColor ">Стоимость</div>
 					  <div className="col-md-4 textAlignRight grayColor" id="appShopCost">{this.state.billDesign} €  <img onClick={_this.cleanCategory} data-id="Разработка сайта Интернет-магазина." src="/img/clear.png" /></div>
 				  </div>
 
