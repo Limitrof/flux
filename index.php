@@ -303,7 +303,7 @@
                     <ul id="marginleft20" class="nav nav-tabs">
                     <li class="col-xs-12 col-md-2"><a href="#tab100" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; white-space:nowrap; text-align:center;">PR СОПРОВОЖДЕНИЕ<p>РАБОТА С КОНТЕНТОМ</p></div></div></a></li>
                     <!-- li class="active"><a href="#tab200" data-toggle="tab">SALES PUSH CAMPAIGNS</a></li-->
-                    <li class="col-xs-12 col-md-2" style="margin-left:-2px;"><a href="#tab200" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:27px; text-align:center;">ПРОГРАММА ЛОЯЛЬНОСТИ</p></div></div></a></li>
+                    <li class="col-xs-12 col-md-2" style="margin-left:-2px;"><a href="#tab200" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:4px; text-align:center;">ПРОГРАММА ЛОЯЛЬНОСТИ</p></div></div></a></li>
                     <li class="col-xs-12 col-md-2" style="margin-left:-20px;"><a href="#tab250" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; top:5px; left:10px;">ТАЙНЫЙ ОБЗВОН</div></div></a></li>
                     <li class="active col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab400" data-toggle="tab"><div style="position:relative;"><div style="position:absolute; left:7px; text-align:center;">ПРОДВИЖЕНИЕ БРЕНДА</div></div></a></li>
                     <li class="col-xs-12 col-md-2" style="margin-left:-22px;"><a href="#tab300" data-toggle="tab"><div style="position:relative;"><div style="position:absolute;left:-7px; white-space:nowrap;text-align:center;">РЕКЛАМНО-СУВЕНИРНАЯ <p>ПРОДУКЦИЯ</p></div></div></a></li>
